@@ -1,93 +1,66 @@
-# Üstün Başarı Akademisi Web Sitesi ve Yönetim Paneli
+# Üstün Başarı Akademisi Web Sitesi - Güncellenmiş Versiyon
 
-Bu proje, Üstün Başarı Akademisi için modern, animasyonlu ve responsive bir web sitesi ve kapsamlı bir yönetim paneli içerir.
+Bu paket, Üstün Başarı Akademisi için güncellenmiş web sitesi dosyalarını içermektedir. Tüm dosyalar optimize edilmiş ve modern web standartlarına uygun hale getirilmiştir.
 
-## Proje İçeriği
+## Yapılan Güncellemeler
 
-Bu paket aşağıdaki bileşenleri içerir:
+1. **Görsel İyileştirmeler**
+   - Placeholder görseller gerçek görsellerle değiştirildi
+   - Logo ve şube fotoğrafları entegre edildi
+   - Favicon eklendi
 
-1. **Modern Web Sitesi**
-   - Animasyonlu ve responsive tasarım
-   - Tüm programlar için bilgi kartları
-   - Şube bilgileri ve iletişim sayfaları
-   - Mobil uyumlu navigasyon
+2. **Kod Optimizasyonu**
+   - Tüm CSS kodları `all-styles.css` dosyasında birleştirildi
+   - Tüm JavaScript kodları `all-scripts.js` dosyasında birleştirildi
+   - HTML dosyası temizlendi ve optimize edildi
 
-2. **Yönetim Paneli**
-   - Kullanıcı girişi ve yetkilendirme
-   - Gösterge paneli ve istatistikler
-   - Program, şube ve öğrenci yönetimi
-   - İçerik yönetimi sistemi
-   - Medya kütüphanesi
-
-3. **İçerik Yönetimi**
-   - Sayfa düzenleme
-   - Blog yazıları yönetimi
-   - Duyuru sistemi
-   - Slider yönetimi
-   - Medya yükleme ve düzenleme
-
-4. **Wix Entegrasyonu**
-   - iframe entegrasyonu
-   - Velo tam entegrasyonu
-   - Adım adım kurulum talimatları
-   - Sorun giderme rehberi
+3. **Responsive Tasarım İyileştirmeleri**
+   - Mobil, tablet ve masaüstü görünümleri optimize edildi
+   - Dokunmatik cihazlar için kullanılabilirlik artırıldı
+   - Farklı ekran boyutları için medya sorguları eklendi
 
 ## Dosya Yapısı
 
-- `index.html` - Ana sayfa
-- `program-template.html` - Program sayfaları için şablon
-- `unified-styles.css` - Tüm site için ortak stil dosyası
-- `animations.css` - Animasyon tanımları ve efektler
-- `animation-effects.js` - JavaScript animasyon efektleri
-- `mobile-nav.js` - Mobil navigasyon ve UI etkileşimleri
-- `images/` - Görseller için klasör
-- `admin/` - Yönetim paneli dosyaları
-  - `index.html` - Yönetim paneli ana sayfası
-  - `content-editor.html` - İçerik düzenleme sayfası
-  - `admin-styles.css` - Yönetim paneli stilleri
-  - `content-editor.css` - İçerik düzenleme stilleri
-  - `admin-scripts.js` - Yönetim paneli scriptleri
-  - `content-editor.js` - İçerik düzenleme scriptleri
-- `WIX_ENTEGRASYON_REHBERI.md` - Wix entegrasyon talimatları
+- `index.html` - Ana sayfa HTML dosyası
+- `all-styles.css` - Tüm stil kodlarını içeren birleştirilmiş CSS dosyası
+- `all-scripts.js` - Tüm JavaScript kodlarını içeren birleştirilmiş JS dosyası
+- `images/` - Tüm görsellerin bulunduğu klasör
+  - `logo.png` - Ana logo
+  - `logo-blue.png` - Mavi arka plan için logo
+  - `logo-white.png` - Beyaz arka plan için logo
+  - `favicon.png` - Site favicon'u
+  - `esenyali-branch.jpeg` - Esenyalı şubesi fotoğrafı
+  - `gebze-branch.jpeg` - Gebze şubesi fotoğrafı
+- `WIX_ENTEGRASYON_REHBERI.md` - Wix entegrasyon rehberi
 
-## Kurulum
+## Wix Entegrasyonu
 
-### Yerel Kurulum
+Web sitesini Wix platformuna entegre etmek için `WIX_ENTEGRASYON_REHBERI.md` dosyasındaki adımları izleyin. Bu rehber, şu konularda detaylı talimatlar içerir:
 
-1. Tüm dosyaları web sunucunuza yükleyin
-2. `index.html` dosyasını tarayıcınızda açın
-3. Yönetim paneline erişmek için `/admin/index.html` adresini ziyaret edin
-4. Yönetim paneli giriş bilgileri:
-   - Kullanıcı adı: `admin`
-   - Şifre: `admin123`
+1. Wix + iframe Entegrasyonu
+2. Wix Velo ile Tam Entegrasyon
+3. Birleştirilmiş CSS ve JS Dosyalarının Entegrasyonu
+4. Responsive Tasarım Entegrasyonu
+5. Dinamik İçerik Koleksiyonları
+6. Animasyonların Entegrasyonu
+7. SEO Optimizasyonu
+8. Mobil Uyumluluk
 
-### GitHub'a Yükleme
+## Yerel Olarak Çalıştırma
 
-1. GitHub hesabınızda yeni bir repository oluşturun
-2. Tüm dosyaları bu repository'ye yükleyin
-3. GitHub Pages'i etkinleştirin (Settings > Pages)
-4. Site `https://[kullanici-adiniz].github.io/[repo-adiniz]/` adresinde yayınlanacaktır
+Web sitesini yerel olarak test etmek için:
 
-### Wix Entegrasyonu
-
-Wix entegrasyonu için `WIX_ENTEGRASYON_REHBERI.md` dosyasındaki adımları izleyin.
-
-## Özelleştirme
-
-- Renkleri değiştirmek için `unified-styles.css` dosyasındaki `:root` değişkenlerini düzenleyin
-- Logoları ve görselleri `images/` klasöründeki dosyalarla değiştirin
-- İçerikleri yönetim paneli üzerinden veya doğrudan HTML dosyalarını düzenleyerek değiştirebilirsiniz
-
-## Teknik Detaylar
-
-- HTML5, CSS3 ve JavaScript kullanılarak geliştirilmiştir
-- Harici kütüphane bağımlılığı yoktur (sadece Font Awesome ikonları)
-- Tüm modern tarayıcılarla uyumludur
-- Mobil cihazlar için tam responsive tasarım
+1. Bu klasördeki dosyaları bilgisayarınıza indirin
+2. `index.html` dosyasını bir web tarayıcısında açın
+3. Veya bir yerel web sunucusu kullanarak (örn. Python'un http.server modülü) dosyaları sunun:
+   ```
+   python -m http.server 8080
+   ```
+   ve tarayıcınızda `http://localhost:8080` adresine gidin
 
 ## İletişim
 
-Herhangi bir sorunuz veya öneriniz varsa, lütfen iletişime geçin.
+Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, lütfen iletişime geçin.
 
 ---
 

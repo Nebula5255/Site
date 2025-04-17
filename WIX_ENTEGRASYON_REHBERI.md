@@ -1,27 +1,20 @@
-# Wix Entegrasyon Rehberi - Üstün Başarı Akademisi
+# Wix Entegrasyon Rehberi - Üstün Başarı Akademisi (Güncellenmiş)
 
-Bu rehber, modern web sitesi ve yönetim panelini Wix platformuna entegre etmek için adım adım talimatlar içerir.
+Bu rehber, modern web site tasarımınızı Wix platformuna entegre etmek için adım adım talimatlar içerir. Bu doküman, son yapılan güncellemeler ve iyileştirmeler dikkate alınarak hazırlanmıştır.
 
 ## İçindekiler
-1. [Giriş ve Genel Bakış](#giriş-ve-genel-bakış)
-2. [Wix + iframe Entegrasyonu](#wix--iframe-entegrasyonu)
-3. [Wix Velo ile Tam Entegrasyon](#wix-velo-ile-tam-entegrasyon)
-4. [Yönetim Paneli Entegrasyonu](#yönetim-paneli-entegrasyonu)
-5. [İçerik Yönetimi Entegrasyonu](#içerik-yönetimi-entegrasyonu)
-6. [Sorun Giderme](#sorun-giderme)
-
-## Giriş ve Genel Bakış
-
-Üstün Başarı Akademisi için hazırlanan modern web sitesi ve yönetim paneli, iki farklı yöntemle Wix platformuna entegre edilebilir:
-
-1. **iframe Entegrasyonu:** Hızlı ve kolay kurulum, ancak sınırlı etkileşim
-2. **Velo Tam Entegrasyonu:** Daha kapsamlı entegrasyon, Wix'in tüm özelliklerinden faydalanma
-
-Her iki yöntem de aşağıda detaylı olarak açıklanmıştır.
+1. [Wix + iframe Entegrasyonu](#wix--iframe-entegrasyonu)
+2. [Wix Velo ile Tam Entegrasyon](#wix-velo-ile-tam-entegrasyon)
+3. [Birleştirilmiş CSS ve JS Dosyalarının Entegrasyonu](#birleştirilmiş-css-ve-js-dosyalarının-entegrasyonu)
+4. [Responsive Tasarım Entegrasyonu](#responsive-tasarım-entegrasyonu)
+5. [Dinamik İçerik Koleksiyonları](#dinamik-içerik-koleksiyonları)
+6. [Animasyonların Entegrasyonu](#animasyonların-entegrasyonu)
+7. [SEO Optimizasyonu](#seo-optimizasyonu)
+8. [Mobil Uyumluluk](#mobil-uyumluluk)
 
 ## Wix + iframe Entegrasyonu
 
-Bu yöntem, GitHub'a yüklediğiniz modern web sitesini ve yönetim panelini Wix içinde iframe olarak görüntülemenizi sağlar.
+Bu yöntem, GitHub'a yüklediğiniz modern web sitesini Wix içinde iframe olarak görüntülemenizi sağlar.
 
 ### Adımlar:
 
@@ -30,9 +23,9 @@ Bu yöntem, GitHub'a yüklediğiniz modern web sitesini ve yönetim panelini Wix
    - GitHub Pages'i etkinleştirin (Settings > Pages)
    - Siteniz https://nebula5255.github.io/Site/ adresinde yayınlanacaktır
 
-2. **Wix'te Ana Site için iframe Ekleme:**
+2. **Wix'te iframe Ekleme:**
    - Wix Editor'da yeni bir sayfa oluşturun
-   - "Ekle" > "Yerleştir" > "HTML iframe" seçin
+   - "Add" > "Embed" > "HTML iframe" seçin
    - Aşağıdaki kodu yapıştırın:
    ```html
    <iframe 
@@ -45,282 +38,236 @@ Bu yöntem, GitHub'a yüklediğiniz modern web sitesini ve yönetim panelini Wix
    ```
    - Boyutları ve diğer ayarları ihtiyacınıza göre düzenleyin
 
-3. **Wix'te Yönetim Paneli için iframe Ekleme:**
-   - Wix Editor'da "Yönetim" adında yeni bir sayfa oluşturun
-   - Bu sayfaya erişimi kısıtlayın (Sayfa Ayarları > Erişim Kontrolü > "Sadece Belirli Kişiler")
-   - "Ekle" > "Yerleştir" > "HTML iframe" seçin
-   - Aşağıdaki kodu yapıştırın:
-   ```html
-   <iframe 
-     src="https://nebula5255.github.io/Site/admin/" 
-     width="100%" 
-     height="800" 
-     frameborder="0" 
-     scrolling="yes">
-   </iframe>
-   ```
-
-4. **Avantajları ve Dezavantajları:**
+3. **Avantajları ve Dezavantajları:**
    - ✅ Hızlı ve kolay kurulum
-   - ✅ Modern tasarımı ve yönetim panelini olduğu gibi korur
+   - ✅ Modern tasarımı olduğu gibi korur
+   - ✅ Birleştirilmiş CSS ve JS dosyaları sayesinde daha hızlı yükleme
    - ❌ Wix ve iframe içeriği arasında sınırlı etkileşim
    - ❌ SEO açısından optimal değil
    - ❌ İçerik güncellemeleri için GitHub'a erişim gerektirir
 
 ## Wix Velo ile Tam Entegrasyon
 
-Bu yöntem, modern tasarımınızı ve yönetim panelinizi Wix'in kendi yapısına uyarlayarak tam entegrasyon sağlar.
+Bu yöntem, modern tasarımınızı Wix'in kendi yapısına uyarlayarak tam entegrasyon sağlar.
 
 ### Adımlar:
 
 1. **Wix'te Yeni Site Oluşturma:**
    - Wix.com'da hesabınıza giriş yapın
-   - "Yeni Site Oluştur" seçeneğini tıklayın
-   - Boş bir şablon seçin ("Sıfırdan Başla")
+   - "Create New Site" seçeneğini tıklayın
+   - Boş bir şablon seçin ("Start from Scratch")
 
 2. **Velo Geliştirme Ortamını Etkinleştirme:**
-   - Site menüsünden "Geliştirici Modu" veya "Velo by Wix" seçeneğini tıklayın
-   - "Geliştirici Modunu Aç" butonuna tıklayın
+   - Site menüsünden "Dev Mode" veya "Velo by Wix" seçeneğini tıklayın
+   - "Turn on Dev Mode" butonuna tıklayın
 
-3. **Dosya Yapısını Oluşturma:**
-   - Sol menüde "Arka Uç Kodu" bölümünde "Public" klasörü oluşturun
-   - CSS ve JS dosyalarını bu klasöre ekleyin:
-     - `unified-styles.css`
-     - `animations.css`
-     - `animation-effects.js`
-     - `mobile-nav.js`
+3. **Sayfa Yapısını Oluşturma:**
+   - Ana Sayfa, Programlar, Şubeler, Hakkımızda, İletişim sayfaları oluşturun
+   - Her program için ayrı sayfalar ekleyin (YKS, LGS, İngilizce vb.)
 
-4. **masterPage.js Dosyasını Düzenleme:**
-   - "Sayfa Kodu" bölümünde "masterPage.js" dosyasını açın
-   - Aşağıdaki kodu dosyanın en üstüne ekleyin:
+4. **Tasarım Elementlerini Ekleme:**
+   - Modern tasarımınızdaki renk şemasını Wix tema ayarlarına uygulayın
+   - Font stillerini ve boyutlarını ayarlayın
+   - Header ve footer bölümlerini oluşturun
+
+## Birleştirilmiş CSS ve JS Dosyalarının Entegrasyonu
+
+Son güncellemelerle birlikte, tüm CSS ve JavaScript kodları tek dosyada birleştirilmiştir. Bu, Wix entegrasyonunu daha kolay ve performanslı hale getirir.
+
+### Adımlar:
+
+1. **Birleştirilmiş CSS Dosyasını Ekleme:**
+   - Velo Code Panel'de "Public" klasörü altında yeni bir CSS dosyası oluşturun (all-styles.css)
+   - Modern web sitenizdeki all-styles.css dosyasının içeriğini bu dosyaya kopyalayın
+   - Sayfanıza CSS dosyasını eklemek için şu kodu kullanın:
    ```javascript
    import {fetch} from 'wix-fetch';
-
-   $w.onReady(function() {
-       // CSS dosyalarını ekle
-       const styleLinks = [
-           '/unified-styles.css',
-           '/animations.css'
-       ];
-       
-       styleLinks.forEach(href => {
-           const link = document.createElement('link');
-           link.rel = 'stylesheet';
-           link.href = href;
-           document.head.appendChild(link);
-       });
-       
-       // JavaScript dosyalarını ekle
-       const scriptSrcs = [
-           '/animation-effects.js',
-           '/mobile-nav.js'
-       ];
-       
-       scriptSrcs.forEach(src => {
-           const script = document.createElement('script');
-           script.src = src;
-           document.body.appendChild(script);
-       });
+   
+   $w.onReady(function () {
+       const link = document.createElement('link');
+       link.rel = 'stylesheet';
+       link.href = '/all-styles.css';
+       document.head.appendChild(link);
    });
    ```
 
-## Yönetim Paneli Entegrasyonu
-
-Yönetim panelini Wix'e entegre etmek için iki yaklaşım bulunmaktadır:
-
-### 1. Özel Sayfa Olarak Entegrasyon:
-
-1. **Yönetim Sayfası Oluşturma:**
-   - Wix Editor'da "Yönetim" adında yeni bir sayfa oluşturun
-   - Bu sayfaya erişimi kısıtlayın (Sayfa Ayarları > Erişim Kontrolü > "Sadece Belirli Kişiler")
-
-2. **Yönetim Paneli Dosyalarını Ekleme:**
-   - "Public" klasörüne aşağıdaki dosyaları ekleyin:
-     - `admin-styles.css`
-     - `admin-scripts.js`
-     - `content-editor.css`
-     - `content-editor.js`
-
-3. **Yönetim Sayfasına Kod Ekleme:**
-   - "Sayfa Kodu" bölümünde "yonetim.js" dosyasını açın
-   - Aşağıdaki kodu ekleyin:
+2. **Birleştirilmiş JavaScript Dosyasını Ekleme:**
+   - Velo Code Panel'de "Public" klasörü altında yeni bir JS dosyası oluşturun (all-scripts.js)
+   - Modern web sitenizdeki all-scripts.js dosyasının içeriğini bu dosyaya kopyalayın
+   - Sayfanıza JS dosyasını eklemek için şu kodu kullanın:
    ```javascript
    import {fetch} from 'wix-fetch';
-   import wixUsers from 'wix-users';
-
-   $w.onReady(function() {
-       // Kullanıcı giriş kontrolü
-       if (!wixUsers.currentUser.loggedIn) {
-           // Giriş yapmamış kullanıcıları giriş sayfasına yönlendir
-           wixLocation.to('/giris');
-           return;
-       }
-       
-       // Admin CSS dosyalarını ekle
-       const adminStyleLinks = [
-           '/admin-styles.css',
-           '/content-editor.css'
-       ];
-       
-       adminStyleLinks.forEach(href => {
-           const link = document.createElement('link');
-           link.rel = 'stylesheet';
-           link.href = href;
-           document.head.appendChild(link);
-       });
-       
-       // Admin JS dosyalarını ekle
-       const adminScriptSrcs = [
-           '/admin-scripts.js',
-           '/content-editor.js'
-       ];
-       
-       adminScriptSrcs.forEach(src => {
-           const script = document.createElement('script');
-           script.src = src;
-           document.body.appendChild(script);
-       });
-       
-       // Admin paneli HTML yapısını oluştur
-       const adminContainer = document.createElement('div');
-       adminContainer.id = 'adminContainer';
-       adminContainer.innerHTML = `
-           <!-- Yönetim paneli HTML yapısı buraya gelecek -->
-           <div class="admin-dashboard">
-               <!-- Sidebar -->
-               <!-- Content -->
-           </div>
-       `;
-       
-       document.body.appendChild(adminContainer);
+   
+   $w.onReady(function () {
+       const script = document.createElement('script');
+       script.src = '/all-scripts.js';
+       document.body.appendChild(script);
    });
    ```
 
-### 2. Wix Dashboard Entegrasyonu:
+3. **Avantajları:**
+   - Daha az HTTP isteği sayesinde daha hızlı sayfa yükleme
+   - Daha kolay bakım ve güncelleme
+   - Daha temiz kod yapısı
 
-1. **Wix Dashboard Uygulaması Oluşturma:**
-   - Velo'da "Dashboard" klasörü oluşturun
-   - Bu klasöre admin panel dosyalarını ekleyin
+## Responsive Tasarım Entegrasyonu
 
-2. **Backend Entegrasyonu:**
-   - Wix'in veritabanı koleksiyonlarını oluşturun:
-     - Sayfalar
-     - Blog Yazıları
-     - Duyurular
-     - Slider Öğeleri
-     - Medya
+Son güncellemelerle birlikte, responsive tasarım özellikleri önemli ölçüde geliştirilmiştir. Bu bölüm, bu iyileştirmelerin Wix'e nasıl entegre edileceğini açıklar.
 
-3. **Velo Kodları ile Veritabanı Bağlantısı:**
-   - Admin panelindeki form işlemlerini Wix veritabanına bağlayın
+### Adımlar:
+
+1. **Responsive CSS Kurallarını Ekleme:**
+   - all-styles.css dosyasındaki tüm medya sorguları (media queries) Wix'in responsive davranışını geliştirmek için kullanılabilir
+   - Özellikle aşağıdaki ekran boyutları için optimize edilmiş kurallar bulunmaktadır:
+     - 1200px ve altı (büyük ekranlar)
+     - 992px ve altı (tablet yatay)
+     - 768px ve altı (tablet dikey)
+     - 576px ve altı (mobil)
+
+2. **Dokunmatik Cihaz Optimizasyonları:**
+   - Dokunmatik cihazlar için eklenen özel CSS kuralları, Wix'in mobil deneyimini iyileştirir
+   - Tüm tıklanabilir öğeler minimum 44px yüksekliğe sahiptir
+   - Butonlar ve menü öğeleri arasında yeterli boşluk bırakılmıştır
+
+3. **Wix Mobile Editor ile Entegrasyon:**
+   - Wix Editor'da "Mobile View" seçeneğini tıklayın
+   - Elementlerin mobil görünümünü düzenleyin
+   - CSS medya sorgularındaki değişiklikleri Wix'in mobil düzenlemelerine yansıtın
+
+4. **Responsive Test:**
+   - Farklı cihazlarda ve ekran boyutlarında sitenizi test edin
+   - Chrome DevTools veya benzeri araçları kullanarak responsive davranışı doğrulayın
+
+## Dinamik İçerik Koleksiyonları
+
+Wix'in veritabanı özelliklerini kullanarak dinamik içerik yönetimi oluşturabilirsiniz.
+
+### Adımlar:
+
+1. **Koleksiyonlar Oluşturma:**
+   - Wix Dashboard > Content Manager > Add Collection
+   - Aşağıdaki koleksiyonları oluşturun:
+     - Programlar (YKS, LGS, İngilizce vb.)
+     - Şubeler
+     - Öğretmenler
+     - Başarı Hikayeleri
+     - SSS (Sıkça Sorulan Sorular)
+
+2. **Koleksiyon Yapıları:**
+   - **Programlar Koleksiyonu:**
+     - Başlık (metin)
+     - Açıklama (zengin metin)
+     - Görsel (resim)
+     - Hedef Kitle (metin)
+     - Program Süresi (metin)
+     - Özellikler (liste)
+     - Müfredat (zengin metin)
+     - Fiyat (sayı)
+
+   - **Şubeler Koleksiyonu:**
+     - Şube Adı (metin)
+     - Adres (metin)
+     - Telefon (metin)
+     - E-posta (metin)
+     - Çalışma Saatleri (metin)
+     - Konum (adres)
+     - Görsel (resim)
+
+3. **Dinamik Sayfalar Oluşturma:**
+   - Wix'in "Dynamic Pages" özelliğini kullanarak her program için otomatik sayfalar oluşturun
+   - URL yapısını düzenleyin (örn: /programlar/yks-hazirlik)
+
+4. **Veri Bağlantıları:**
+   - Sayfa elementlerini koleksiyon verilerine bağlayın
+   - Dinamik listeler ve galeriler oluşturun
+
+## Animasyonların Entegrasyonu
+
+Wix Velo kullanarak modern animasyonları entegre edebilirsiniz.
+
+### Adımlar:
+
+1. **JavaScript Kütüphanelerini Ekleme:**
+   - Birleştirilmiş all-scripts.js dosyası tüm animasyon kodlarını içerir
+   - Sayfanıza JS dosyasını eklemek için yukarıdaki JavaScript entegrasyon adımlarını izleyin
+
+2. **Scroll Animasyonları:**
+   - Elementlere data-animation öznitelikleri ekleyin
+   - Intersection Observer API kullanarak scroll animasyonlarını tetikleyin
    - Örnek kod:
    ```javascript
-   import wixData from 'wix-data';
-
-   // Sayfa kaydetme fonksiyonu
-   export function savePage(pageData) {
-       return wixData.insert("Sayfalar", {
-           title: pageData.title,
-           content: pageData.content,
-           status: pageData.status,
-           url: pageData.url,
-           lastUpdated: new Date()
-       });
-   }
-
-   // Sayfa listeleme fonksiyonu
-   export function getPages() {
-       return wixData.query("Sayfalar")
-           .find()
-           .then((results) => {
-               return results.items;
-           });
-   }
-   ```
-
-## İçerik Yönetimi Entegrasyonu
-
-İçerik yönetimi özelliklerini Wix'e entegre etmek için:
-
-1. **Wix Koleksiyonları Oluşturma:**
-   - "Veritabanı" bölümünde aşağıdaki koleksiyonları oluşturun:
-     - Sayfalar (title, content, status, url, lastUpdated)
-     - BlogYazilari (title, content, category, author, date, status)
-     - Duyurular (title, content, date, priority, status)
-     - SliderOgeleri (title, content, image, link, order, status)
-
-2. **İçerik Editörü Entegrasyonu:**
-   - content-editor.js dosyasındaki AJAX fonksiyonlarını Wix Velo API çağrılarına dönüştürün:
-   ```javascript
-   // Örnek: İçerik kaydetme fonksiyonu
-   function saveContentData(formData) {
-       // Wix Velo API çağrısı
-       import {savePage, saveBlogPost, saveAnnouncement, saveSlider} from 'backend/contentManager';
+   // Animate elements when they come into view
+   const animateOnScroll = function() {
+       const elements = document.querySelectorAll('.animate-on-scroll');
        
-       if (formData.type === 'page') {
-           savePage(formData)
-               .then((results) => {
-                   showNotification('Sayfa başarıyla kaydedildi.');
-               })
-               .catch((error) => {
-                   console.error('Hata:', error);
-                   showNotification('Hata: ' + error.message, 'error');
-               });
-       } else if (formData.type === 'blog') {
-           saveBlogPost(formData)
-               .then((results) => {
-                   showNotification('Blog yazısı başarıyla kaydedildi.');
-               })
-               .catch((error) => {
-                   console.error('Hata:', error);
-                   showNotification('Hata: ' + error.message, 'error');
-               });
-       }
-       // Diğer içerik tipleri için benzer kodlar...
-   }
+       elements.forEach(element => {
+           const elementPosition = element.getBoundingClientRect().top;
+           const windowHeight = window.innerHeight;
+           
+           if (elementPosition < windowHeight - 50) {
+               const animationClass = element.dataset.animation || 'animate-fade-in-up';
+               element.classList.add(animationClass);
+               
+               // Add delay if specified
+               if (element.dataset.delay) {
+                   element.style.animationDelay = element.dataset.delay + 's';
+               }
+               
+               // Add duration if specified
+               if (element.dataset.duration) {
+                   element.style.animationDuration = element.dataset.duration + 's';
+               }
+           }
+       });
+   };
+   
+   // Run on page load
+   animateOnScroll();
+   
+   // Run on scroll
+   window.addEventListener('scroll', animateOnScroll);
    ```
 
-3. **Medya Yönetimi Entegrasyonu:**
-   - Wix'in medya API'sini kullanarak dosya yükleme işlemlerini entegre edin:
-   ```javascript
-   import {mediaManager} from 'wix-media-backend';
+3. **Hover Efektleri:**
+   - CSS hover efektlerini özel CSS dosyanıza ekleyin
+   - JavaScript ile interaktif hover efektleri oluşturun
 
-   // Dosya yükleme fonksiyonu
-   export function uploadMedia(file) {
-       return mediaManager.upload(file)
-           .then((mediaItem) => {
-               return mediaItem;
-           });
-   }
-   ```
+## SEO Optimizasyonu
 
-## Sorun Giderme
+Wix'in SEO araçlarını kullanarak sitenizi optimize edin.
 
-### Genel Sorunlar ve Çözümleri:
+### Adımlar:
 
-1. **CSS Çakışmaları:**
-   - Sorun: Wix'in kendi CSS'leri ile özel CSS'ler çakışabilir
-   - Çözüm: CSS sınıflarını benzersiz öneklerle yeniden adlandırın (örn: `uba-header` gibi)
+1. **Sayfa Meta Bilgileri:**
+   - Her sayfa için başlık, açıklama ve anahtar kelimeler ekleyin
+   - Wix SEO Wiz aracını kullanın
 
-2. **JavaScript Hataları:**
-   - Sorun: Konsol hatalarına dikkat edin
-   - Çözüm: Wix Velo'nun JavaScript API'lerini kullanırken doğru import ifadelerini kullandığınızdan emin olun
+2. **URL Yapısı:**
+   - Temiz ve anlaşılır URL'ler oluşturun
+   - Türkçe karakterleri düzenleyin
 
-3. **Velo Erişim Sorunları:**
-   - Sorun: Velo'ya erişemiyorsanız
-   - Çözüm: Premium Wix planına sahip olduğunuzdan emin olun, tarayıcınızı yenileyin veya farklı bir tarayıcı deneyin
+3. **Yapısal Veri:**
+   - Schema.org yapısal verilerini ekleyin
+   - Eğitim kursu, yerel işletme gibi şemaları kullanın
 
-4. **iframe Yükleme Sorunları:**
-   - Sorun: iframe içeriği yüklenmiyorsa
-   - Çözüm: GitHub Pages'in doğru şekilde yapılandırıldığından emin olun, URL'yi kontrol edin
+## Mobil Uyumluluk
 
-### Yardım Alma:
+Wix'in mobil editörünü kullanarak responsive tasarımı optimize edin.
 
-Entegrasyon sırasında sorunlarla karşılaşırsanız:
+### Adımlar:
 
-1. Wix Yardım Merkezi'ni ziyaret edin: https://support.wix.com/
-2. Wix Velo Forum'unu kullanın: https://www.wix.com/velo/forum
-3. GitHub repository üzerinden iletişime geçin
+1. **Mobil Görünüm Düzenleme:**
+   - Wix Editor'da "Mobile View" seçeneğini tıklayın
+   - Elementlerin mobil görünümünü düzenleyin
+
+2. **Responsive Ayarlar:**
+   - Farklı ekran boyutları için görünüm ayarlarını yapın
+   - Mobil menüyü özelleştirin
+
+3. **Performans Optimizasyonu:**
+   - Görselleri optimize edin
+   - Sayfa yükleme hızını artırın
 
 ---
 
-Bu rehber, modern web sitenizi ve yönetim panelinizi Wix platformuna entegre etmeniz için temel adımları içerir. Daha detaylı bilgi veya yardım için lütfen iletişime geçin.
+Bu güncellenmiş rehber, modern web site tasarımınızı Wix platformuna entegre etmeniz için temel adımları içerir. Son yapılan güncellemeler (birleştirilmiş CSS/JS dosyaları ve geliştirilmiş responsive tasarım) dikkate alınarak hazırlanmıştır. Daha detaylı bilgi veya yardım için lütfen iletişime geçin.
