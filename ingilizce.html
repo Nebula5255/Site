@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İngilizce - Üstün Başarı Akademisi</title>
+    <link rel="stylesheet" href="unified-styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Üstün Başarı Akademisi Logo">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link active">Programlarımız</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="yks-hazirlik.html" class="dropdown-link">YKS Hazırlık</a></li>
+                            <li><a href="lgs-hazirlik.html" class="dropdown-link">LGS Hazırlık</a></li>
+                            <li><a href="ingilizce.html" class="dropdown-link active">İngilizce</a></li>
+                            <li><a href="okul-takviye.html" class="dropdown-link">Okula Takviye</a></li>
+                            <li><a href="deneme-klubu.html" class="dropdown-link">Deneme Kulübü</a></li>
+                            <li><a href="yaz-kampi.html" class="dropdown-link">Yaz Kampı</a></li>
+                            <li><a href="after-school.html" class="dropdown-link">After School</a></li>
+                            <li><a href="ozel-ders.html" class="dropdown-link">Özel Ders</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="subelerimiz.html" class="nav-link">Şubelerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="basarilarimiz.html" class="nav-link">Başarılarımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="iletisim.html" class="nav-link">İletişim</a>
+                    </li>
+                </ul>
+                
+                <a href="kayit.html" class="register-button">Kayıt Ol</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobil Menü -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <ul class="mobile-nav-menu">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Ana Sayfa</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link active">Programlarımız</a>
+                <button class="mobile-dropdown-toggle" id="programsToggle">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <ul class="mobile-dropdown-menu" id="programsDropdown">
+                    <li class="mobile-dropdown-item">
+                        <a href="yks-hazirlik.html" class="mobile-dropdown-link">YKS Hazırlık</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="lgs-hazirlik.html" class="mobile-dropdown-link">LGS Hazırlık</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="okul-takviye.html" class="mobile-dropdown-link">Okula Takviye</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="ingilizce.html" class="mobile-dropdown-link active">İngilizce</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="deneme-klubu.html" class="mobile-dropdown-link">Deneme Kulübü</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="yaz-kampi.html" class="mobile-dropdown-link">Yaz Kampı</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="after-school.html" class="mobile-dropdown-link">After School</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="ozel-ders.html" class="mobile-dropdown-link">Özel Ders</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="subelerimiz.html" class="mobile-nav-link">Şubelerimiz</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="hakkimizda.html" class="mobile-nav-link">Hakkımızda</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="basarilarimiz.html" class="mobile-nav-link">Başarılarımız</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="iletisim.html" class="mobile-nav-link">İletişim</a>
+            </li>
+        </ul>
+        
+        <a href="kayit.html" class="mobile-register-button">Kayıt Ol</a>
+    </div>
+    
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="page-banner-content">
+            <h1 class="page-title animate-on-scroll" data-animation="animate-fade-in-up">THAMES ENGLISH ACADEMY</h1>
+            <div class="breadcrumbs animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                <a href="index.html">Ana Sayfa</a> / <a href="#">Programlarımız</a> / <span>İngilizce</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Program Content -->
+    <section class="program-content">
+        <div class="container">
+            <div class="program-overview">
+                <div class="program-image animate-on-scroll" data-animation="animate-fade-in-left">
+                    <img src="images/ingilizce.jpg" alt="İngilizce Programı">
+                    <div class="program-badge animate-pulse">Yeni Dönem Kayıtları Açıldı</div>
+                </div>
+                
+                <div class="program-details animate-on-scroll" data-animation="animate-fade-in-right">
+                    <h2 class="program-title">Thames English Academy</h2>
+                    <p class="program-description">Londra'nın kalbinden gelen İngilizce eğitimi ile dünya vatandaşı olma yolculuğunuz başlıyor. Thames English Academy, Üstün Başarı Akademisi bünyesinde, uluslararası standartlarda İngilizce eğitimi sunan bir programdır. Genel İngilizce kurslarından YDT sınav hazırlığına kadar geniş bir yelpazede eğitim seçenekleri sunuyoruz.</p>
+                    
+                    <div class="program-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Hedef Kitle</h3>
+                                <p>Her yaş ve seviyeden öğrenciler</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Program Süresi</h3>
+                                <p>Seviyeye göre 2-8 ay arası</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Ders Saatleri</h3>
+                                <p>Hafta içi ve hafta sonu seçenekleri</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Öğretmen Kadrosu</h3>
+                                <p>Anadili İngilizce olan ve sertifikalı eğitmenler</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-cta">
+                        <a href="kayit.html" class="cta-button">Hemen Kayıt Ol</a>
+                        <a href="#" class="cta-button secondary">Ücretsiz Seviye Tespit Sınavı</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Program Features -->
+            <div class="program-features">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Program Özellikleri</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="feature-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3 class="feature-title">Thames Kids</h3>
+                        <p class="feature-description">4-12 yaş arası çocuklar için özel olarak tasarlanmış, oyun temelli İngilizce eğitimi. Çocukların dil öğrenme sürecini eğlenceli ve interaktif hale getiren aktivitelerle İngilizceyi sevdiriyoruz.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="feature-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="feature-title">A1 & A2 Seviyesi</h3>
+                        <p class="feature-description">Temel İngilizce seviyesinden başlayarak, günlük konuşma ve temel iletişim becerilerini geliştiren programlar. Avrupa Dil Portfolyosu standartlarına uygun eğitim içeriği ile İngilizce öğrenmeye ilk adımı atın.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="feature-title">YDT Hazırlık</h3>
+                        <p class="feature-description">YKS'nin Yabancı Dil Testi (YDT) için özel hazırlık programı. Sınav stratejileri, kelime bilgisi, dilbilgisi ve soru çözüm teknikleri ile YDT'de başarıya ulaşmanızı sağlıyoruz.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                        <div class="feature-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3 class="feature-title">Campus</h3>
+                        <p class="feature-description">Üniversite öğrencileri ve yetişkinler için akademik İngilizce ve iş İngilizcesi programları. Kariyerinizde ilerlemenizi sağlayacak dil becerileri kazandırıyoruz.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                        <div class="feature-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="feature-title">Pro</h3>
+                        <p class="feature-description">Profesyoneller için özel tasarlanmış, iş dünyasında ihtiyaç duyulan İngilizce becerilerini geliştiren programlar. Sunum teknikleri, toplantı yönetimi ve iş yazışmaları gibi konularda uzmanlaşın.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.6">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="feature-title">Konuşma Kulübü</h3>
+                        <p class="feature-description">Öğrenilen dil becerilerini pratik yapma imkanı sunan, anadili İngilizce olan eğitmenler eşliğinde gerçekleşen konuşma kulübü etkinlikleri. Dil pratiğinizi artırın ve akıcı konuşmayı öğrenin.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- YDT Hazırlık Programı -->
+            <div class="ydt-program-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">YDT Hazırlık Programı</h2>
+                
+                <div class="ydt-content">
+                    <div class="ydt-image animate-on-scroll" data-animation="animate-fade-in-left">
+                        <img src="images/ydt-hazirlik.jpg" alt="YDT Hazırlık">
+                    </div>
+                    
+                    <div class="ydt-details animate-on-scroll" data-animation="animate-fade-in-right">
+                        <h3 class="ydt-title">YKS Yabancı Dil Testi (YDT) Hazırlık</h3>
+                        <p class="ydt-description">YDT Hazırlık programımız, YKS'nin Yabancı Dil Testi bölümünde başarılı olmak isteyen öğrenciler için özel olarak tasarlanmıştır. Programımız, sınav odaklı stratejiler, kapsamlı konu anlatımları ve düzenli deneme sınavları ile öğrencilerin YDT'de yüksek puan almalarını hedefler.</p>
+                        
+                        <div class="ydt-features">
+                            <div class="ydt-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Kelime bilgisi geliştirme ve hafıza teknikleri</span>
+                            </div>
+                            <div class="ydt-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Dilbilgisi konularının detaylı anlatımı ve uygulaması</span>
+                            </div>
+                            <div class="ydt-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Okuma ve anlama stratejileri</span>
+                            </div>
+                            <div class="ydt-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Cloze test ve boşluk doldurma teknikleri</span>
+                            </div>
+                            <div class="ydt-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Paragraf tamamlama ve diyalog soruları çözüm yöntemleri</span>
+                            </div>
+                            <div class="ydt-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Çeviri teknikleri ve uygulamaları</span>
+                            </div>
+                            <div class="ydt-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Düzenli YDT deneme sınavları ve analizleri</span>
+                            </div>
+                            <div class="ydt-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Bireysel eksik konuların tespiti ve tamamlanması</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ydt-cta">
+                            <a href="kayit.html" class="cta-button">YDT Hazırlık Programına Kayıt Ol</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Program Curriculum -->
+            <div class="program-curriculum">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Program İçeriği</h2>
+                
+                <div class="curriculum-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="module1">Thames Kids</button>
+                        <button class="tab-button" data-tab="module2">A1 & A2 Seviyesi</button>
+                        <button class="tab-button" data-tab="module3">YDT Hazırlık</button>
+                        <button class="tab-button" data-tab="module4">Campus & Pro</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="module1">
+                            <h3 class="module-title">Thames Kids Programı (4-12 Yaş)</h3>
+                            <p class="module-description">Thames Kids programımız, çocukların İngilizceyi doğal bir şekilde öğrenmelerini sağlayan, oyun temelli bir yaklaşım sunar. Yaş gruplarına göre özel olarak tasarlanmış içeriklerle, çocukların dil öğrenme sürecini eğlenceli ve verimli hale getiriyoruz.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Oyun temelli dil öğrenimi</li>
+                                <li><i class="fas fa-check-circle"></i> Şarkılar ve müzikle İngilizce</li>
+                                <li><i class="fas fa-check-circle"></i> Hikaye anlatımı ve drama aktiviteleri</li>
+                                <li><i class="fas fa-check-circle"></i> El becerileri ve sanat etkinlikleri</li>
+                                <li><i class="fas fa-check-circle"></i> Temel günlük konuşma becerileri</li>
+                                <li><i class="fas fa-check-circle"></i> Fonetik ve doğru telaffuz çalışmaları</li>
+                                <li><i class="fas fa-check-circle"></i> Dijital içeriklerle interaktif öğrenme</li>
+                                <li><i class="fas fa-check-circle"></i> Düzenli ilerleme raporları</li>
+                                <li><i class="fas fa-check-circle"></i> Aile katılımlı etkinlikler</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="module2">
+                            <h3 class="module-title">A1 & A2 Seviyesi Programı</h3>
+                            <p class="module-description">A1 ve A2 seviyesi programlarımız, İngilizce öğrenmeye yeni başlayanlar veya temel seviyede olan öğrenciler için tasarlanmıştır. Avrupa Dil Portfolyosu standartlarına uygun olarak hazırlanan içeriklerle, temel iletişim becerilerini kazandırıyoruz.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Temel günlük konuşma kalıpları</li>
+                                <li><i class="fas fa-check-circle"></i> Kendini tanıtma ve basit diyaloglar</li>
+                                <li><i class="fas fa-check-circle"></i> Temel dilbilgisi yapıları</li>
+                                <li><i class="fas fa-check-circle"></i> Günlük hayatta kullanılan kelimeler</li>
+                                <li><i class="fas fa-check-circle"></i> Basit okuma ve anlama becerileri</li>
+                                <li><i class="fas fa-check-circle"></i> Temel yazma becerileri</li>
+                                <li><i class="fas fa-check-circle"></i> Dinleme ve anlama alıştırmaları</li>
+                                <li><i class="fas fa-check-circle"></i> Konuşma pratiği ve telaffuz çalışmaları</li>
+                                <li><i class="fas fa-check-circle"></i> Kültürel öğeler ve günlük yaşam bilgisi</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="module3">
+                            <h3 class="module-title">YDT Hazırlık Programı</h3>
+                            <p class="module-description">YDT Hazırlık programımız, YKS'nin Yabancı Dil Testi bölümünde başarılı olmak isteyen öğrenciler için özel olarak tasarlanmıştır. Sınav odaklı stratejiler, kapsamlı konu anlatımları ve düzenli deneme sınavları ile öğrencilerin YDT'de yüksek puan almalarını hedefliyoruz.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> YDT sınav formatı ve soru tipleri tanıtımı</li>
+                                <li><i class="fas fa-check-circle"></i> Kelime bilgisi geliştirme ve hafıza teknikleri</li>
+                                <li><i class="fas fa-check-circle"></i> İleri düzey dilbilgisi konuları</li>
+                                <li><i class="fas fa-check-circle"></i> Okuma ve anlama stratejileri</li>
+                                <li><i class="fas fa-check-circle"></i> Cloze test ve boşluk doldurma teknikleri</li>
+                                <li><i class="fas fa-check-circle"></i> Paragraf tamamlama ve diyalog soruları</li>
+                                <li><i class="fas fa-check-circle"></i> Çeviri teknikleri ve uygulamaları</li>
+                                <li><i class="fas fa-check-circle"></i> Düzenli YDT deneme sınavları ve analizleri</li>
+                                <li><i class="fas fa-check-circle"></i> Sınav stratejileri ve zaman yönetimi</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="module4">
+                            <h3 class="module-title">Campus & Pro Programları</h3>
+                            <p class="module-description">Campus ve Pro programlarımız, üniversite öğrencileri ve profesyoneller için tasarlanmış, akademik ve iş İngilizcesi odaklı eğitim içerikleri sunar. Kariyerinizde ilerlemenizi sağlayacak dil becerileri kazandırıyoruz.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Akademik yazma becerileri</li>
+                                <li><i class="fas fa-check-circle"></i> Sunum teknikleri ve iş toplantıları</li>
+                                <li><i class="fas fa-check-circle"></i> İş yazışmaları ve e-posta yazımı</li>
+                                <li><i class="fas fa-check-circle"></i> CV hazırlama ve iş görüşmesi teknikleri</li>
+                                <li><i class="fas fa-check-circle"></i> Sektöre özel terminoloji</li>
+                                <li><i class="fas fa-check-circle"></i> Müzakere ve ikna teknikleri</li>
+                                <li><i class="fas fa-check-circle"></i> Uluslararası iş kültürü</li>
+                                <li><i class="fas fa-check-circle"></i> Telekonferans ve online toplantı becerileri</li>
+                                <li><i class="fas fa-check-circle"></i> Networking ve sosyal iletişim</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Success Stories -->
+            <div class="success-stories">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Başarı Hikayeleri</h2>
+                
+                <div class="stories-slider">
+                    <div class="story-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="story-image">
+                            <img src="images/student7.jpg" alt="Öğrenci 7">
+                        </div>
+                        <div class="story-content">
+                            <h3 class="student-name">Elif Yılmaz</h3>
+                            <p class="student-achievement">YDT: 90 Puan - Boğaziçi Üniversitesi İngilizce Öğretmenliği</p>
+                            <p class="student-testimonial">"Thames English Academy'nin YDT Hazırlık programı sayesinde, sınavda 90 puan alarak hayalim olan bölüme yerleştim. Özellikle kelime bilgisi çalışmaları ve soru çözüm teknikleri konusunda aldığım eğitim, sınavda büyük fark yarattı. Tüm eğitmenlerime teşekkür ederim."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="story-image">
+                            <img src="images/student8.jpg" alt="Öğrenci 8">
+                        </div>
+                        <div class="story-content">
+                            <h3 class="student-name">Can Demir</h3>
+                            <p class="student-achievement">TOEFL: 105 Puan - Yurtdışı Eğitim Bursu</p>
+                            <p class="student-testimonial">"Thames English Academy'de aldığım eğitim sayesinde TOEFL sınavından 105 puan alarak yurtdışı eğitim bursunu kazandım. Özellikle konuşma ve yazma becerilerimi geliştiren programları ve anadili İngilizce olan eğitmenlerle yaptığımız pratikler çok faydalı oldu."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="story-image">
+                            <img src="images/student9.jpg" alt="Öğrenci 9">
+                        </div>
+                        <div class="story-content">
+                            <h3 class="student-name">Zeynep Kaya</h3>
+                            <p class="student-achievement">Uluslararası Şirkette Kariyer</p>
+                            <p class="student-testimonial">"Thames English Academy'nin Pro programında aldığım iş İngilizcesi eğitimi sayesinde, uluslararası bir şirkette kariyer yapma fırsatı buldum. İş görüşmesi teknikleri, sunum becerileri ve iş yazışmaları konusundaki eğitimler, kariyerimde büyük fark yarattı."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Sıkça Sorulan Sorular</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="faq-question">
+                            <h3>Hangi yaş grupları için İngilizce eğitimi veriyorsunuz?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Thames English Academy olarak 4 yaşından itibaren her yaş grubuna İngilizce eğitimi sunuyoruz. Thames Kids (4-12 yaş), A1 & A2 (temel seviye), YDT Hazırlık (lise öğrencileri), Campus (üniversite öğrencileri) ve Pro (profesyoneller) programlarımız bulunmaktadır.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="faq-question">
+                            <h3>YDT Hazırlık programı ne kadar sürüyor?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>YDT Hazırlık programımız, öğrencinin mevcut İngilizce seviyesine göre 6-8 ay arasında sürmektedir. Program, haftada 8-12 saat ders içermektedir. Öğrencinin seviyesine ve hedeflerine göre özel programlar da oluşturulabilmektedir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="faq-question">
+                            <h3>Eğitmenleriniz kimlerdir?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Thames English Academy'de dersler, anadili İngilizce olan eğitmenler ve uluslararası sertifikalara sahip (CELTA, DELTA, TESOL) Türk eğitmenler tarafından verilmektedir. YDT Hazırlık programında ise, sınav formatına hakim, deneyimli Türk eğitmenlerimiz görev almaktadır.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                        <div class="faq-question">
+                            <h3>Seviye tespit sınavı nasıl yapılıyor?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Programlarımıza kayıt olmadan önce, ücretsiz seviye tespit sınavı uygulanmaktadır. Sınav, yazılı ve sözlü olmak üzere iki aşamadan oluşur. Yazılı sınavda dilbilgisi, kelime bilgisi ve okuma-anlama becerileri ölçülürken, sözlü sınavda konuşma ve dinleme becerileri değerlendirilir. Sınav sonucuna göre, öğrencinin seviyesine uygun program önerilir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                        <div class="faq-question">
+                            <h3>Sınıf mevcutları kaç kişidir?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Thames English Academy'de sınıf mevcutları, programlara göre değişmekle birlikte maksimum 8-12 kişi ile sınırlıdır. YDT Hazırlık programında ise sınıf mevcudu maksimum 15 kişidir. Bu sayede her öğrenciye yeterli ilgi gösterilir ve etkileşimli bir eğitim ortamı sağlanır.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="cta-section animate-on-scroll" data-animation="animate-fade-in-up">
+                <div class="cta-content">
+                    <h2 class="cta-title">İngilizce Öğrenmek İçin Doğru Adres</h2>
+                    <p class="cta-description">Thames English Academy ile İngilizce öğrenme yolculuğunuza başlayın. Ücretsiz seviye tespit sınavı ve deneme dersi için hemen kayıt olun.</p>
+                    <div class="cta-buttons">
+                        <a href="kayit.html" class="cta-button primary">Kayıt Ol</a>
+                        <a href="iletisim.html" class="cta-button secondary">Bize Ulaşın</a>
+                    </div>
+                </div>
+                <div class="cta-image">
+                    <img src="images/ingilizce-cta.jpg" alt="İngilizce Eğitimi">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Related Programs -->
+    <section class="related-programs">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">İlgili Programlar</h2>
+            
+            <div class="programs-grid">
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                    <div class="program-card-image">
+                        <img src="images/yks-hazirlik.jpg" alt="YKS Hazırlık">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">YKS Hazırlık</h3>
+                        <p class="program-card-description">YKS'ye hazırlık sürecinde 60 Türkiye geneli deneme sınavı ve uzman kadromuzla yanınızdayız.</p>
+                        <a href="yks-hazirlik.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                    <div class="program-card-image">
+                        <img src="images/after-school.jpg" alt="After School">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">After School</h3>
+                        <p class="program-card-description">Okul sonrası eğitim programı ile öğrencilerin akademik başarısını destekleyin.</p>
+                        <a href="after-school.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                    <div class="program-card-image">
+                        <img src="images/ozel-ders.jpg" alt="Özel Ders">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Özel Ders</h3>
+                        <p class="program-card-description">Birebir özel dersler ile eksik konularınızı tamamlayın ve kişiselleştirilmiş eğitim alın.</p>
+                        <a href="ozel-ders.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-white.png" alt="Üstün Başarı Akademisi Logo">
+                    <p>Geleceğinizi Şekillendirin</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>Programlarımız</h3>
+                        <ul>
+                            <li><a href="yks-hazirlik.html">YKS Hazırlık</a></li>
+                            <li><a href="lgs-hazirlik.html">LGS Hazırlık</a></li>
+                            <li><a href="ingilizce.html">İngilizce</a></li>
+                            <li><a href="okul-takviye.html">Okula Takviye</a></li>
+                            <li><a href="deneme-klubu.html">Deneme Kulübü</a></li>
+                            <li><a href="yaz-kampi.html">Yaz Kampı</a></li>
+                            <li><a href="after-school.html">After School</a></li>
+                            <li><a href="ozel-ders.html">Özel Ders</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h3>Kurumsal</h3>
+                        <ul>
+                            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                            <li><a href="subelerimiz.html">Şubelerimiz</a></li>
+                            <li><a href="basarilarimiz.html">Başarılarımız</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="kariyer.html">Kariyer</a></li>
+                            <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h3>İletişim</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Esenyalı, Uygar Sk. No:29, 34890 Pendik/İstanbul</li>
+                            <li><i class="fas fa-phone"></i> <a href="tel:+902165000000">0216 500 00 00</a></li>
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:info@ustunbasariakademisi.com">info@ustunbasariakademisi.com</a></li>
+                        </ul>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Üstün Başarı Akademisi. Tüm Hakları Saklıdır.</p>
+                <div class="footer-bottom-links">
+                    <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+                    <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+                    <a href="kvkk.html">KVKK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="mobile-nav.js"></script>
+    <script src="animation-effects.js"></script>
+    <script>
+        // Tab Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and panes
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Show corresponding tab pane
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // FAQ Functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const toggle = item.querySelector('.faq-toggle');
+                
+                question.addEventListener('click', () => {
+                    // Toggle active class
+                    item.classList.toggle('active');
+                    
+                    // Change icon
+                    if (item.classList.contains('active')) {
+                        toggle.innerHTML = '<i class="fas fa-minus"></i>';
+                    } else {
+                        toggle.innerHTML = '<i class="fas fa-plus"></i>';
+                    }
+                });
+            });
+            
+            // Slider Functionality
+            const sliderCards = document.querySelectorAll('.story-card');
+            const sliderDots = document.querySelectorAll('.dot');
+            const prevButton = document.querySelector('.slider-prev');
+            const nextButton = document.querySelector('.slider-next');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                // Hide all slides
+                sliderCards.forEach(card => card.style.display = 'none');
+                sliderDots.forEach(dot => dot.classList.remove('active'));
+                
+                // Show current slide
+                sliderCards[index].style.display = 'flex';
+                sliderDots[index].classList.add('active');
+                currentSlide = index;
+            }
+            
+            // Initialize slider
+            showSlide(0);
+            
+            // Next slide
+            nextButton.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % sliderCards.length;
+                showSlide(currentSlide);
+            });
+            
+            // Previous slide
+            prevButton.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + sliderCards.length) % sliderCards.length;
+                showSlide(currentSlide);
+            });
+            
+            // Dot navigation
+            sliderDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+            
+            // Back to Top Button
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

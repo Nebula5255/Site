@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özel Ders - Üstün Başarı Akademisi</title>
+    <link rel="stylesheet" href="unified-styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Üstün Başarı Akademisi Logo">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link active">Programlarımız</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="yks-hazirlik.html" class="dropdown-link">YKS Hazırlık</a></li>
+                            <li><a href="lgs-hazirlik.html" class="dropdown-link">LGS Hazırlık</a></li>
+                            <li><a href="ingilizce.html" class="dropdown-link">İngilizce</a></li>
+                            <li><a href="okul-takviye.html" class="dropdown-link">Okula Takviye</a></li>
+                            <li><a href="deneme-klubu.html" class="dropdown-link">Deneme Kulübü</a></li>
+                            <li><a href="yaz-kampi.html" class="dropdown-link">Yaz Kampı</a></li>
+                            <li><a href="after-school.html" class="dropdown-link">After School</a></li>
+                            <li><a href="ozel-ders.html" class="dropdown-link active">Özel Ders</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="subelerimiz.html" class="nav-link">Şubelerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="basarilarimiz.html" class="nav-link">Başarılarımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="iletisim.html" class="nav-link">İletişim</a>
+                    </li>
+                </ul>
+                
+                <a href="kayit.html" class="register-button">Kayıt Ol</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobil Menü -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <ul class="mobile-nav-menu">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Ana Sayfa</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link active">Programlarımız</a>
+                <button class="mobile-dropdown-toggle" id="programsToggle">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <ul class="mobile-dropdown-menu" id="programsDropdown">
+                    <li class="mobile-dropdown-item">
+                        <a href="yks-hazirlik.html" class="mobile-dropdown-link">YKS Hazırlık</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="lgs-hazirlik.html" class="mobile-dropdown-link">LGS Hazırlık</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="okul-takviye.html" class="mobile-dropdown-link">Okula Takviye</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="ingilizce.html" class="mobile-dropdown-link">İngilizce</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="deneme-klubu.html" class="mobile-dropdown-link">Deneme Kulübü</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="yaz-kampi.html" class="mobile-dropdown-link">Yaz Kampı</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="after-school.html" class="mobile-dropdown-link">After School</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="ozel-ders.html" class="mobile-dropdown-link active">Özel Ders</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="subelerimiz.html" class="mobile-nav-link">Şubelerimiz</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="hakkimizda.html" class="mobile-nav-link">Hakkımızda</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="basarilarimiz.html" class="mobile-nav-link">Başarılarımız</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="iletisim.html" class="mobile-nav-link">İletişim</a>
+            </li>
+        </ul>
+        
+        <a href="kayit.html" class="mobile-register-button">Kayıt Ol</a>
+    </div>
+    
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="page-banner-content">
+            <h1 class="page-title animate-on-scroll" data-animation="animate-fade-in-up">ÖZEL DERS</h1>
+            <div class="breadcrumbs animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                <a href="index.html">Ana Sayfa</a> / <a href="#">Programlarımız</a> / <span>Özel Ders</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Program Content -->
+    <section class="program-content">
+        <div class="container">
+            <div class="program-overview">
+                <div class="program-image animate-on-scroll" data-animation="animate-fade-in-left">
+                    <img src="images/ozel-ders.jpg" alt="Özel Ders">
+                    <div class="program-badge animate-pulse">Birebir Eğitim</div>
+                </div>
+                
+                <div class="program-details animate-on-scroll" data-animation="animate-fade-in-right">
+                    <h2 class="program-title">Özel Ders Programı</h2>
+                    <p class="program-description">Öğrencilerin bireysel ihtiyaçlarına göre tasarlanmış birebir eğitim programı ile akademik başarıyı en üst seviyeye çıkarın. Alanında uzman öğretmenlerimiz ile öğrencinin eksik olduğu konuları tamamlayın, güçlü olduğu alanları daha da geliştirin.</p>
+                    
+                    <div class="program-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Hedef Kitle</h3>
+                                <p>İlkokul, ortaokul ve lise öğrencileri</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Program Süresi</h3>
+                                <p>Öğrencinin ihtiyacına göre esnek</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Ders Saatleri</h3>
+                                <p>Öğrenciye özel planlama</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Öğretmen Kadrosu</h3>
+                                <p>Branşında uzman, deneyimli eğitmenler</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-cta">
+                        <a href="kayit.html" class="cta-button">Hemen Kayıt Ol</a>
+                        <a href="#" class="cta-button secondary">Ücretsiz Deneme Dersi</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Program Features -->
+            <div class="program-features">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Özel Ders Programımızın Avantajları</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="feature-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="feature-title">Birebir Eğitim</h3>
+                        <p class="feature-description">Öğrencinin öğrenme hızına ve stiline göre uyarlanmış birebir eğitim ile maksimum verim sağlanır. Öğrenci, anlamadığı konuları çekinmeden sorabilir ve tam olarak kavrayana kadar çalışabilir.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="feature-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3 class="feature-title">Kişiye Özel Program</h3>
+                        <p class="feature-description">Her öğrencinin güçlü ve zayıf yönleri farklıdır. Özel ders programımızda, öğrencinin ihtiyaçlarına göre özel olarak hazırlanmış bir çalışma planı uygulanır ve düzenli olarak güncellenir.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="feature-title">Hızlı İlerleme</h3>
+                        <p class="feature-description">Birebir eğitim sayesinde, öğrenci grup derslerine göre çok daha hızlı ilerler. Zaman kaybı olmadan, doğrudan ihtiyaç duyulan konulara odaklanılır ve kısa sürede büyük gelişme sağlanır.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Esnek Zamanlama</h3>
+                        <p class="feature-description">Öğrencinin okul programına ve diğer aktivitelerine göre ders saatleri esnek bir şekilde planlanır. Böylece, öğrenci stres yaşamadan, kendisi için en uygun zamanda ders alabilir.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="feature-title">Sürekli İletişim</h3>
+                        <p class="feature-description">Öğretmen, öğrenci ve veli arasında sürekli iletişim sağlanır. Düzenli geri bildirimler ile öğrencinin gelişimi yakından takip edilir ve gerekli durumlarda program revize edilir.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.6">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="feature-title">Öğrenme Tekniklerinin Geliştirilmesi</h3>
+                        <p class="feature-description">Sadece konu anlatımı değil, aynı zamanda etkili öğrenme teknikleri, zaman yönetimi ve sınav stratejileri de öğretilir. Böylece öğrenci, hayat boyu kullanabileceği öğrenme becerilerini kazanır.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Available Subjects -->
+            <div class="subjects-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Özel Ders Verilen Dersler</h2>
+                
+                <div class="subjects-grid">
+                    <div class="subject-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="subject-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3 class="subject-title">Matematik</h3>
+                        <ul class="subject-topics">
+                            <li>Temel Matematik</li>
+                            <li>Cebir</li>
+                            <li>Geometri</li>
+                            <li>Trigonometri</li>
+                            <li>Analitik Geometri</li>
+                            <li>Olasılık ve İstatistik</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="subject-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="subject-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h3 class="subject-title">Fen Bilimleri</h3>
+                        <ul class="subject-topics">
+                            <li>Fizik</li>
+                            <li>Kimya</li>
+                            <li>Biyoloji</li>
+                            <li>Fen Bilgisi</li>
+                            <li>Laboratuvar Çalışmaları</li>
+                            <li>Deney ve Gözlemler</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="subject-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="subject-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3 class="subject-title">Türkçe ve Edebiyat</h3>
+                        <ul class="subject-topics">
+                            <li>Dil Bilgisi</li>
+                            <li>Okuma Anlama</li>
+                            <li>Yazılı Anlatım</li>
+                            <li>Türk Edebiyatı</li>
+                            <li>Divan Edebiyatı</li>
+                            <li>Cumhuriyet Dönemi Edebiyatı</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="subject-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                        <div class="subject-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="subject-title">Sosyal Bilimler</h3>
+                        <ul class="subject-topics">
+                            <li>Tarih</li>
+                            <li>Coğrafya</li>
+                            <li>Vatandaşlık</li>
+                            <li>Felsefe</li>
+                            <li>Din Kültürü</li>
+                            <li>Sosyoloji</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="subject-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                        <div class="subject-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="subject-title">Yabancı Diller</h3>
+                        <ul class="subject-topics">
+                            <li>İngilizce</li>
+                            <li>Almanca</li>
+                            <li>Fransızca</li>
+                            <li>İspanyolca</li>
+                            <li>YDT Hazırlık</li>
+                            <li>Konuşma Pratiği</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="subject-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.6">
+                        <div class="subject-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <h3 class="subject-title">Sınav Hazırlık</h3>
+                        <ul class="subject-topics">
+                            <li>YKS (TYT ve AYT)</li>
+                            <li>LGS</li>
+                            <li>KPSS</li>
+                            <li>DGS</li>
+                            <li>ALES</li>
+                            <li>Yabancı Dil Sınavları</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- How It Works -->
+            <div class="how-it-works-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Özel Ders Programı Nasıl İşliyor?</h2>
+                
+                <div class="steps-container">
+                    <div class="step-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">İlk Görüşme ve İhtiyaç Analizi</h3>
+                            <p class="step-description">Öğrenci ve velisi ile yapılan ilk görüşmede, öğrencinin akademik durumu, güçlü ve zayıf yönleri, hedefleri ve beklentileri detaylı olarak analiz edilir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Seviye Tespit Sınavı</h3>
+                            <p class="step-description">Öğrencinin mevcut bilgi düzeyini belirlemek için kapsamlı bir seviye tespit sınavı uygulanır. Bu sınav sonucunda, hangi konularda eksiklik olduğu ve hangi alanlarda güçlü olduğu tespit edilir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Kişiye Özel Eğitim Planı</h3>
+                            <p class="step-description">Seviye tespit sınavı sonuçlarına göre, öğrencinin ihtiyaçlarına ve hedeflerine uygun bir eğitim planı hazırlanır. Bu planda, çalışılacak konular, kullanılacak kaynaklar ve ders programı detaylı olarak belirlenir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Öğretmen Seçimi</h3>
+                            <p class="step-description">Öğrencinin ihtiyaçlarına ve öğrenme stiline en uygun öğretmen belirlenir. Öğretmenlerimiz, alanında uzman, deneyimli ve öğrenci psikolojisini iyi bilen eğitimcilerdir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Düzenli Dersler ve Takip</h3>
+                            <p class="step-description">Belirlenen program doğrultusunda düzenli dersler yapılır. Her derste, öğrencinin gelişimi takip edilir ve not alınır. Öğrencinin anlamadığı konular tekrar edilir ve pekiştirme çalışmaları yapılır.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.6">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Düzenli Değerlendirme ve Geri Bildirim</h3>
+                            <p class="step-description">Belirli aralıklarla yapılan değerlendirme sınavları ile öğrencinin gelişimi ölçülür. Velilere düzenli olarak geri bildirim verilir ve gerekli durumlarda eğitim planı revize edilir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Special Programs -->
+            <div class="special-programs-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Özel Programlar</h2>
+                
+                <div class="special-programs-grid">
+                    <div class="special-program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="special-program-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="special-program-title">YKS Özel Hazırlık</h3>
+                        <p class="special-program-description">Üniversite sınavına hazırlanan öğrenciler için özel olarak tasarlanmış program. TYT ve AYT'de çıkan tüm konular, soru çözüm teknikleri ve sınav stratejileri birebir çalışılır.</p>
+                        <a href="yks-hazirlik.html" class="special-program-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="special-program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="special-program-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h3 class="special-program-title">LGS Özel Hazırlık</h3>
+                        <p class="special-program-description">Liselere Geçiş Sınavına hazırlanan öğrenciler için özel olarak tasarlanmış program. Tüm dersler, soru tipleri ve sınav teknikleri birebir çalışılır.</p>
+                        <a href="lgs-hazirlik.html" class="special-program-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="special-program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="special-program-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3 class="special-program-title">YDT Özel Hazırlık</h3>
+                        <p class="special-program-description">Yabancı Dil Testine hazırlanan öğrenciler için özel olarak tasarlanmış program. Dil bilgisi, kelime bilgisi, okuma anlama ve çeviri teknikleri birebir çalışılır.</p>
+                        <a href="ingilizce.html" class="special-program-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="special-program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                        <div class="special-program-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="special-program-title">Okul Derslerine Takviye</h3>
+                        <p class="special-program-description">Okul derslerinde zorlanan öğrenciler için özel olarak tasarlanmış program. Anlaşılmayan konular, ödevler ve sınavlara hazırlık birebir çalışılır.</p>
+                        <a href="okul-takviye.html" class="special-program-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pricing -->
+            <div class="pricing-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Özel Ders Ücretlendirme</h2>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Tekli Ders Paketi</h3>
+                            <div class="pricing-price">
+                                <span class="price-amount">Özel Fiyat</span>
+                                <span class="price-period">ders başına</span>
+                            </div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Tek seferlik veya düzensiz dersler</li>
+                                <li><i class="fas fa-check"></i> Alanında uzman öğretmen</li>
+                                <li><i class="fas fa-check"></i> Kişiye özel ders içeriği</li>
+                                <li><i class="fas fa-check"></i> Ders sonrası özet ve ödevler</li>
+                                <li><i class="fas fa-check"></i> Esnek zamanlama</li>
+                                <li><i class="fas fa-times"></i> İndirimli fiyat avantajı</li>
+                                <li><i class="fas fa-times"></i> Ücretsiz deneme sınavları</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="kayit.html" class="pricing-button">Hemen Başvur</a>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card featured animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="pricing-badge">En Popüler</div>
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">8 Ders Paketi</h3>
+                            <div class="pricing-price">
+                                <span class="price-amount">%10 İndirimli</span>
+                                <span class="price-period">aylık</span>
+                            </div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Ayda 8 ders (haftada 2 ders)</li>
+                                <li><i class="fas fa-check"></i> Alanında uzman öğretmen</li>
+                                <li><i class="fas fa-check"></i> Kişiye özel ders içeriği</li>
+                                <li><i class="fas fa-check"></i> Ders sonrası özet ve ödevler</li>
+                                <li><i class="fas fa-check"></i> Esnek zamanlama</li>
+                                <li><i class="fas fa-check"></i> %10 indirim avantajı</li>
+                                <li><i class="fas fa-check"></i> Ayda 1 ücretsiz deneme sınavı</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="kayit.html" class="pricing-button">Hemen Başvur</a>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">16 Ders Paketi</h3>
+                            <div class="pricing-price">
+                                <span class="price-amount">%15 İndirimli</span>
+                                <span class="price-period">aylık</span>
+                            </div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Ayda 16 ders (haftada 4 ders)</li>
+                                <li><i class="fas fa-check"></i> Alanında uzman öğretmen</li>
+                                <li><i class="fas fa-check"></i> Kişiye özel ders içeriği</li>
+                                <li><i class="fas fa-check"></i> Ders sonrası özet ve ödevler</li>
+                                <li><i class="fas fa-check"></i> Esnek zamanlama</li>
+                                <li><i class="fas fa-check"></i> %15 indirim avantajı</li>
+                                <li><i class="fas fa-check"></i> Ayda 2 ücretsiz deneme sınavı</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="kayit.html" class="pricing-button">Hemen Başvur</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pricing-note animate-on-scroll" data-animation="animate-fade-in-up">
+                    <p>* Fiyatlar, ders saati ve içeriğine göre değişiklik gösterebilir. Detaylı bilgi için lütfen bizimle iletişime geçin.</p>
+                    <p>* Grup özel dersleri için (2-3 kişilik) özel fiyatlandırma mevcuttur.</p>
+                    <p>* Uzun dönem paketlerde ek indirimler uygulanmaktadır.</p>
+                </div>
+            </div>
+            
+            <!-- Testimonials -->
+            <div class="testimonials-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Öğrenci ve Velilerimizden Yorumlar</h2>
+                
+                <div class="testimonials-slider">
+                    <div class="testimonial-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="testimonial-content">
+                            <p>"Matematik dersinde çok zorlanıyordum ve sınavlardan düşük notlar alıyordum. Üstün Başarı Akademisi'nde aldığım özel dersler sayesinde, matematiği sevmeye başladım ve notlarım yükseldi. Öğretmenim çok sabırlı ve konuları anlaşılır bir şekilde anlatıyor. Artık matematik dersinden korkmuyorum."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="images/student1.jpg" alt="Öğrenci 1">
+                            </div>
+                            <div class="author-info">
+                                <h4>Ahmet Yılmaz</h4>
+                                <p>10. Sınıf Öğrencisi</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="testimonial-content">
+                            <p>"Kızım YKS'ye hazırlanıyordu ve özellikle fizik ve kimya derslerinde zorlanıyordu. Üstün Başarı Akademisi'nde aldığı özel dersler sayesinde, bu derslerdeki eksikliklerini tamamladı ve netlerini artırdı. Öğretmenlerin ilgisi ve profesyonel yaklaşımı sayesinde, kızım özgüvenini kazandı ve hedeflediği üniversiteyi kazandı."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="images/parent1.jpg" alt="Veli 1">
+                            </div>
+                            <div class="author-info">
+                                <h4>Ayşe Kaya</h4>
+                                <p>Zeynep'in Annesi</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="testimonial-content">
+                            <p>"LGS'ye hazırlanırken, özellikle Türkçe ve matematik derslerinde desteğe ihtiyacım vardı. Üstün Başarı Akademisi'nde aldığım özel dersler sayesinde, bu derslerdeki eksikliklerimi tamamladım ve sınavda yüksek puan aldım. Öğretmenlerim sadece ders anlatmakla kalmadı, aynı zamanda sınav stratejileri ve zaman yönetimi konusunda da bana çok yardımcı oldular."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="images/student2.jpg" alt="Öğrenci 2">
+                            </div>
+                            <div class="author-info">
+                                <h4>Mehmet Demir</h4>
+                                <p>8. Sınıf Öğrencisi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Sıkça Sorulan Sorular</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="faq-question">
+                            <h3>Özel ders programı hangi yaş grubuna yöneliktir?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Özel ders programımız, ilkokul, ortaokul ve lise öğrencilerine yöneliktir. Her yaş grubuna ve sınıf seviyesine uygun, özel olarak hazırlanmış programlar sunuyoruz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="faq-question">
+                            <h3>Özel dersler nerede yapılır?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Özel dersler, kurumumuzun modern ve teknolojik donanımlı sınıflarında yapılır. Öğrencinin ihtiyaçlarına göre, online özel ders seçeneği de mevcuttur.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="faq-question">
+                            <h3>Özel ders saatleri nasıl belirlenir?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Özel ders saatleri, öğrencinin okul programı ve diğer aktiviteleri göz önünde bulundurularak, öğrenci ve veli ile birlikte belirlenir. Hafta içi ve hafta sonu, sabah ve akşam saatlerinde ders seçeneği mevcuttur.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                        <div class="faq-question">
+                            <h3>Özel ders öğretmenleri nasıl seçilir?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Özel ders öğretmenlerimiz, alanında uzman, deneyimli ve öğrenci psikolojisini iyi bilen eğitimcilerdir. Öğretmen seçiminde, öğrencinin ihtiyaçları, öğrenme stili ve kişilik özellikleri göz önünde bulundurulur.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                        <div class="faq-question">
+                            <h3>Özel ders programının süresi ne kadardır?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Özel ders programının süresi, öğrencinin ihtiyaçlarına ve hedeflerine göre değişiklik gösterir. Kısa süreli (1-2 ay) veya uzun süreli (bir eğitim-öğretim yılı) programlar mevcuttur. Program süresi, öğrencinin gelişimine göre uzatılabilir veya kısaltılabilir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="cta-section animate-on-scroll" data-animation="animate-fade-in-up">
+                <div class="cta-content">
+                    <h2 class="cta-title">Akademik Başarıyı Yakalamak İçin İlk Adımı Atın</h2>
+                    <p class="cta-description">Üstün Başarı Akademisi'nin özel ders programı ile öğrencinin potansiyelini en üst seviyeye çıkarın. Ücretsiz deneme dersi için hemen başvurun!</p>
+                    <div class="cta-buttons">
+                        <a href="kayit.html" class="cta-button primary">Kayıt Ol</a>
+                        <a href="iletisim.html" class="cta-button secondary">Bize Ulaşın</a>
+                    </div>
+                </div>
+                <div class="cta-image">
+                    <img src="images/ozel-ders-cta.jpg" alt="Özel Ders">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Related Programs -->
+    <section class="related-programs">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">İlgili Programlar</h2>
+            
+            <div class="programs-grid">
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                    <div class="program-card-image">
+                        <img src="images/yks-hazirlik.jpg" alt="YKS Hazırlık">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">YKS Hazırlık</h3>
+                        <p class="program-card-description">Üniversite sınavına hazırlık programı ile hedef üniversitenizi kazanın.</p>
+                        <a href="yks-hazirlik.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                    <div class="program-card-image">
+                        <img src="images/lgs-hazirlik.jpg" alt="LGS Hazırlık">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">LGS Hazırlık</h3>
+                        <p class="program-card-description">Liselere Geçiş Sınavına hazırlık programı ile hedef lisenizi kazanın.</p>
+                        <a href="lgs-hazirlik.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                    <div class="program-card-image">
+                        <img src="images/okul-takviye.jpg" alt="Okul Takviye">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Okul Takviye</h3>
+                        <p class="program-card-description">Okul derslerine takviye ve yazılı sınavlara hazırlık programı ile akademik başarınızı artırın.</p>
+                        <a href="okul-takviye.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-white.png" alt="Üstün Başarı Akademisi Logo">
+                    <p>Geleceğinizi Şekillendirin</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>Programlarımız</h3>
+                        <ul>
+                            <li><a href="yks-hazirlik.html">YKS Hazırlık</a></li>
+                            <li><a href="lgs-hazirlik.html">LGS Hazırlık</a></li>
+                            <li><a href="ingilizce.html">İngilizce</a></li>
+                            <li><a href="okul-takviye.html">Okula Takviye</a></li>
+                            <li><a href="deneme-klubu.html">Deneme Kulübü</a></li>
+                            <li><a href="yaz-kampi.html">Yaz Kampı</a></li>
+                            <li><a href="after-school.html">After School</a></li>
+                            <li><a href="ozel-ders.html">Özel Ders</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h3>Kurumsal</h3>
+                        <ul>
+                            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                            <li><a href="subelerimiz.html">Şubelerimiz</a></li>
+                            <li><a href="basarilarimiz.html">Başarılarımız</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="kariyer.html">Kariyer</a></li>
+                            <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h3>İletişim</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Esenyalı, Uygar Sk. No:29, 34890 Pendik/İstanbul</li>
+                            <li><i class="fas fa-phone"></i> <a href="tel:+902165000000">0216 500 00 00</a></li>
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:info@ustunbasariakademisi.com">info@ustunbasariakademisi.com</a></li>
+                        </ul>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Üstün Başarı Akademisi. Tüm Hakları Saklıdır.</p>
+                <div class="footer-bottom-links">
+                    <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+                    <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+                    <a href="kvkk.html">KVKK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="mobile-nav.js"></script>
+    <script src="animation-effects.js"></script>
+    <script>
+        // FAQ Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const toggle = item.querySelector('.faq-toggle');
+                
+                question.addEventListener('click', () => {
+                    // Toggle active class
+                    item.classList.toggle('active');
+                    
+                    // Change icon
+                    if (item.classList.contains('active')) {
+                        toggle.innerHTML = '<i class="fas fa-minus"></i>';
+                    } else {
+                        toggle.innerHTML = '<i class="fas fa-plus"></i>';
+                    }
+                });
+            });
+            
+            // Slider Functionality
+            const sliderCards = document.querySelectorAll('.testimonial-card');
+            const sliderDots = document.querySelectorAll('.dot');
+            const prevButton = document.querySelector('.slider-prev');
+            const nextButton = document.querySelector('.slider-next');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                // Hide all slides
+                sliderCards.forEach(card => card.style.display = 'none');
+                sliderDots.forEach(dot => dot.classList.remove('active'));
+                
+                // Show current slide
+                sliderCards[index].style.display = 'block';
+                sliderDots[index].classList.add('active');
+                currentSlide = index;
+            }
+            
+            // Initialize slider
+            showSlide(0);
+            
+            // Next slide
+            nextButton.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % sliderCards.length;
+                showSlide(currentSlide);
+            });
+            
+            // Previous slide
+            prevButton.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + sliderCards.length) % sliderCards.length;
+                showSlide(currentSlide);
+            });
+            
+            // Dot navigation
+            sliderDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+            
+            // Back to Top Button
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

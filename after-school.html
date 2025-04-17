@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After School - Üstün Başarı Akademisi</title>
+    <link rel="stylesheet" href="unified-styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Üstün Başarı Akademisi Logo">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link active">Programlarımız</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="yks-hazirlik.html" class="dropdown-link">YKS Hazırlık</a></li>
+                            <li><a href="lgs-hazirlik.html" class="dropdown-link">LGS Hazırlık</a></li>
+                            <li><a href="ingilizce.html" class="dropdown-link">İngilizce</a></li>
+                            <li><a href="okul-takviye.html" class="dropdown-link">Okula Takviye</a></li>
+                            <li><a href="deneme-klubu.html" class="dropdown-link">Deneme Kulübü</a></li>
+                            <li><a href="yaz-kampi.html" class="dropdown-link">Yaz Kampı</a></li>
+                            <li><a href="after-school.html" class="dropdown-link active">After School</a></li>
+                            <li><a href="ozel-ders.html" class="dropdown-link">Özel Ders</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="subelerimiz.html" class="nav-link">Şubelerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="basarilarimiz.html" class="nav-link">Başarılarımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="iletisim.html" class="nav-link">İletişim</a>
+                    </li>
+                </ul>
+                
+                <a href="kayit.html" class="register-button">Kayıt Ol</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobil Menü -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <ul class="mobile-nav-menu">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Ana Sayfa</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link active">Programlarımız</a>
+                <button class="mobile-dropdown-toggle" id="programsToggle">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <ul class="mobile-dropdown-menu" id="programsDropdown">
+                    <li class="mobile-dropdown-item">
+                        <a href="yks-hazirlik.html" class="mobile-dropdown-link">YKS Hazırlık</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="lgs-hazirlik.html" class="mobile-dropdown-link">LGS Hazırlık</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="okul-takviye.html" class="mobile-dropdown-link">Okula Takviye</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="ingilizce.html" class="mobile-dropdown-link">İngilizce</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="deneme-klubu.html" class="mobile-dropdown-link">Deneme Kulübü</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="yaz-kampi.html" class="mobile-dropdown-link">Yaz Kampı</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="after-school.html" class="mobile-dropdown-link active">After School</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="ozel-ders.html" class="mobile-dropdown-link">Özel Ders</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="subelerimiz.html" class="mobile-nav-link">Şubelerimiz</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="hakkimizda.html" class="mobile-nav-link">Hakkımızda</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="basarilarimiz.html" class="mobile-nav-link">Başarılarımız</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="iletisim.html" class="mobile-nav-link">İletişim</a>
+            </li>
+        </ul>
+        
+        <a href="kayit.html" class="mobile-register-button">Kayıt Ol</a>
+    </div>
+    
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="page-banner-content">
+            <h1 class="page-title animate-on-scroll" data-animation="animate-fade-in-up">AFTER SCHOOL</h1>
+            <div class="breadcrumbs animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                <a href="index.html">Ana Sayfa</a> / <a href="#">Programlarımız</a> / <span>After School</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Program Content -->
+    <section class="program-content">
+        <div class="container">
+            <div class="program-overview">
+                <div class="program-image animate-on-scroll" data-animation="animate-fade-in-left">
+                    <img src="images/after-school.jpg" alt="After School">
+                    <div class="program-badge animate-pulse">Okul Sonrası Destek</div>
+                </div>
+                
+                <div class="program-details animate-on-scroll" data-animation="animate-fade-in-right">
+                    <h2 class="program-title">Afterschool Programı</h2>
+                    <p class="program-description">Çocuğunuz okuldan sonra güvenli, akademik ve keyifli bir ortamda olsun ister misiniz? Üstün Başarı Akademisi'nin okul sonrası destek programı ile hem ödevler tamamlanıyor, hem dersler pekişiyor hem de çocuklar eğlenerek öğreniyor!</p>
+                    
+                    <div class="program-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Hedef Kitle</h3>
+                                <p>İlkokul ve ortaokul öğrencileri</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Program Süresi</h3>
+                                <p>Eğitim-öğretim yılı boyunca</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Ders Saatleri</h3>
+                                <p>Okul çıkışı - 18:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Öğretmen Kadrosu</h3>
+                                <p>Branşında uzman, deneyimli eğitmenler</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-cta">
+                        <a href="kayit.html" class="cta-button">Hemen Kayıt Ol</a>
+                        <a href="#" class="cta-button secondary">Ücretsiz Tanıtım Günü</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Daily Schedule -->
+            <div class="daily-schedule-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Günlük Program Akışı</h2>
+                
+                <div class="schedule-grid">
+                    <div class="schedule-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="schedule-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="schedule-title">1 Saat Ödev Takibi</h3>
+                        <p class="schedule-description">Birebir öğretmen desteğiyle öğrencilerin günlük ödevlerini tamamlamaları sağlanır.</p>
+                    </div>
+                    
+                    <div class="schedule-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="schedule-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3 class="schedule-title">Türkçe Dersi</h3>
+                        <p class="schedule-description">Okuma, yazma, anlama çalışmaları ile öğrencilerin dil becerilerini geliştirmeleri sağlanır.</p>
+                    </div>
+                    
+                    <div class="schedule-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="schedule-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3 class="schedule-title">Matematik Dersi</h3>
+                        <p class="schedule-description">İşlem pratiği ve problem çözme teknikleri ile matematiksel düşünme becerileri geliştirilir.</p>
+                    </div>
+                    
+                    <div class="schedule-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                        <div class="schedule-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3 class="schedule-title">Fen Bilimleri</h3>
+                        <p class="schedule-description">Deney ve gözleme dayalı öğrenme ile bilimsel düşünme ve merak duygusu geliştirilir.</p>
+                    </div>
+                    
+                    <div class="schedule-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                        <div class="schedule-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="schedule-title">Sosyal Bilgiler</h3>
+                        <p class="schedule-description">Kültür, tarih ve çevre farkındalığı ile sosyal bilgiler alanında gelişim sağlanır.</p>
+                    </div>
+                    
+                    <div class="schedule-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.6">
+                        <div class="schedule-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="schedule-title">Zeka Oyunları</h3>
+                        <p class="schedule-description">Analitik düşünme, dikkat gelişimi ve problem çözme becerilerini artıran oyunlar oynanır.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Program Features -->
+            <div class="program-features">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Öğrenciler Bu Programla Ne Kazanır?</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="feature-title">Akademik Başarı</h3>
+                        <p class="feature-description">Düzenli ödev takibi ve ders tekrarları ile okul derslerinde başarı sağlanır. Öğrenciler, konuları daha iyi anlar ve sınavlarda daha yüksek notlar alır.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="feature-title">Bilimsel Merak</h3>
+                        <p class="feature-description">Fen bilimleri derslerinde yapılan deneyler ve gözlemler ile öğrencilerin bilime olan merakı artar, sorgulama ve araştırma becerileri gelişir.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="feature-title">Sosyal İletişim Becerileri</h3>
+                        <p class="feature-description">Grup çalışmaları ve etkileşimli etkinlikler ile öğrencilerin sosyal iletişim becerileri gelişir, arkadaşlık ilişkileri güçlenir.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="feature-title">Özgüven</h3>
+                        <p class="feature-description">Başarılı oldukça ve yeni beceriler kazandıkça öğrencilerin özgüveni artar, kendilerine olan inançları güçlenir.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="feature-title">Zaman Yönetimi</h3>
+                        <p class="feature-description">Düzenli program akışı içinde çalışma alışkanlığı kazanan öğrenciler, zamanı verimli kullanmayı öğrenir ve sorumluluk bilinci gelişir.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.6">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="feature-title">Analitik Düşünme</h3>
+                        <p class="feature-description">Zeka oyunları ve problem çözme etkinlikleri ile öğrencilerin analitik düşünme ve hızlı karar verme becerileri gelişir.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Program Details -->
+            <div class="program-details-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Program Detayları</h2>
+                
+                <div class="details-content">
+                    <div class="details-image animate-on-scroll" data-animation="animate-fade-in-left">
+                        <img src="images/after-school-details.jpg" alt="After School Detayları">
+                    </div>
+                    
+                    <div class="details-info animate-on-scroll" data-animation="animate-fade-in-right">
+                        <div class="details-item">
+                            <h3><i class="fas fa-users"></i> Sınıf Mevcudu</h3>
+                            <p>Maksimum 12 öğrenci ile sınırlı tutularak her öğrenciye yeterli ilgi gösterilmesi sağlanır.</p>
+                        </div>
+                        
+                        <div class="details-item">
+                            <h3><i class="fas fa-calendar-week"></i> Program Süresi</h3>
+                            <p>Eğitim-öğretim yılı boyunca, okul takvimi ile uyumlu olarak devam eder.</p>
+                        </div>
+                        
+                        <div class="details-item">
+                            <h3><i class="fas fa-clock"></i> Günlük Çalışma Saatleri</h3>
+                            <p>Okul çıkış saatinden itibaren 18:00'e kadar devam eder. Esnek giriş saatleri mevcuttur.</p>
+                        </div>
+                        
+                        <div class="details-item">
+                            <h3><i class="fas fa-utensils"></i> Beslenme</h3>
+                            <p>Program süresince sağlıklı atıştırmalıklar ve içecekler sunulur.</p>
+                        </div>
+                        
+                        <div class="details-item">
+                            <h3><i class="fas fa-chalkboard-teacher"></i> Öğretmen Kadrosu</h3>
+                            <p>Alanında uzman, deneyimli ve çocuk gelişimi konusunda eğitimli öğretmenler tarafından yürütülür.</p>
+                        </div>
+                        
+                        <div class="details-item">
+                            <h3><i class="fas fa-file-alt"></i> Raporlama</h3>
+                            <p>Aylık gelişim raporları ile veliler düzenli olarak bilgilendirilir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Program Curriculum -->
+            <div class="program-curriculum">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Program İçeriği</h2>
+                
+                <div class="curriculum-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="odev">Ödev Takibi</button>
+                        <button class="tab-button" data-tab="turkce">Türkçe</button>
+                        <button class="tab-button" data-tab="matematik">Matematik</button>
+                        <button class="tab-button" data-tab="fen">Fen Bilimleri</button>
+                        <button class="tab-button" data-tab="sosyal">Sosyal Bilgiler</button>
+                        <button class="tab-button" data-tab="zeka">Zeka Oyunları</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="odev">
+                            <h3 class="module-title">Ödev Takibi</h3>
+                            <p class="module-description">Öğrencilerin günlük ödevlerini tamamlamaları için birebir öğretmen desteği sağlanır.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Günlük ödevlerin kontrol edilmesi</li>
+                                <li><i class="fas fa-check-circle"></i> Ödev yaparken karşılaşılan zorlukların aşılması</li>
+                                <li><i class="fas fa-check-circle"></i> Anlaşılmayan konuların açıklanması</li>
+                                <li><i class="fas fa-check-circle"></i> Ödev yapma alışkanlığının kazandırılması</li>
+                                <li><i class="fas fa-check-circle"></i> Düzenli çalışma disiplini oluşturulması</li>
+                                <li><i class="fas fa-check-circle"></i> Ödevlerin zamanında ve eksiksiz tamamlanması</li>
+                                <li><i class="fas fa-check-circle"></i> Ödev takip çizelgesi ile ilerlemenin izlenmesi</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="turkce">
+                            <h3 class="module-title">Türkçe Dersi</h3>
+                            <p class="module-description">Öğrencilerin okuma, yazma ve anlama becerilerini geliştirmek için tasarlanmış etkinlikler.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Okuma alışkanlığının kazandırılması</li>
+                                <li><i class="fas fa-check-circle"></i> Okuduğunu anlama ve yorumlama çalışmaları</li>
+                                <li><i class="fas fa-check-circle"></i> Kelime hazinesinin geliştirilmesi</li>
+                                <li><i class="fas fa-check-circle"></i> Yazım kuralları ve noktalama işaretleri</li>
+                                <li><i class="fas fa-check-circle"></i> Kompozisyon yazma teknikleri</li>
+                                <li><i class="fas fa-check-circle"></i> Dil bilgisi konularının pekiştirilmesi</li>
+                                <li><i class="fas fa-check-circle"></i> Sözlü anlatım becerilerinin geliştirilmesi</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="matematik">
+                            <h3 class="module-title">Matematik Dersi</h3>
+                            <p class="module-description">Öğrencilerin matematiksel düşünme ve problem çözme becerilerini geliştirmek için tasarlanmış etkinlikler.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Temel matematik işlemlerinin pekiştirilmesi</li>
+                                <li><i class="fas fa-check-circle"></i> Problem çözme stratejilerinin öğretilmesi</li>
+                                <li><i class="fas fa-check-circle"></i> Matematiksel düşünme becerilerinin geliştirilmesi</li>
+                                <li><i class="fas fa-check-circle"></i> Günlük hayatta matematik uygulamaları</li>
+                                <li><i class="fas fa-check-circle"></i> Matematik korkusunun yenilmesi</li>
+                                <li><i class="fas fa-check-circle"></i> Eğlenceli matematik oyunları ile öğrenme</li>
+                                <li><i class="fas fa-check-circle"></i> Sınav hazırlık çalışmaları</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="fen">
+                            <h3 class="module-title">Fen Bilimleri</h3>
+                            <p class="module-description">Öğrencilerin bilimsel düşünme ve merak duygusunu geliştirmek için tasarlanmış deney ve gözleme dayalı etkinlikler.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Basit bilimsel deneyler</li>
+                                <li><i class="fas fa-check-circle"></i> Doğa ve çevre bilinci oluşturma</li>
+                                <li><i class="fas fa-check-circle"></i> Bilimsel süreç becerilerinin geliştirilmesi</li>
+                                <li><i class="fas fa-check-circle"></i> Gözlem yapma ve sonuç çıkarma alışkanlığı</li>
+                                <li><i class="fas fa-check-circle"></i> Bilimsel merak duygusunun uyandırılması</li>
+                                <li><i class="fas fa-check-circle"></i> Fen konularının günlük hayatla ilişkilendirilmesi</li>
+                                <li><i class="fas fa-check-circle"></i> Bilim ve teknoloji alanında farkındalık oluşturma</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="sosyal">
+                            <h3 class="module-title">Sosyal Bilgiler</h3>
+                            <p class="module-description">Öğrencilerin kültür, tarih ve çevre farkındalığını geliştirmek için tasarlanmış etkinlikler.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Tarih bilincinin oluşturulması</li>
+                                <li><i class="fas fa-check-circle"></i> Kültürel değerlerin tanıtılması</li>
+                                <li><i class="fas fa-check-circle"></i> Coğrafi bilgilerin pekiştirilmesi</li>
+                                <li><i class="fas fa-check-circle"></i> Vatandaşlık bilincinin geliştirilmesi</li>
+                                <li><i class="fas fa-check-circle"></i> Toplumsal kuralların öğretilmesi</li>
+                                <li><i class="fas fa-check-circle"></i> Güncel olayların tartışılması</li>
+                                <li><i class="fas fa-check-circle"></i> Sosyal sorumluluk projelerine katılım</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="zeka">
+                            <h3 class="module-title">Zeka Oyunları</h3>
+                            <p class="module-description">Öğrencilerin analitik düşünme, dikkat ve problem çözme becerilerini geliştirmek için tasarlanmış oyunlar.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Satranç ve mangala gibi stratejik oyunlar</li>
+                                <li><i class="fas fa-check-circle"></i> Sudoku, tangram ve diğer bulmacalar</li>
+                                <li><i class="fas fa-check-circle"></i> Hafıza geliştirici oyunlar</li>
+                                <li><i class="fas fa-check-circle"></i> Dikkat ve konsantrasyon oyunları</li>
+                                <li><i class="fas fa-check-circle"></i> Mantık ve muhakeme oyunları</li>
+                                <li><i class="fas fa-check-circle"></i> Hızlı düşünme ve karar verme oyunları</li>
+                                <li><i class="fas fa-check-circle"></i> Eğitsel bilgisayar oyunları</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonials -->
+            <div class="testimonials-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Velilerimizden Yorumlar</h2>
+                
+                <div class="testimonials-slider">
+                    <div class="testimonial-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="testimonial-content">
+                            <p>"Oğlum After School programına başladıktan sonra ödevlerini düzenli yapmaya başladı ve okul notları yükseldi. Artık eve geldiğinde ödev stresi yaşamıyoruz. Ayrıca, zeka oyunları sayesinde daha sabırlı ve analitik düşünebilen bir çocuk oldu. Üstün Başarı Akademisi'ne teşekkür ederiz."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="images/parent1.jpg" alt="Veli 1">
+                            </div>
+                            <div class="author-info">
+                                <h4>Ahmet Yılmaz</h4>
+                                <p>Mehmet'in Babası (3. Sınıf)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="testimonial-content">
+                            <p>"Kızım After School programı sayesinde hem akademik olarak gelişti hem de sosyal becerilerini artırdı. Özellikle fen bilimleri derslerindeki deneyler sayesinde bilime olan ilgisi arttı. Ayrıca, çalışan bir anne olarak, kızımın güvenli ve eğitici bir ortamda olduğunu bilmek beni rahatlatıyor."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="images/parent2.jpg" alt="Veli 2">
+                            </div>
+                            <div class="author-info">
+                                <h4>Ayşe Kaya</h4>
+                                <p>Zeynep'in Annesi (4. Sınıf)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="testimonial-content">
+                            <p>"Oğlum matematik dersinde zorlanıyordu. After School programındaki matematik dersleri ve zeka oyunları sayesinde matematiğe olan korkusu azaldı ve problem çözme becerileri gelişti. Ayrıca, ödev takibi sayesinde sorumluluk bilinci arttı ve daha düzenli çalışmaya başladı. Çok memnunuz."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="images/parent3.jpg" alt="Veli 3">
+                            </div>
+                            <div class="author-info">
+                                <h4>Mehmet Demir</h4>
+                                <p>Ali'nin Babası (5. Sınıf)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Sıkça Sorulan Sorular</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="faq-question">
+                            <h3>After School programı hangi yaş grubuna yöneliktir?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>After School programımız, ilkokul ve ortaokul öğrencilerine (1-8. sınıflar) yöneliktir. Öğrenciler, yaş gruplarına göre sınıflara ayrılarak, seviyelerine uygun eğitim alırlar.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="faq-question">
+                            <h3>After School programının saatleri nedir?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>After School programımız, öğrencilerin okul çıkış saatinden itibaren 18:00'e kadar devam eder. Okulların farklı çıkış saatleri olduğu için esnek giriş saatleri uygulanmaktadır.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="faq-question">
+                            <h3>After School programında öğrencilere yemek sağlanıyor mu?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Evet, After School programımızda öğrencilere sağlıklı atıştırmalıklar ve içecekler sunulmaktadır. Ancak, ana öğün sağlanmamaktadır. Öğrencilerin özel diyet gereksinimleri varsa, lütfen kayıt sırasında belirtiniz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                        <div class="faq-question">
+                            <h3>After School programında öğrencilerin gelişimi nasıl takip ediliyor?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Öğrencilerin gelişimi, aylık raporlar ile takip edilmektedir. Bu raporlarda, öğrencinin akademik gelişimi, sosyal becerileri, katılımı ve davranışları hakkında bilgiler yer alır. Ayrıca, dönem sonlarında veli toplantıları düzenlenerek, öğrencinin gelişimi hakkında detaylı bilgi verilir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                        <div class="faq-question">
+                            <h3>After School programına kayıt nasıl yapılır?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>After School programına kayıt için web sitemizden online başvuru yapabilir, şubelerimizi ziyaret edebilir veya telefon ile bizimle iletişime geçebilirsiniz. Kayıt sırasında öğrencinin okul bilgileri, sağlık durumu ve özel gereksinimleri hakkında bilgi almanız istenecektir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="cta-section animate-on-scroll" data-animation="animate-fade-in-up">
+                <div class="cta-content">
+                    <h2 class="cta-title">Çocuğunuzun Okul Sonrası Zamanını Verimli Değerlendirmesini Sağlayın</h2>
+                    <p class="cta-description">Üstün Başarı Akademisi'nin After School programı ile çocuğunuz hem ödevlerini tamamlayacak hem de eğlenerek öğrenecek. Sınırlı kontenjan için hemen kayıt olun!</p>
+                    <div class="cta-buttons">
+                        <a href="kayit.html" class="cta-button primary">Kayıt Ol</a>
+                        <a href="iletisim.html" class="cta-button secondary">Bize Ulaşın</a>
+                    </div>
+                </div>
+                <div class="cta-image">
+                    <img src="images/after-school-cta.jpg" alt="After School">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Related Programs -->
+    <section class="related-programs">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">İlgili Programlar</h2>
+            
+            <div class="programs-grid">
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                    <div class="program-card-image">
+                        <img src="images/okul-takviye.jpg" alt="Okul Takviye">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Okul Takviye</h3>
+                        <p class="program-card-description">Okul derslerine takviye ve yazılı sınavlara hazırlık programı ile öğrencilerin akademik başarısını artırın.</p>
+                        <a href="okul-takviye.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                    <div class="program-card-image">
+                        <img src="images/yaz-kampi.jpg" alt="Yaz Kampı">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Yaz Kampı</h3>
+                        <p class="program-card-description">Yaz tatilinde eğlenerek öğrenme fırsatı sunan 8 haftalık program ile çocuğunuzun tatilini verimli geçirmesini sağlayın.</p>
+                        <a href="yaz-kampi.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                    <div class="program-card-image">
+                        <img src="images/ozel-ders.jpg" alt="Özel Ders">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Özel Ders</h3>
+                        <p class="program-card-description">Birebir öğretmen desteği ile öğrencilerin ihtiyaç duydukları konularda ekstra destek almasını sağlayın.</p>
+                        <a href="ozel-ders.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-white.png" alt="Üstün Başarı Akademisi Logo">
+                    <p>Geleceğinizi Şekillendirin</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>Programlarımız</h3>
+                        <ul>
+                            <li><a href="yks-hazirlik.html">YKS Hazırlık</a></li>
+                            <li><a href="lgs-hazirlik.html">LGS Hazırlık</a></li>
+                            <li><a href="ingilizce.html">İngilizce</a></li>
+                            <li><a href="okul-takviye.html">Okula Takviye</a></li>
+                            <li><a href="deneme-klubu.html">Deneme Kulübü</a></li>
+                            <li><a href="yaz-kampi.html">Yaz Kampı</a></li>
+                            <li><a href="after-school.html">After School</a></li>
+                            <li><a href="ozel-ders.html">Özel Ders</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h3>Kurumsal</h3>
+                        <ul>
+                            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                            <li><a href="subelerimiz.html">Şubelerimiz</a></li>
+                            <li><a href="basarilarimiz.html">Başarılarımız</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="kariyer.html">Kariyer</a></li>
+                            <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h3>İletişim</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Esenyalı, Uygar Sk. No:29, 34890 Pendik/İstanbul</li>
+                            <li><i class="fas fa-phone"></i> <a href="tel:+902165000000">0216 500 00 00</a></li>
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:info@ustunbasariakademisi.com">info@ustunbasariakademisi.com</a></li>
+                        </ul>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Üstün Başarı Akademisi. Tüm Hakları Saklıdır.</p>
+                <div class="footer-bottom-links">
+                    <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+                    <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+                    <a href="kvkk.html">KVKK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="mobile-nav.js"></script>
+    <script src="animation-effects.js"></script>
+    <script>
+        // Tab Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and panes
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Show corresponding tab pane
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // FAQ Functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const toggle = item.querySelector('.faq-toggle');
+                
+                question.addEventListener('click', () => {
+                    // Toggle active class
+                    item.classList.toggle('active');
+                    
+                    // Change icon
+                    if (item.classList.contains('active')) {
+                        toggle.innerHTML = '<i class="fas fa-minus"></i>';
+                    } else {
+                        toggle.innerHTML = '<i class="fas fa-plus"></i>';
+                    }
+                });
+            });
+            
+            // Slider Functionality
+            const sliderCards = document.querySelectorAll('.testimonial-card');
+            const sliderDots = document.querySelectorAll('.dot');
+            const prevButton = document.querySelector('.slider-prev');
+            const nextButton = document.querySelector('.slider-next');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                // Hide all slides
+                sliderCards.forEach(card => card.style.display = 'none');
+                sliderDots.forEach(dot => dot.classList.remove('active'));
+                
+                // Show current slide
+                sliderCards[index].style.display = 'block';
+                sliderDots[index].classList.add('active');
+                currentSlide = index;
+            }
+            
+            // Initialize slider
+            showSlide(0);
+            
+            // Next slide
+            nextButton.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % sliderCards.length;
+                showSlide(currentSlide);
+            });
+            
+            // Previous slide
+            prevButton.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + sliderCards.length) % sliderCards.length;
+                showSlide(currentSlide);
+            });
+            
+            // Dot navigation
+            sliderDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+            
+            // Back to Top Button
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

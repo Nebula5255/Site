@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGS Hazırlık - Üstün Başarı Akademisi</title>
+    <link rel="stylesheet" href="unified-styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Üstün Başarı Akademisi Logo">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link active">Programlarımız</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="yks-hazirlik.html" class="dropdown-link">YKS Hazırlık</a></li>
+                            <li><a href="lgs-hazirlik.html" class="dropdown-link active">LGS Hazırlık</a></li>
+                            <li><a href="ingilizce.html" class="dropdown-link">İngilizce</a></li>
+                            <li><a href="okul-takviye.html" class="dropdown-link">Okula Takviye</a></li>
+                            <li><a href="deneme-klubu.html" class="dropdown-link">Deneme Kulübü</a></li>
+                            <li><a href="yaz-kampi.html" class="dropdown-link">Yaz Kampı</a></li>
+                            <li><a href="after-school.html" class="dropdown-link">After School</a></li>
+                            <li><a href="ozel-ders.html" class="dropdown-link">Özel Ders</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="subelerimiz.html" class="nav-link">Şubelerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="basarilarimiz.html" class="nav-link">Başarılarımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="iletisim.html" class="nav-link">İletişim</a>
+                    </li>
+                </ul>
+                
+                <a href="kayit.html" class="register-button">Kayıt Ol</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobil Menü -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <ul class="mobile-nav-menu">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Ana Sayfa</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link active">Programlarımız</a>
+                <button class="mobile-dropdown-toggle" id="programsToggle">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <ul class="mobile-dropdown-menu" id="programsDropdown">
+                    <li class="mobile-dropdown-item">
+                        <a href="yks-hazirlik.html" class="mobile-dropdown-link">YKS Hazırlık</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="lgs-hazirlik.html" class="mobile-dropdown-link active">LGS Hazırlık</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="okul-takviye.html" class="mobile-dropdown-link">Okula Takviye</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="ingilizce.html" class="mobile-dropdown-link">İngilizce</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="deneme-klubu.html" class="mobile-dropdown-link">Deneme Kulübü</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="yaz-kampi.html" class="mobile-dropdown-link">Yaz Kampı</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="after-school.html" class="mobile-dropdown-link">After School</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="ozel-ders.html" class="mobile-dropdown-link">Özel Ders</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="subelerimiz.html" class="mobile-nav-link">Şubelerimiz</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="hakkimizda.html" class="mobile-nav-link">Hakkımızda</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="basarilarimiz.html" class="mobile-nav-link">Başarılarımız</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="iletisim.html" class="mobile-nav-link">İletişim</a>
+            </li>
+        </ul>
+        
+        <a href="kayit.html" class="mobile-register-button">Kayıt Ol</a>
+    </div>
+    
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="page-banner-content">
+            <h1 class="page-title animate-on-scroll" data-animation="animate-fade-in-up">LGS HAZIRLIK PROGRAMI</h1>
+            <div class="breadcrumbs animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                <a href="index.html">Ana Sayfa</a> / <a href="#">Programlarımız</a> / <span>LGS Hazırlık</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Program Content -->
+    <section class="program-content">
+        <div class="container">
+            <div class="program-overview">
+                <div class="program-image animate-on-scroll" data-animation="animate-fade-in-left">
+                    <img src="images/lgs-hazirlik.jpg" alt="LGS Hazırlık Programı">
+                    <div class="program-badge animate-pulse">Yeni Dönem Kayıtları Açıldı</div>
+                </div>
+                
+                <div class="program-details animate-on-scroll" data-animation="animate-fade-in-right">
+                    <h2 class="program-title">LGS Hazırlık Programı</h2>
+                    <p class="program-description">Üstün Başarı Akademisi'nde LGS hazırlık programımız, sadece bir sınava değil, hayata hazırlayan bütünsel bir eğitim yaklaşımı sunar. Öğrencilerimizin akademik başarılarını artırırken, kişisel gelişimlerini de destekleyen kapsamlı bir eğitim modeli uyguluyoruz.</p>
+                    
+                    <div class="program-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Hedef Kitle</h3>
+                                <p>5, 6, 7 ve 8. sınıf öğrencileri</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Program Süresi</h3>
+                                <p>9 ay (Eylül-Haziran)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Ders Saatleri</h3>
+                                <p>Hafta içi ve hafta sonu seçenekleri</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Öğretmen Kadrosu</h3>
+                                <p>Alanında uzman ve deneyimli</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-cta">
+                        <a href="kayit.html" class="cta-button">Hemen Kayıt Ol</a>
+                        <a href="#" class="cta-button secondary">Ücretsiz Deneme Dersi</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Program Features -->
+            <div class="program-features">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Program Özellikleri</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="feature-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="feature-title">Haftalık Ders Programı</h3>
+                        <p class="feature-description">Her sınıf seviyesine uygun haftalık ders planları; konu anlatımı, pekiştirme ve seviye gruplamasına göre düzenlenir. Hem okul başarısı hem LGS hazırlığı birlikte yürütülür.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="feature-title">40 Türkiye Geneli Deneme</h3>
+                        <p class="feature-description">Program boyunca toplam 40 adet Türkiye Geneli LGS Deneme Sınavı uygulanır. Sınavlar Türkiye çapında binlerce öğrencinin katılımıyla gerçekleşir ve gerçek sınav deneyimi sunar.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3 class="feature-title">Afterclass - Günlük Etüt</h3>
+                        <p class="feature-description">Okul çıkışında uygulanan günlük etütlerle tekrar, ödev kontrolü ve birebir destek sağlanır. Bu sistem, bilgilerin günlük takibini kolaylaştırır.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="feature-title">Koçluk ve Rehberlik</h3>
+                        <p class="feature-description">Her öğrenciye özel hedef planı, haftalık koç görüşmeleri, deneme analizi ve veli bilgilendirme süreçlerini kapsayan kapsamlı bir sistemdir.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3 class="feature-title">Bireysel Etüt Sistemi</h3>
+                        <p class="feature-description">Her öğrencinin ihtiyacına göre planlanan birebir etütler ile eksikler tamamlanır, özgüven artar, bireysel başarı desteklenir.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.6">
+                        <div class="feature-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3 class="feature-title">Kamp ve Hızlandırma</h3>
+                        <p class="feature-description">Yarıyıl, yaz ve LGS öncesi yoğunlaştırılmış tekrar ve test kampı ile öğrencilerin eksikleri tamamlanır, motivasyonu yükseltilir.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Program Curriculum -->
+            <div class="program-curriculum">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Program İçeriği</h2>
+                
+                <div class="curriculum-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="module1">5-6. Sınıf</button>
+                        <button class="tab-button" data-tab="module2">7. Sınıf</button>
+                        <button class="tab-button" data-tab="module3">8. Sınıf</button>
+                        <button class="tab-button" data-tab="module4">Deneme Programı</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="module1">
+                            <h3 class="module-title">5-6. Sınıf Programı</h3>
+                            <p class="module-description">5. ve 6. sınıf programımız, öğrencilerin temel akademik becerilerini geliştirmeye ve LGS'ye uzun vadeli hazırlık sürecini başlatmaya odaklanır. Okul derslerindeki başarıyı artırırken, sınav hazırlığı için gerekli altyapıyı oluşturur.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Türkçe: Okuma, anlama, dil bilgisi ve yazma becerileri</li>
+                                <li><i class="fas fa-check-circle"></i> Matematik: Temel matematiksel kavramlar ve problem çözme</li>
+                                <li><i class="fas fa-check-circle"></i> Fen Bilimleri: Bilimsel süreç becerileri ve temel fen kavramları</li>
+                                <li><i class="fas fa-check-circle"></i> Sosyal Bilgiler: Tarih, coğrafya ve vatandaşlık bilgisi</li>
+                                <li><i class="fas fa-check-circle"></i> İngilizce: Temel dil becerileri ve iletişim</li>
+                                <li><i class="fas fa-check-circle"></i> Düşünme Becerileri: Analitik düşünme ve problem çözme</li>
+                                <li><i class="fas fa-check-circle"></i> Haftalık Mini Sınavlar: Düzenli ölçme ve değerlendirme</li>
+                                <li><i class="fas fa-check-circle"></i> Okul Derslerine Destek: Ödev takibi ve proje desteği</li>
+                                <li><i class="fas fa-check-circle"></i> Kişisel Gelişim: Özgüven ve motivasyon çalışmaları</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="module2">
+                            <h3 class="module-title">7. Sınıf Programı</h3>
+                            <p class="module-description">7. sınıf programımız, LGS hazırlığının yoğunlaştığı bir dönemdir. Okul müfredatına paralel olarak, sınav odaklı çalışmalar artırılır ve öğrencilerin analitik düşünme becerileri geliştirilir.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Türkçe: Paragraf analizi, söz sanatları, dil bilgisi</li>
+                                <li><i class="fas fa-check-circle"></i> Matematik: Cebirsel ifadeler, denklemler, geometri</li>
+                                <li><i class="fas fa-check-circle"></i> Fen Bilimleri: Fizik, kimya ve biyoloji temel kavramları</li>
+                                <li><i class="fas fa-check-circle"></i> Sosyal Bilgiler: Türkiye ve dünya tarihi, coğrafya</li>
+                                <li><i class="fas fa-check-circle"></i> İngilizce: Okuma, yazma ve dilbilgisi</li>
+                                <li><i class="fas fa-check-circle"></i> Soru Çözüm Teknikleri: Sınav stratejileri ve zaman yönetimi</li>
+                                <li><i class="fas fa-check-circle"></i> Düzenli Deneme Sınavları: Ayda 4 deneme sınavı</li>
+                                <li><i class="fas fa-check-circle"></i> Birebir Akademik Koçluk: Kişisel gelişim takibi</li>
+                                <li><i class="fas fa-check-circle"></i> Veli Bilgilendirme: Düzenli gelişim raporları</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="module3">
+                            <h3 class="module-title">8. Sınıf Programı</h3>
+                            <p class="module-description">8. sınıf programımız, LGS'ye doğrudan hazırlık sürecini kapsar. Yoğun ve sistematik bir çalışma programı ile öğrencilerin tüm konulara hakim olması ve sınav başarısı için gerekli becerileri kazanması hedeflenir.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Türkçe: İleri düzey paragraf analizi, söz sanatları, anlam bilgisi</li>
+                                <li><i class="fas fa-check-circle"></i> Matematik: Problemler, geometri, olasılık, veri analizi</li>
+                                <li><i class="fas fa-check-circle"></i> Fen Bilimleri: Fizik, kimya, biyoloji konuları ve deney analizi</li>
+                                <li><i class="fas fa-check-circle"></i> T.C. İnkılap Tarihi: Osmanlı'dan Cumhuriyet'e geçiş ve sonrası</li>
+                                <li><i class="fas fa-check-circle"></i> Din Kültürü: İnanç, ibadet, ahlak ve değerler</li>
+                                <li><i class="fas fa-check-circle"></i> İngilizce: Okuma, anlama ve dilbilgisi</li>
+                                <li><i class="fas fa-check-circle"></i> Haftalık Deneme Sınavları: Türkiye geneli karşılaştırmalı</li>
+                                <li><i class="fas fa-check-circle"></i> Soru Bankası Çalışmaları: Konu bazlı soru çözümleri</li>
+                                <li><i class="fas fa-check-circle"></i> LGS Kampları: Yarıyıl ve sınav öncesi yoğun çalışma</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="module4">
+                            <h3 class="module-title">Türkiye Geneli 40 Deneme Sınavı Programı</h3>
+                            <p class="module-description">Program boyunca toplam 40 adet Türkiye Geneli LGS Deneme Sınavı uygulanır. Sınavlar Türkiye çapında binlerce öğrencinin katılımıyla gerçekleşir ve gerçek sınav deneyimi sunar. Her deneme sonrası detaylı analizler yapılır ve öğrencilerin gelişim alanları belirlenir.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> MEB formatında hazırlanmış LGS denemeleri</li>
+                                <li><i class="fas fa-check-circle"></i> Türkiye genelinde binlerce öğrencinin katılımıyla gerçekleşen sınavlar</li>
+                                <li><i class="fas fa-check-circle"></i> Konu bazlı analiz raporları ve gelişim grafikleri</li>
+                                <li><i class="fas fa-check-circle"></i> Yanlış yapılan soruların detaylı çözümleri</li>
+                                <li><i class="fas fa-check-circle"></i> Eksik konuların tespiti ve tamamlanması</li>
+                                <li><i class="fas fa-check-circle"></i> Sınav stratejileri ve zaman yönetimi teknikleri</li>
+                                <li><i class="fas fa-check-circle"></i> Branş bazında performans değerlendirmesi</li>
+                                <li><i class="fas fa-check-circle"></i> Hedef okul ve puan bazında başarı analizi</li>
+                                <li><i class="fas fa-check-circle"></i> Veli bilgilendirme raporları</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 40 Deneme Sınavı Listesi -->
+            <div class="exam-list-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">40 Türkiye Geneli Deneme Sınavı</h2>
+                
+                <div class="exam-list-container">
+                    <div class="exam-list-intro">
+                        <p>Üstün Başarı Akademisi olarak, öğrencilerimize Türkiye'nin en kaliteli yayınlarından seçilmiş 40 adet LGS deneme sınavı sunuyoruz. Bu denemeler, MEB formatında hazırlanmış olup, gerçek sınav deneyimi yaşamanızı sağlar.</p>
+                    </div>
+                    
+                    <div class="exam-list-columns">
+                        <div class="exam-list-column">
+                            <h3>LGS Denemeleri (40 Adet)</h3>
+                            <ul>
+                                <li>Apotemi LGS Denemeleri (5 Adet)</li>
+                                <li>Hız LGS Denemeleri (5 Adet)</li>
+                                <li>Tonguç LGS Denemeleri (5 Adet)</li>
+                                <li>Palme LGS Denemeleri (5 Adet)</li>
+                                <li>Çap LGS Denemeleri (5 Adet)</li>
+                                <li>Karekök LGS Denemeleri (5 Adet)</li>
+                                <li>Bilfen LGS Denemeleri (5 Adet)</li>
+                                <li>Üstün Başarı Özel LGS Denemeleri (5 Adet)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="exam-list-features">
+                        <div class="exam-feature">
+                            <i class="fas fa-chart-bar"></i>
+                            <h4>Detaylı Analiz</h4>
+                            <p>Her deneme sonrası konu bazlı analiz ve gelişim grafikleri</p>
+                        </div>
+                        
+                        <div class="exam-feature">
+                            <i class="fas fa-globe"></i>
+                            <h4>Türkiye Geneli</h4>
+                            <p>Binlerce öğrencinin katılımıyla gerçek sıralama</p>
+                        </div>
+                        
+                        <div class="exam-feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>MEB Formatı</h4>
+                            <p>Gerçek sınav formatında hazırlanmış sorular</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Success Stories -->
+            <div class="success-stories">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Başarı Hikayeleri</h2>
+                
+                <div class="stories-slider">
+                    <div class="story-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="story-image">
+                            <img src="images/student4.jpg" alt="Öğrenci 4">
+                        </div>
+                        <div class="story-content">
+                            <h3 class="student-name">Ayşe Yılmaz</h3>
+                            <p class="student-achievement">Galatasaray Lisesi</p>
+                            <p class="student-testimonial">"Üstün Başarı Akademisi'ndeki eğitim sürecim boyunca aldığım destek ve 40 deneme sınavı sayesinde eksiklerimi görerek hızla tamamladım. Koçluk sistemi motivasyonumu her zaman yüksek tutmamı sağladı. Hayalim olan okula yerleştiğim için çok mutluyum."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="story-image">
+                            <img src="images/student5.jpg" alt="Öğrenci 5">
+                        </div>
+                        <div class="story-content">
+                            <h3 class="student-name">Mehmet Demir</h3>
+                            <p class="student-achievement">İstanbul Erkek Lisesi</p>
+                            <p class="student-testimonial">"Üstün Başarı Akademisi'nin sistemli çalışma programı ve Türkiye geneli denemeler sayesinde kendimi sürekli geliştirme fırsatı buldum. Öğretmenlerimin ve koçumun desteğiyle sınav kaygımı yendim ve hedefime ulaştım. Teşekkürler Üstün Başarı Akademisi!"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="story-image">
+                            <img src="images/student6.jpg" alt="Öğrenci 6">
+                        </div>
+                        <div class="story-content">
+                            <h3 class="student-name">Zeynep Kaya</h3>
+                            <p class="student-achievement">Kabataş Erkek Lisesi</p>
+                            <p class="student-testimonial">"Üstün Başarı Akademisi'nin yoğun eğitim programı ve 40 Türkiye geneli deneme sınavı, beni gerçek sınava hazır hale getirdi. Branş denemeleri ve soru çözüm seansları sayesinde zayıf yönlerimi güçlendirdim. Hayalim olan okula yerleştim."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Sıkça Sorulan Sorular</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="faq-question">
+                            <h3>LGS Hazırlık programına ne zaman başlamalıyım?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>LGS hazırlığına ideal olarak 5. sınıftan itibaren başlanması önerilir. Ancak 6, 7 veya 8. sınıfta da programlarımıza katılabilirsiniz. Her öğrencinin seviyesine ve ihtiyaçlarına göre özel programlar sunuyoruz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="faq-question">
+                            <h3>40 Türkiye geneli deneme sınavı nasıl uygulanıyor?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Denemeler haftalık olarak belirlenen program dahilinde uygulanır. LGS denemeleri Türkiye'nin önde gelen yayınevlerinden seçilir ve MEB formatında hazırlanır. Her deneme sonrası detaylı analiz raporları sunulur ve eksik konular tespit edilerek tamamlanır.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="faq-question">
+                            <h3>Koçluk ve rehberlik sistemi nasıl çalışır?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Her öğrenciye bir akademik koç atanır. Koçlar, öğrencilerin hedeflerini belirlemelerine, çalışma planı oluşturmalarına ve motivasyonlarını yüksek tutmalarına yardımcı olur. Haftalık düzenli görüşmeler yapılır ve öğrencinin gelişimi takip edilir. Sınav kaygısı ve stres yönetimi konularında da destek sağlanır.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                        <div class="faq-question">
+                            <h3>Sınıf mevcutları kaç kişidir?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Üstün Başarı Akademisi'nde sınıf mevcutları maksimum 12-15 kişi ile sınırlıdır. Bu sayede her öğrenciye yeterli ilgi gösterilir ve etkileşimli bir eğitim ortamı sağlanır. Öğretmenlerimiz, her öğrencinin sorularını yanıtlayabilir ve bireysel ihtiyaçlarına odaklanabilir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                        <div class="faq-question">
+                            <h3>Veli bilgilendirmesi nasıl yapılır?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Velilerimiz, öğrencilerimizin gelişimini düzenli olarak takip edebilir. Haftalık deneme sonuçları, aylık gelişim raporları ve dönemlik veli toplantıları ile bilgilendirme yapılır. Ayrıca, velilerimiz istedikleri zaman akademik koçlar ve öğretmenlerle görüşme talep edebilirler.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="cta-section animate-on-scroll" data-animation="animate-fade-in-up">
+                <div class="cta-content">
+                    <h2 class="cta-title">Hayalindeki Okula Adım Adım</h2>
+                    <p class="cta-description">Üstün Başarı Akademisi'nde yerinizi ayırtın ve başarıya giden yolda ilk adımı atın. 40 Türkiye geneli deneme sınavı ve uzman kadromuzla yanınızdayız.</p>
+                    <div class="cta-buttons">
+                        <a href="kayit.html" class="cta-button primary">Kayıt Ol</a>
+                        <a href="iletisim.html" class="cta-button secondary">Bize Ulaşın</a>
+                    </div>
+                </div>
+                <div class="cta-image">
+                    <img src="images/lgs-cta.jpg" alt="LGS Hazırlık Kayıt">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Related Programs -->
+    <section class="related-programs">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">İlgili Programlar</h2>
+            
+            <div class="programs-grid">
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                    <div class="program-card-image">
+                        <img src="images/deneme-klubu.jpg" alt="Deneme Kulübü">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Deneme Kulübü</h3>
+                        <p class="program-card-description">Türkiye genelinde uygulanan 40 deneme sınavı ile gerçek sınav deneyimi yaşayın ve eksiklerinizi tespit edin.</p>
+                        <a href="deneme-klubu.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                    <div class="program-card-image">
+                        <img src="images/okul-takviye.jpg" alt="Okula Takviye">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Okula Takviye</h3>
+                        <p class="program-card-description">Okul derslerinde başarıyı artırmak için birebir destek ve düzenli takip sistemi ile akademik gelişiminizi destekleyin.</p>
+                        <a href="okul-takviye.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                    <div class="program-card-image">
+                        <img src="images/yaz-kampi.jpg" alt="Yaz Kampı">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Yaz Kampı</h3>
+                        <p class="program-card-description">Yaz tatilinde hem eğlenerek öğrenin hem de yeni dönem için hazırlık yapın. Eğlenceli ve verimli bir yaz kampı deneyimi.</p>
+                        <a href="yaz-kampi.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-white.png" alt="Üstün Başarı Akademisi Logo">
+                    <p>Geleceğinizi Şekillendirin</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>Programlarımız</h3>
+                        <ul>
+                            <li><a href="yks-hazirlik.html">YKS Hazırlık</a></li>
+                            <li><a href="lgs-hazirlik.html">LGS Hazırlık</a></li>
+                            <li><a href="ingilizce.html">İngilizce</a></li>
+                            <li><a href="okul-takviye.html">Okula Takviye</a></li>
+                            <li><a href="deneme-klubu.html">Deneme Kulübü</a></li>
+                            <li><a href="yaz-kampi.html">Yaz Kampı</a></li>
+                            <li><a href="after-school.html">After School</a></li>
+                            <li><a href="ozel-ders.html">Özel Ders</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h3>Kurumsal</h3>
+                        <ul>
+                            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                            <li><a href="subelerimiz.html">Şubelerimiz</a></li>
+                            <li><a href="basarilarimiz.html">Başarılarımız</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="kariyer.html">Kariyer</a></li>
+                            <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h3>İletişim</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Esenyalı, Uygar Sk. No:29, 34890 Pendik/İstanbul</li>
+                            <li><i class="fas fa-phone"></i> <a href="tel:+902165000000">0216 500 00 00</a></li>
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:info@ustunbasariakademisi.com">info@ustunbasariakademisi.com</a></li>
+                        </ul>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Üstün Başarı Akademisi. Tüm Hakları Saklıdır.</p>
+                <div class="footer-bottom-links">
+                    <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+                    <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+                    <a href="kvkk.html">KVKK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="mobile-nav.js"></script>
+    <script src="animation-effects.js"></script>
+    <script>
+        // Tab Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and panes
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Show corresponding tab pane
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // FAQ Functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const toggle = item.querySelector('.faq-toggle');
+                
+                question.addEventListener('click', () => {
+                    // Toggle active class
+                    item.classList.toggle('active');
+                    
+                    // Change icon
+                    if (item.classList.contains('active')) {
+                        toggle.innerHTML = '<i class="fas fa-minus"></i>';
+                    } else {
+                        toggle.innerHTML = '<i class="fas fa-plus"></i>';
+                    }
+                });
+            });
+            
+            // Slider Functionality
+            const sliderCards = document.querySelectorAll('.story-card');
+            const sliderDots = document.querySelectorAll('.dot');
+            const prevButton = document.querySelector('.slider-prev');
+            const nextButton = document.querySelector('.slider-next');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                // Hide all slides
+                sliderCards.forEach(card => card.style.display = 'none');
+                sliderDots.forEach(dot => dot.classList.remove('active'));
+                
+                // Show current slide
+                sliderCards[index].style.display = 'flex';
+                sliderDots[index].classList.add('active');
+                currentSlide = index;
+            }
+            
+            // Initialize slider
+            showSlide(0);
+            
+            // Next slide
+            nextButton.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % sliderCards.length;
+                showSlide(currentSlide);
+            });
+            
+            // Previous slide
+            prevButton.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + sliderCards.length) % sliderCards.length;
+                showSlide(currentSlide);
+            });
+            
+            // Dot navigation
+            sliderDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+            
+            // Back to Top Button
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

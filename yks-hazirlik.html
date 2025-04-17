@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YKS Hazırlık - Üstün Başarı Akademisi</title>
+    <link rel="stylesheet" href="unified-styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Üstün Başarı Akademisi Logo">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link active">Programlarımız</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="yks-hazirlik.html" class="dropdown-link active">YKS Hazırlık</a></li>
+                            <li><a href="lgs-hazirlik.html" class="dropdown-link">LGS Hazırlık</a></li>
+                            <li><a href="ingilizce.html" class="dropdown-link">İngilizce</a></li>
+                            <li><a href="okul-takviye.html" class="dropdown-link">Okula Takviye</a></li>
+                            <li><a href="deneme-klubu.html" class="dropdown-link">Deneme Kulübü</a></li>
+                            <li><a href="yaz-kampi.html" class="dropdown-link">Yaz Kampı</a></li>
+                            <li><a href="after-school.html" class="dropdown-link">After School</a></li>
+                            <li><a href="ozel-ders.html" class="dropdown-link">Özel Ders</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="subelerimiz.html" class="nav-link">Şubelerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="basarilarimiz.html" class="nav-link">Başarılarımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="iletisim.html" class="nav-link">İletişim</a>
+                    </li>
+                </ul>
+                
+                <a href="kayit.html" class="register-button">Kayıt Ol</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobil Menü -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <ul class="mobile-nav-menu">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link">Ana Sayfa</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link active">Programlarımız</a>
+                <button class="mobile-dropdown-toggle" id="programsToggle">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <ul class="mobile-dropdown-menu" id="programsDropdown">
+                    <li class="mobile-dropdown-item">
+                        <a href="yks-hazirlik.html" class="mobile-dropdown-link active">YKS Hazırlık</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="lgs-hazirlik.html" class="mobile-dropdown-link">LGS Hazırlık</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="okul-takviye.html" class="mobile-dropdown-link">Okula Takviye</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="ingilizce.html" class="mobile-dropdown-link">İngilizce</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="deneme-klubu.html" class="mobile-dropdown-link">Deneme Kulübü</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="yaz-kampi.html" class="mobile-dropdown-link">Yaz Kampı</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="after-school.html" class="mobile-dropdown-link">After School</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="ozel-ders.html" class="mobile-dropdown-link">Özel Ders</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="subelerimiz.html" class="mobile-nav-link">Şubelerimiz</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="hakkimizda.html" class="mobile-nav-link">Hakkımızda</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="basarilarimiz.html" class="mobile-nav-link">Başarılarımız</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="iletisim.html" class="mobile-nav-link">İletişim</a>
+            </li>
+        </ul>
+        
+        <a href="kayit.html" class="mobile-register-button">Kayıt Ol</a>
+    </div>
+    
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="page-banner-content">
+            <h1 class="page-title animate-on-scroll" data-animation="animate-fade-in-up">YKS HAZIRLIK PROGRAMI</h1>
+            <div class="breadcrumbs animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                <a href="index.html">Ana Sayfa</a> / <a href="#">Programlarımız</a> / <span>YKS Hazırlık</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Program Content -->
+    <section class="program-content">
+        <div class="container">
+            <div class="program-overview">
+                <div class="program-image animate-on-scroll" data-animation="animate-fade-in-left">
+                    <img src="images/yks-hazirlik.jpg" alt="YKS Hazırlık Programı">
+                    <div class="program-badge animate-pulse">Yeni Dönem Kayıtları Açıldı</div>
+                </div>
+                
+                <div class="program-details animate-on-scroll" data-animation="animate-fade-in-right">
+                    <h2 class="program-title">YKS Hazırlık Programı</h2>
+                    <p class="program-description">Üstün Başarı Akademisi, hayalindeki üniversiteye giden yolun başlangıç noktasıdır. YKS yolculuğunda sistemli, disiplinli ve bireysel destekli bir eğitim modeli sunuyoruz. Sadece akademik başarı değil, aynı zamanda kişisel gelişim, psikolojik hazırlık ve motivasyon ile YKS'yi başarıyla geçmenizi sağlıyoruz.</p>
+                    
+                    <div class="program-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Hedef Kitle</h3>
+                                <p>Lise öğrencileri (11-12. sınıf) ve mezunlar</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Program Süresi</h3>
+                                <p>9 ay (Eylül-Haziran)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Ders Saatleri</h3>
+                                <p>Hafta içi ve hafta sonu seçenekleri</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h3>Öğretmen Kadrosu</h3>
+                                <p>Alanında uzman ve deneyimli</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-cta">
+                        <a href="kayit.html" class="cta-button">Hemen Kayıt Ol</a>
+                        <a href="#" class="cta-button secondary">Ücretsiz Deneme Dersi</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Program Features -->
+            <div class="program-features">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Program Özellikleri</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="feature-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="feature-title">Yoğun Eğitim Programı</h3>
+                        <p class="feature-description">TYT ve AYT'de en çok çıkan konulara hakimiyet sağlayan, alanında uzman öğretmenlerimiz tarafından müfredata uygun ve sınav odaklı eğitim.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="feature-title">60 Türkiye Geneli Deneme</h3>
+                        <p class="feature-description">Yıl boyunca uygulanan 60 Türkiye Geneli TYT-AYT deneme sınavı ile öğrenciler kendilerini ülke genelindeki rakipleriyle kıyaslama fırsatı bulur.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3 class="feature-title">Soru Çözüm Seansları</h3>
+                        <p class="feature-description">Sınav başarısının kilidi, anlamadığınız soruları doğru şekilde öğrenmektir. Öğrencilerimize haftalık birebir soru çözüm seansları sunuyoruz.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="feature-title">Akademik Koçluk</h3>
+                        <p class="feature-description">Her öğrenciye özel akademik koçlar sayesinde bireysel takip sistemi yürütülür. Hedef belirleme, haftalık görüşmeler ve sınav kaygısı yönetimi.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3 class="feature-title">Branş Denemeleri</h3>
+                        <p class="feature-description">Branşlara özel deneme sınavları ve konu tarama testleri ile öğrencinin Türkçe, Matematik, Fen ve Sosyal alanlarındaki gelişimi yakından takip edilir.</p>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.6">
+                        <div class="feature-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3 class="feature-title">Net Artırma Kampları</h3>
+                        <p class="feature-description">Tatillerde ve sınav öncesinde düzenlediğimiz kamp programlarıyla yoğun tekrar ve hedef odaklı test çözüm maratonları düzenliyoruz.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Program Curriculum -->
+            <div class="program-curriculum">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Program İçeriği</h2>
+                
+                <div class="curriculum-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="module1">TYT Hazırlık</button>
+                        <button class="tab-button" data-tab="module2">AYT Hazırlık</button>
+                        <button class="tab-button" data-tab="module3">Deneme Programı</button>
+                        <button class="tab-button" data-tab="module4">Koçluk Sistemi</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="module1">
+                            <h3 class="module-title">TYT Hazırlık Programı</h3>
+                            <p class="module-description">Temel Yeterlilik Testi (TYT) için kapsamlı hazırlık programımız, tüm adayların başarılı olması için gereken temel becerileri kazandırır. Türkçe, Matematik, Fen Bilimleri ve Sosyal Bilimler alanlarında güçlü bir temel oluşturur.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Türkçe: Paragraf, Dil Bilgisi, Anlatım Bozuklukları</li>
+                                <li><i class="fas fa-check-circle"></i> Matematik: Temel Kavramlar, Sayılar, Cebir, Geometri</li>
+                                <li><i class="fas fa-check-circle"></i> Fizik: Temel Fizik Kavramları, Kuvvet ve Hareket</li>
+                                <li><i class="fas fa-check-circle"></i> Kimya: Madde ve Özellikleri, Kimyasal Tepkimeler</li>
+                                <li><i class="fas fa-check-circle"></i> Biyoloji: Canlılar Bilimi, Hücre, Sistemler</li>
+                                <li><i class="fas fa-check-circle"></i> Tarih: Tarih Metodolojisi, İlk Çağ Uygarlıkları, Türk Tarihi</li>
+                                <li><i class="fas fa-check-circle"></i> Coğrafya: Dünya'nın Şekli ve Hareketleri, Türkiye Coğrafyası</li>
+                                <li><i class="fas fa-check-circle"></i> Felsefe: Bilgi Felsefesi, Ahlak Felsefesi, Mantık</li>
+                                <li><i class="fas fa-check-circle"></i> Din Kültürü: İnanç, İbadet, Ahlak</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="module2">
+                            <h3 class="module-title">AYT Hazırlık Programı</h3>
+                            <p class="module-description">Alan Yeterlilik Testi (AYT) için hazırlık programımız, öğrencilerin seçtikleri alanlarda derinlemesine bilgi sahibi olmalarını sağlar. Sayısal, Sözel, Eşit Ağırlık ve Dil alanlarında uzmanlaşma imkanı sunar.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Matematik: İleri Düzey Matematik, Türev, İntegral, Limit</li>
+                                <li><i class="fas fa-check-circle"></i> Geometri: Analitik Geometri, Trigonometri, Uzay Geometri</li>
+                                <li><i class="fas fa-check-circle"></i> Fizik: Elektrik, Manyetizma, Modern Fizik, Dalgalar</li>
+                                <li><i class="fas fa-check-circle"></i> Kimya: Organik Kimya, Reaksiyon Hızları, Kimyasal Denge</li>
+                                <li><i class="fas fa-check-circle"></i> Biyoloji: Genetik, Ekoloji, İnsan Fizyolojisi</li>
+                                <li><i class="fas fa-check-circle"></i> Edebiyat: Edebi Akımlar, Edebi Sanatlar, Türk Edebiyatı Tarihi</li>
+                                <li><i class="fas fa-check-circle"></i> Tarih: Osmanlı Tarihi, Türkiye Cumhuriyeti Tarihi</li>
+                                <li><i class="fas fa-check-circle"></i> Coğrafya: Beşeri ve Ekonomik Coğrafya, Çevre ve Toplum</li>
+                                <li><i class="fas fa-check-circle"></i> Felsefe: Varlık Felsefesi, Siyaset Felsefesi, Sanat Felsefesi</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="module3">
+                            <h3 class="module-title">Türkiye Geneli 60 Deneme Sınavı Programı</h3>
+                            <p class="module-description">Yıl boyunca uygulanan 60 Türkiye Geneli TYT-AYT deneme sınavı ile öğrenciler kendilerini yalnızca sınıf arkadaşlarıyla değil, ülke genelindeki rakipleriyle kıyaslama fırsatı bulur. Denemeler sonrası sunulan gelişmiş analiz raporları ile başarıya giden yol net bir şekilde çizilir.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> ÖSYM formatında hazırlanmış TYT ve AYT denemeleri</li>
+                                <li><i class="fas fa-check-circle"></i> Türkiye genelinde binlerce öğrencinin katılımıyla gerçekleşen sınavlar</li>
+                                <li><i class="fas fa-check-circle"></i> Konu bazlı analiz raporları ve gelişim grafikleri</li>
+                                <li><i class="fas fa-check-circle"></i> Yanlış yapılan soruların detaylı çözümleri</li>
+                                <li><i class="fas fa-check-circle"></i> Eksik konuların tespiti ve tamamlanması</li>
+                                <li><i class="fas fa-check-circle"></i> Sınav stratejileri ve zaman yönetimi teknikleri</li>
+                                <li><i class="fas fa-check-circle"></i> Branş bazında performans değerlendirmesi</li>
+                                <li><i class="fas fa-check-circle"></i> Hedef üniversite ve bölüm bazında başarı analizi</li>
+                                <li><i class="fas fa-check-circle"></i> Veli bilgilendirme raporları</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="module4">
+                            <h3 class="module-title">Akademik Koçluk Sistemi</h3>
+                            <p class="module-description">Her öğrenciye özel akademik koçlar sayesinde bireysel takip sistemi yürütülür. Hedef belirleme, haftalık görüşmeler ve sınav kaygısı yönetimi ile öğrencinin akademik başarısı desteklenir.</p>
+                            
+                            <ul class="module-topics">
+                                <li><i class="fas fa-check-circle"></i> Kişisel hedef belirleme ve planlama</li>
+                                <li><i class="fas fa-check-circle"></i> Haftalık düzenli görüşmeler</li>
+                                <li><i class="fas fa-check-circle"></i> Motivasyon ve zaman yönetimi desteği</li>
+                                <li><i class="fas fa-check-circle"></i> Sınav kaygısı ve stres yönetimi</li>
+                                <li><i class="fas fa-check-circle"></i> Çalışma teknikleri ve verimlilik artırma</li>
+                                <li><i class="fas fa-check-circle"></i> Kişisel gelişim ve özgüven artırma</li>
+                                <li><i class="fas fa-check-circle"></i> Aile iletişimi ve destek sistemi</li>
+                                <li><i class="fas fa-check-circle"></i> Üniversite ve meslek seçimi danışmanlığı</li>
+                                <li><i class="fas fa-check-circle"></i> Bireysel gelişim takibi ve raporlama</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 60 Deneme Sınavı Listesi -->
+            <div class="exam-list-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">60 Türkiye Geneli Deneme Sınavı</h2>
+                
+                <div class="exam-list-container">
+                    <div class="exam-list-intro">
+                        <p>Üstün Başarı Akademisi olarak, öğrencilerimize Türkiye'nin en kaliteli yayınlarından seçilmiş 60 adet TYT-AYT deneme sınavı sunuyoruz. Bu denemeler, ÖSYM formatında hazırlanmış olup, gerçek sınav deneyimi yaşamanızı sağlar.</p>
+                    </div>
+                    
+                    <div class="exam-list-columns">
+                        <div class="exam-list-column">
+                            <h3>TYT Denemeleri (35 Adet)</h3>
+                            <ul>
+                                <li>Apotemi TYT Denemeleri (5 Adet)</li>
+                                <li>Limit TYT Denemeleri (5 Adet)</li>
+                                <li>345 TYT Denemeleri (5 Adet)</li>
+                                <li>Palme TYT Denemeleri (5 Adet)</li>
+                                <li>Çap TYT Denemeleri (5 Adet)</li>
+                                <li>Karekök TYT Denemeleri (5 Adet)</li>
+                                <li>Üstün Başarı Özel TYT Denemeleri (5 Adet)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="exam-list-column">
+                            <h3>AYT Denemeleri (25 Adet)</h3>
+                            <ul>
+                                <li>Apotemi AYT Denemeleri (4 Adet)</li>
+                                <li>Limit AYT Denemeleri (4 Adet)</li>
+                                <li>345 AYT Denemeleri (4 Adet)</li>
+                                <li>Palme AYT Denemeleri (4 Adet)</li>
+                                <li>Çap AYT Denemeleri (4 Adet)</li>
+                                <li>Karekök AYT Denemeleri (3 Adet)</li>
+                                <li>Üstün Başarı Özel AYT Denemeleri (2 Adet)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="exam-list-features">
+                        <div class="exam-feature">
+                            <i class="fas fa-chart-bar"></i>
+                            <h4>Detaylı Analiz</h4>
+                            <p>Her deneme sonrası konu bazlı analiz ve gelişim grafikleri</p>
+                        </div>
+                        
+                        <div class="exam-feature">
+                            <i class="fas fa-globe"></i>
+                            <h4>Türkiye Geneli</h4>
+                            <p>Binlerce öğrencinin katılımıyla gerçek sıralama</p>
+                        </div>
+                        
+                        <div class="exam-feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>ÖSYM Formatı</h4>
+                            <p>Gerçek sınav formatında hazırlanmış sorular</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Success Stories -->
+            <div class="success-stories">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Başarı Hikayeleri</h2>
+                
+                <div class="stories-slider">
+                    <div class="story-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="story-image">
+                            <img src="images/student1.jpg" alt="Öğrenci 1">
+                        </div>
+                        <div class="story-content">
+                            <h3 class="student-name">Ahmet Yılmaz</h3>
+                            <p class="student-achievement">İstanbul Teknik Üniversitesi - Bilgisayar Mühendisliği</p>
+                            <p class="student-testimonial">"Üstün Başarı Akademisi'ndeki eğitim sürecim boyunca aldığım destek ve 60 deneme sınavı sayesinde eksiklerimi görerek hızla tamamladım. Akademik koçluk sistemi motivasyonumu her zaman yüksek tutmamı sağladı. Hayalim olan bölüme yerleştiğim için çok mutluyum."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="story-image">
+                            <img src="images/student2.jpg" alt="Öğrenci 2">
+                        </div>
+                        <div class="story-content">
+                            <h3 class="student-name">Zeynep Kaya</h3>
+                            <p class="student-achievement">Boğaziçi Üniversitesi - Endüstri Mühendisliği</p>
+                            <p class="student-testimonial">"Üstün Başarı Akademisi'nin sistemli çalışma programı ve Türkiye geneli denemeler sayesinde kendimi sürekli geliştirme fırsatı buldum. Öğretmenlerimin ve koçumun desteğiyle sınav kaygımı yendim ve hedefime ulaştım. Teşekkürler Üstün Başarı Akademisi!"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="story-image">
+                            <img src="images/student3.jpg" alt="Öğrenci 3">
+                        </div>
+                        <div class="story-content">
+                            <h3 class="student-name">Mehmet Demir</h3>
+                            <p class="student-achievement">Ankara Üniversitesi - Tıp Fakültesi</p>
+                            <p class="student-testimonial">"Üstün Başarı Akademisi'nin yoğun eğitim programı ve 60 Türkiye geneli deneme sınavı, beni gerçek sınava hazır hale getirdi. Branş denemeleri ve soru çözüm seansları sayesinde zayıf yönlerimi güçlendirdim. Hayalim olan tıp fakültesine yerleştim."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Sıkça Sorulan Sorular</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                        <div class="faq-question">
+                            <h3>YKS Hazırlık programına ne zaman başlamalıyım?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>YKS hazırlığına ideal olarak 11. sınıfta başlanması önerilir. Ancak 12. sınıfta veya mezun durumunda da programlarımıza katılabilirsiniz. Her öğrencinin seviyesine ve ihtiyaçlarına göre özel programlar sunuyoruz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                        <div class="faq-question">
+                            <h3>60 Türkiye geneli deneme sınavı nasıl uygulanıyor?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Denemeler haftalık olarak belirlenen program dahilinde uygulanır. TYT ve AYT denemeleri Türkiye'nin önde gelen yayınevlerinden seçilir ve ÖSYM formatında hazırlanır. Her deneme sonrası detaylı analiz raporları sunulur ve eksik konular tespit edilerek tamamlanır.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                        <div class="faq-question">
+                            <h3>Akademik koçluk sistemi nasıl çalışır?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Her öğrenciye bir akademik koç atanır. Koçlar, öğrencilerin hedeflerini belirlemelerine, çalışma planı oluşturmalarına ve motivasyonlarını yüksek tutmalarına yardımcı olur. Haftalık düzenli görüşmeler yapılır ve öğrencinin gelişimi takip edilir. Sınav kaygısı ve stres yönetimi konularında da destek sağlanır.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                        <div class="faq-question">
+                            <h3>Sınıf mevcutları kaç kişidir?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Üstün Başarı Akademisi'nde sınıf mevcutları maksimum 12-15 kişi ile sınırlıdır. Bu sayede her öğrenciye yeterli ilgi gösterilir ve etkileşimli bir eğitim ortamı sağlanır. Öğretmenlerimiz, her öğrencinin sorularını yanıtlayabilir ve bireysel ihtiyaçlarına odaklanabilir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                        <div class="faq-question">
+                            <h3>Veli bilgilendirmesi nasıl yapılır?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Velilerimiz, öğrencilerimizin gelişimini düzenli olarak takip edebilir. Haftalık deneme sonuçları, aylık gelişim raporları ve dönemlik veli toplantıları ile bilgilendirme yapılır. Ayrıca, velilerimiz istedikleri zaman akademik koçlar ve öğretmenlerle görüşme talep edebilirler.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="cta-section animate-on-scroll" data-animation="animate-fade-in-up">
+                <div class="cta-content">
+                    <h2 class="cta-title">Hayalindeki Üniversiteye Adım Adım</h2>
+                    <p class="cta-description">Üstün Başarı Akademisi'nde yerinizi ayırtın ve başarıya giden yolda ilk adımı atın. 60 Türkiye geneli deneme sınavı ve uzman kadromuzla yanınızdayız.</p>
+                    <div class="cta-buttons">
+                        <a href="kayit.html" class="cta-button primary">Kayıt Ol</a>
+                        <a href="iletisim.html" class="cta-button secondary">Bize Ulaşın</a>
+                    </div>
+                </div>
+                <div class="cta-image">
+                    <img src="images/yks-cta.jpg" alt="YKS Hazırlık Kayıt">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Related Programs -->
+    <section class="related-programs">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">İlgili Programlar</h2>
+            
+            <div class="programs-grid">
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                    <div class="program-card-image">
+                        <img src="images/deneme-klubu.jpg" alt="Deneme Kulübü">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Deneme Kulübü</h3>
+                        <p class="program-card-description">Türkiye genelinde uygulanan 60 deneme sınavı ile gerçek sınav deneyimi yaşayın ve eksiklerinizi tespit edin.</p>
+                        <a href="deneme-klubu.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                    <div class="program-card-image">
+                        <img src="images/kocluk-rehberlik.jpg" alt="Koçluk ve Rehberlik">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Koçluk ve Rehberlik</h3>
+                        <p class="program-card-description">Akademik koçluk sistemi ile hedef belirleme, motivasyon ve sınav kaygısı yönetimi konularında destek alın.</p>
+                        <a href="kocluk-rehberlik.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                    <div class="program-card-image">
+                        <img src="images/ozel-ders.jpg" alt="Özel Ders">
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Özel Ders</h3>
+                        <p class="program-card-description">Birebir özel dersler ile eksik konularınızı tamamlayın ve kişiselleştirilmiş eğitim alın.</p>
+                        <a href="ozel-ders.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-white.png" alt="Üstün Başarı Akademisi Logo">
+                    <p>Geleceğinizi Şekillendirin</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>Programlarımız</h3>
+                        <ul>
+                            <li><a href="yks-hazirlik.html">YKS Hazırlık</a></li>
+                            <li><a href="lgs-hazirlik.html">LGS Hazırlık</a></li>
+                            <li><a href="ingilizce.html">İngilizce</a></li>
+                            <li><a href="okul-takviye.html">Okula Takviye</a></li>
+                            <li><a href="deneme-klubu.html">Deneme Kulübü</a></li>
+                            <li><a href="yaz-kampi.html">Yaz Kampı</a></li>
+                            <li><a href="after-school.html">After School</a></li>
+                            <li><a href="ozel-ders.html">Özel Ders</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h3>Kurumsal</h3>
+                        <ul>
+                            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                            <li><a href="subelerimiz.html">Şubelerimiz</a></li>
+                            <li><a href="basarilarimiz.html">Başarılarımız</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="kariyer.html">Kariyer</a></li>
+                            <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h3>İletişim</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Esenyalı, Uygar Sk. No:29, 34890 Pendik/İstanbul</li>
+                            <li><i class="fas fa-phone"></i> <a href="tel:+902165000000">0216 500 00 00</a></li>
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:info@ustunbasariakademisi.com">info@ustunbasariakademisi.com</a></li>
+                        </ul>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Üstün Başarı Akademisi. Tüm Hakları Saklıdır.</p>
+                <div class="footer-bottom-links">
+                    <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+                    <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+                    <a href="kvkk.html">KVKK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="mobile-nav.js"></script>
+    <script src="animation-effects.js"></script>
+    <script>
+        // Tab Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and panes
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Show corresponding tab pane
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // FAQ Functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const toggle = item.querySelector('.faq-toggle');
+                
+                question.addEventListener('click', () => {
+                    // Toggle active class
+                    item.classList.toggle('active');
+                    
+                    // Change icon
+                    if (item.classList.contains('active')) {
+                        toggle.innerHTML = '<i class="fas fa-minus"></i>';
+                    } else {
+                        toggle.innerHTML = '<i class="fas fa-plus"></i>';
+                    }
+                });
+            });
+            
+            // Slider Functionality
+            const sliderCards = document.querySelectorAll('.story-card');
+            const sliderDots = document.querySelectorAll('.dot');
+            const prevButton = document.querySelector('.slider-prev');
+            const nextButton = document.querySelector('.slider-next');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                // Hide all slides
+                sliderCards.forEach(card => card.style.display = 'none');
+                sliderDots.forEach(dot => dot.classList.remove('active'));
+                
+                // Show current slide
+                sliderCards[index].style.display = 'flex';
+                sliderDots[index].classList.add('active');
+                currentSlide = index;
+            }
+            
+            // Initialize slider
+            showSlide(0);
+            
+            // Next slide
+            nextButton.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % sliderCards.length;
+                showSlide(currentSlide);
+            });
+            
+            // Previous slide
+            prevButton.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + sliderCards.length) % sliderCards.length;
+                showSlide(currentSlide);
+            });
+            
+            // Dot navigation
+            sliderDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+            
+            // Back to Top Button
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
