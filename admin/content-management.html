@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İçerik Düzenleyici - Üstün Başarı Akademisi</title>
+    <title>İçerik Yönetimi - Üstün Başarı Akademisi</title>
     <link rel="stylesheet" href="admin-styles.css">
-    <link rel="stylesheet" href="content-editor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../images/favicon.png">
@@ -123,42 +122,33 @@
         <main class="admin-main">
             <div class="container-fluid">
                 <div class="admin-content-header">
-                    <h1 class="admin-title">İçerik Düzenleyici</h1>
+                    <h1 class="admin-title">İçerik Yönetimi</h1>
                     
                     <div class="admin-breadcrumb">
-                        <a href="index.html">Gösterge Paneli</a> / <a href="content-management.html">İçerik Yönetimi</a> / <span>İçerik Düzenleyici</span>
+                        <a href="index.html">Gösterge Paneli</a> / <span>İçerik Yönetimi</span>
                     </div>
                 </div>
                 
                 <div class="admin-content">
                     <div class="admin-card">
                         <div class="admin-card-header">
-                            <h2 class="admin-card-title">İçerik Düzenle</h2>
+                            <h2 class="admin-card-title">İçerik Listesi</h2>
                             
                             <div class="admin-card-actions">
-                                <button class="btn btn-secondary me-2" id="previewContentBtn">
-                                    <i class="fas fa-eye"></i> Önizleme
-                                </button>
-                                <button class="btn btn-primary" id="saveContentBtn">
-                                    <i class="fas fa-save"></i> Kaydet
+                                <button class="btn btn-primary" id="addContentBtn">
+                                    <i class="fas fa-plus"></i> Yeni İçerik
                                 </button>
                             </div>
                         </div>
                         
                         <div class="admin-card-body">
-                            <div class="content-form">
-                                <div class="row mb-4">
-                                    <div class="col-md-8">
-                                        <div class="form-group">
-                                            <label for="contentTitle">Başlık</label>
-                                            <input type="text" class="form-control" id="contentTitle" placeholder="İçerik başlığı">
-                                        </div>
-                                    </div>
-                                    
+                            <div class="admin-filters">
+                                <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label for="contentType">İçerik Türü</label>
-                                            <select class="form-select" id="contentType">
+                                            <label for="contentFilter">İçerik Türü</label>
+                                            <select class="form-select" id="contentFilter">
+                                                <option value="all">Tümü</option>
                                                 <option value="program">Program</option>
                                                 <option value="page">Sayfa</option>
                                                 <option value="blog">Blog</option>
@@ -166,105 +156,47 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div>
-                                
-                                <div class="row mb-4">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="contentSlug">URL Adresi</label>
-                                            <div class="input-group">
-                                                <span class="input-group-text">https://www.ustunbasariakademisi.com/</span>
-                                                <input type="text" class="form-control" id="contentSlug" placeholder="icerik-adresi">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="row mb-4">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>İçerik</label>
-                                            <div class="editor-container">
-                                                <div class="editor-toolbar">
-                                                    <button data-command="bold" title="Kalın"><i class="fas fa-bold"></i></button>
-                                                    <button data-command="italic" title="İtalik"><i class="fas fa-italic"></i></button>
-                                                    <button data-command="underline" title="Altı Çizili"><i class="fas fa-underline"></i></button>
-                                                    <button data-command="strikeThrough" title="Üstü Çizili"><i class="fas fa-strikethrough"></i></button>
-                                                    <span class="separator"></span>
-                                                    <button data-command="h1" title="Başlık 1">H1</button>
-                                                    <button data-command="h2" title="Başlık 2">H2</button>
-                                                    <button data-command="h3" title="Başlık 3">H3</button>
-                                                    <button data-command="p" title="Paragraf">P</button>
-                                                    <span class="separator"></span>
-                                                    <button data-command="justifyLeft" title="Sola Hizala"><i class="fas fa-align-left"></i></button>
-                                                    <button data-command="justifyCenter" title="Ortala"><i class="fas fa-align-center"></i></button>
-                                                    <button data-command="justifyRight" title="Sağa Hizala"><i class="fas fa-align-right"></i></button>
-                                                    <button data-command="justifyFull" title="İki Yana Yasla"><i class="fas fa-align-justify"></i></button>
-                                                    <span class="separator"></span>
-                                                    <button data-command="insertUnorderedList" title="Madde İşaretleri"><i class="fas fa-list-ul"></i></button>
-                                                    <button data-command="insertOrderedList" title="Numaralandırma"><i class="fas fa-list-ol"></i></button>
-                                                    <span class="separator"></span>
-                                                    <button data-command="createlink" title="Bağlantı Ekle"><i class="fas fa-link"></i></button>
-                                                    <button data-command="insertimage" title="Resim Ekle"><i class="fas fa-image"></i></button>
-                                                    <button type="button" data-bs-toggle="modal" data-bs-target="#mediaModal" title="Medya Kütüphanesi"><i class="fas fa-photo-video"></i></button>
-                                                    <span class="separator"></span>
-                                                    <button data-command="undo" title="Geri Al"><i class="fas fa-undo"></i></button>
-                                                    <button data-command="redo" title="Yinele"><i class="fas fa-redo"></i></button>
-                                                </div>
-                                                <div class="editor-content" id="contentEditor" contenteditable="true"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="row mb-4">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="contentFeaturedImage">Öne Çıkan Görsel</label>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" id="contentFeaturedImage" placeholder="Görsel URL'si">
-                                                <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#mediaModal">Medya Kütüphanesi</button>
-                                            </div>
-                                        </div>
-                                    </div>
                                     
-                                    <div class="col-md-6">
+                                    <div class="col-md-8">
                                         <div class="form-group">
-                                            <label for="contentStatus">Durum</label>
-                                            <select class="form-select" id="contentStatus">
-                                                <option value="published">Yayında</option>
-                                                <option value="draft">Taslak</option>
-                                                <option value="scheduled">Zamanlanmış</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="row mb-4">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="contentMetaDescription">Meta Açıklama</label>
-                                            <textarea class="form-control" id="contentMetaDescription" rows="3" placeholder="SEO için meta açıklama"></textarea>
-                                            <small class="form-text text-muted">Arama motorları için kısa bir açıklama. En fazla 160 karakter olmalıdır.</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="row mb-4">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="contentTags">Etiketler</label>
-                                            <input type="text" class="form-control" id="contentTags" placeholder="Etiketleri virgülle ayırın">
-                                            <small class="form-text text-muted">İçeriğinizi kategorize etmek için etiketler ekleyin.</small>
+                                            <label for="contentSearch">Ara</label>
+                                            <input type="text" class="form-control" id="contentSearch" placeholder="İçerik ara...">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="admin-card-footer">
-                            <button class="btn btn-secondary" id="cancelBtn">İptal</button>
-                            <button class="btn btn-primary" id="saveContentBtn2">Kaydet</button>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Başlık</th>
+                                            <th>Tür</th>
+                                            <th>Son Güncelleme</th>
+                                            <th>İşlemler</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="contentList">
+                                        <!-- Content list will be loaded dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="admin-pagination">
+                                <nav>
+                                    <ul class="pagination">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Önceki</a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Sonraki</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -331,7 +263,6 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="content-management.js"></script>
-    <script src="content-editor.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // User dropdown toggle
@@ -351,14 +282,6 @@
             
             // Initialize media library
             initializeMediaLibrary();
-            
-            // Initialize rich text editor
-            initializeRichTextEditor();
-            
-            // Save button (footer)
-            document.getElementById('saveContentBtn2').addEventListener('click', function() {
-                saveContent();
-            });
         });
     </script>
 </body>

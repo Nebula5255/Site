@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duyuru Yönetimi - Üstün Başarı Akademisi</title>
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="container-fluid">
+            <div class="admin-header-content">
+                <div class="admin-logo">
+                    <a href="index.html">
+                        <img src="../images/logo.png" alt="Üstün Başarı Akademisi Logo">
+                    </a>
+                </div>
+                
+                <div class="admin-user-menu">
+                    <div class="admin-notifications">
+                        <button class="notification-button">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                    </div>
+                    
+                    <div class="admin-user">
+                        <button class="user-button" id="userMenuToggle">
+                            <img src="../images/admin-avatar.jpg" alt="Admin Avatar">
+                            <span class="user-name">Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        
+                        <div class="user-dropdown" id="userDropdown">
+                            <ul>
+                                <li><a href="#"><i class="fas fa-user"></i> Profil</a></li>
+                                <li><a href="#"><i class="fas fa-cog"></i> Ayarlar</a></li>
+                                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Çıkış</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Admin Content -->
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Gösterge Paneli</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="content-management.html">
+                            <i class="fas fa-file-alt"></i>
+                            <span>İçerik Yönetimi</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="programs.html">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Programlar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="branches.html">
+                            <i class="fas fa-building"></i>
+                            <span>Şubeler</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="teachers.html">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Öğretmenler</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="students.html">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>Öğrenciler</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="advertisements.html">
+                            <i class="fas fa-ad"></i>
+                            <span>Reklamlar</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="announcements.html">
+                            <i class="fas fa-bullhorn"></i>
+                            <span>Duyurular</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Raporlar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Ayarlar</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="admin-main">
+            <div class="container-fluid">
+                <div class="admin-content-header">
+                    <h1 class="admin-title">Duyuru Yönetimi</h1>
+                    
+                    <div class="admin-breadcrumb">
+                        <a href="index.html">Gösterge Paneli</a> / <span>Duyuru Yönetimi</span>
+                    </div>
+                </div>
+                
+                <div class="admin-content">
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h2 class="admin-card-title">Duyuru Listesi</h2>
+                            
+                            <div class="admin-card-actions">
+                                <button class="btn btn-primary" id="addAnnouncementBtn" data-bs-toggle="modal" data-bs-target="#announcementModal">
+                                    <i class="fas fa-plus"></i> Yeni Duyuru
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="admin-card-body">
+                            <div class="admin-filters">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="announcementFilter">Duyuru Durumu</label>
+                                            <select class="form-select" id="announcementFilter">
+                                                <option value="all">Tümü</option>
+                                                <option value="active">Aktif</option>
+                                                <option value="scheduled">Zamanlanmış</option>
+                                                <option value="expired">Süresi Dolmuş</option>
+                                                <option value="draft">Taslak</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="priorityFilter">Öncelik</label>
+                                            <select class="form-select" id="priorityFilter">
+                                                <option value="all">Tümü</option>
+                                                <option value="high">Yüksek</option>
+                                                <option value="medium">Orta</option>
+                                                <option value="low">Düşük</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="announcementSearch">Ara</label>
+                                            <input type="text" class="form-control" id="announcementSearch" placeholder="Duyuru ara...">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Başlık</th>
+                                            <th>Öncelik</th>
+                                            <th>Yayın Tarihi</th>
+                                            <th>Bitiş Tarihi</th>
+                                            <th>Durum</th>
+                                            <th>İşlemler</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="announcementList">
+                                        <tr>
+                                            <td>
+                                                <div class="announcement-title-container">
+                                                    <span class="announcement-icon high"><i class="fas fa-exclamation-circle"></i></span>
+                                                    <span>YKS Deneme Sınavı Tarihi Değişikliği</span>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-danger">Yüksek</span></td>
+                                            <td>15.04.2025</td>
+                                            <td>20.04.2025</td>
+                                            <td><span class="badge bg-success">Aktif</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary edit-announcement" data-id="1">
+                                                    <i class="fas fa-edit"></i> Düzenle
+                                                </button>
+                                                <button class="btn btn-sm btn-danger delete-announcement" data-id="1">
+                                                    <i class="fas fa-trash"></i> Sil
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="announcement-title-container">
+                                                    <span class="announcement-icon medium"><i class="fas fa-info-circle"></i></span>
+                                                    <span>Yaz Kampı Kayıtları Başladı</span>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-warning">Orta</span></td>
+                                            <td>10.04.2025</td>
+                                            <td>10.05.2025</td>
+                                            <td><span class="badge bg-success">Aktif</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary edit-announcement" data-id="2">
+                                                    <i class="fas fa-edit"></i> Düzenle
+                                                </button>
+                                                <button class="btn btn-sm btn-danger delete-announcement" data-id="2">
+                                                    <i class="fas fa-trash"></i> Sil
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="announcement-title-container">
+                                                    <span class="announcement-icon medium"><i class="fas fa-info-circle"></i></span>
+                                                    <span>Gebze Şubemiz Açıldı</span>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-warning">Orta</span></td>
+                                            <td>05.04.2025</td>
+                                            <td>05.05.2025</td>
+                                            <td><span class="badge bg-success">Aktif</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary edit-announcement" data-id="3">
+                                                    <i class="fas fa-edit"></i> Düzenle
+                                                </button>
+                                                <button class="btn btn-sm btn-danger delete-announcement" data-id="3">
+                                                    <i class="fas fa-trash"></i> Sil
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="announcement-title-container">
+                                                    <span class="announcement-icon low"><i class="fas fa-bell"></i></span>
+                                                    <span>İngilizce Konuşma Kulübü Etkinlikleri</span>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-info">Düşük</span></td>
+                                            <td>01.04.2025</td>
+                                            <td>30.04.2025</td>
+                                            <td><span class="badge bg-success">Aktif</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary edit-announcement" data-id="4">
+                                                    <i class="fas fa-edit"></i> Düzenle
+                                                </button>
+                                                <button class="btn btn-sm btn-danger delete-announcement" data-id="4">
+                                                    <i class="fas fa-trash"></i> Sil
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="announcement-title-container">
+                                                    <span class="announcement-icon high"><i class="fas fa-exclamation-circle"></i></span>
+                                                    <span>LGS Hazırlık Programı Yeni Dönem Kayıtları</span>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-danger">Yüksek</span></td>
+                                            <td>01.05.2025</td>
+                                            <td>31.05.2025</td>
+                                            <td><span class="badge bg-warning">Zamanlanmış</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary edit-announcement" data-id="5">
+                                                    <i class="fas fa-edit"></i> Düzenle
+                                                </button>
+                                                <button class="btn btn-sm btn-danger delete-announcement" data-id="5">
+                                                    <i class="fas fa-trash"></i> Sil
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="announcement-title-container">
+                                                    <span class="announcement-icon low"><i class="fas fa-bell"></i></span>
+                                                    <span>Mart Ayı Veli Toplantısı</span>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-info">Düşük</span></td>
+                                            <td>01.03.2025</td>
+                                            <td>15.03.2025</td>
+                                            <td><span class="badge bg-secondary">Süresi Dolmuş</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary edit-announcement" data-id="6">
+                                                    <i class="fas fa-edit"></i> Düzenle
+                                                </button>
+                                                <button class="btn btn-sm btn-danger delete-announcement" data-id="6">
+                                                    <i class="fas fa-trash"></i> Sil
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="admin-pagination">
+                                <nav>
+                                    <ul class="pagination">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Önceki</a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Sonraki</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-card mt-4">
+                        <div class="admin-card-header">
+                            <h2 class="admin-card-title">Duyuru İstatistikleri</h2>
+                        </div>
+                        
+                        <div class="admin-card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="stat-card">
+                                        <div class="stat-card-icon bg-primary">
+                                            <i class="fas fa-bullhorn"></i>
+                                        </div>
+                                        <div class="stat-card-content">
+                                            <h3 class="stat-card-title">6</h3>
+                                            <p class="stat-card-text">Toplam Duyuru</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-3">
+                                    <div class="stat-card">
+                                        <div class="stat-card-icon bg-success">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <div class="stat-card-content">
+                                            <h3 class="stat-card-title">4</h3>
+                                            <p class="stat-card-text">Aktif Duyuru</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-3">
+                                    <div class="stat-card">
+                                        <div class="stat-card-icon bg-warning">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div class="stat-card-content">
+                                            <h3 class="stat-card-title">1</h3>
+                                            <p class="stat-card-text">Zamanlanmış</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-3">
+                                    <div class="stat-card">
+                                        <div class="stat-card-icon bg-secondary">
+                                            <i class="fas fa-calendar-times"></i>
+                                        </div>
+                                        <div class="stat-card-content">
+                                            <h3 class="stat-card-title">1</h3>
+                                            <p class="stat-card-text">Süresi Dolmuş</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="chart-container">
+                                        <h4 class="chart-title">Duyuru Öncelikleri</h4>
+                                        <canvas id="priorityChart"></canvas>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="chart-container">
+                                        <h4 class="chart-title">Duyuru Durumları</h4>
+                                        <canvas id="statusChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Announcement Modal -->
+    <div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="announcementModalLabel">Duyuru Ekle/Düzenle</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="announcementForm">
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="announcementTitle">Duyuru Başlığı</label>
+                                    <input type="text" class="form-control" id="announcementTitle" placeholder="Duyuru başlığı" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="announcementContent">Duyuru İçeriği</label>
+                                    <textarea class="form-control" id="announcementContent" rows="5" placeholder="Duyuru içeriği" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="announcementPriority">Öncelik</label>
+                                    <select class="form-select" id="announcementPriority" required>
+                                        <option value="high">Yüksek</option>
+                                        <option value="medium" selected>Orta</option>
+                                        <option value="low">Düşük</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="announcementStatus">Durum</label>
+                                    <select class="form-select" id="announcementStatus" required>
+                                        <option value="active">Aktif</option>
+                                        <option value="scheduled">Zamanlanmış</option>
+                                        <option value="draft">Taslak</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="announcementStartDate">Yayın Tarihi</label>
+                                    <input type="date" class="form-control" id="announcementStartDate" required>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="announcementEndDate">Bitiş Tarihi</label>
+                                    <input type="date" class="form-control" id="announcementEndDate" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="announcementTarget">Hedef Kitle</label>
+                                    <select class="form-select" id="announcementTarget">
+                                        <option value="all" selected>Tüm Ziyaretçiler</option>
+                                        <option value="students">Öğrenciler</option>
+                                        <option value="parents">Veliler</option>
+                                        <option value="teachers">Öğretmenler</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="announcementIcon">İkon</label>
+                                    <select class="form-select" id="announcementIcon">
+                                        <option value="exclamation-circle">Ünlem İşareti</option>
+                                        <option value="info-circle" selected>Bilgi İşareti</option>
+                                        <option value="bell">Zil İşareti</option>
+                                        <option value="calendar">Takvim İşareti</option>
+                                        <option value="star">Yıldız İşareti</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="announcementLink">Bağlantı (İsteğe Bağlı)</label>
+                                    <input type="url" class="form-control" id="announcementLink" placeholder="https://www.example.com">
+                                    <small class="form-text text-muted">Duyuruya tıklandığında yönlendirilecek bağlantı.</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="announcementSticky">
+                                    <label class="form-check-label" for="announcementSticky">
+                                        Sabit Duyuru (Her zaman üstte gösterilir)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="announcementPopup">
+                                    <label class="form-check-label" for="announcementPopup">
+                                        Açılır Pencere Olarak Göster
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                    <button type="button" class="btn btn-primary" id="saveAnnouncementBtn">Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // User dropdown toggle
+            const userMenuToggle = document.getElementById('userMenuToggle');
+            const userDropdown = document.getElementById('userDropdown');
+            
+            userMenuToggle.addEventListener('click', function() {
+                userDropdown.classList.toggle('active');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!userMenuToggle.contains(event.target) && !userDropdown.contains(event.target)) {
+                    userDropdown.classList.remove('active');
+                }
+            });
+            
+            // Initialize charts
+            initializeCharts();
+            
+            // Edit announcement buttons
+            document.querySelectorAll('.edit-announcement').forEach(button => {
+                button.addEventListener('click', function() {
+                    const announcementId = this.dataset.id;
+                    editAnnouncement(announcementId);
+                });
+            });
+            
+            // Delete announcement buttons
+            document.querySelectorAll('.delete-announcement').forEach(button => {
+                button.addEventListener('click', function() {
+                    const announcementId = this.dataset.id;
+                    deleteAnnouncement(announcementId);
+                });
+            });
+            
+            // Save announcement button
+            document.getElementById('saveAnnouncementBtn').addEventListener('click', function() {
+                saveAnnouncement();
+            });
+        });
+        
+        // Initialize charts
+        function initializeCharts() {
+            // Priority chart
+            const priorityCtx = document.getElementById('priorityChart').getContext('2d');
+            const priorityChart = new Chart(priorityCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Yüksek', 'Orta', 'Düşük'],
+                    datasets: [{
+                        data: [2, 2, 2],
+                        backgroundColor: [
+                            'rgba(220, 53, 69, 0.7)',
+                            'rgba(255, 193, 7, 0.7)',
+                            'rgba(23, 162, 184, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(220, 53, 69, 1)',
+                            'rgba(255, 193, 7, 1)',
+                            'rgba(23, 162, 184, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+            
+            // Status chart
+            const statusCtx = document.getElementById('statusChart').getContext('2d');
+            const statusChart = new Chart(statusCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Aktif', 'Zamanlanmış', 'Süresi Dolmuş', 'Taslak'],
+                    datasets: [{
+                        data: [4, 1, 1, 0],
+                        backgroundColor: [
+                            'rgba(40, 167, 69, 0.7)',
+                            'rgba(255, 193, 7, 0.7)',
+                            'rgba(108, 117, 125, 0.7)',
+                            'rgba(23, 162, 184, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(40, 167, 69, 1)',
+                            'rgba(255, 193, 7, 1)',
+                            'rgba(108, 117, 125, 1)',
+                            'rgba(23, 162, 184, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Edit announcement
+        function editAnnouncement(announcementId) {
+            // In a real implementation, this would fetch the announcement data from the server
+            // For demonstration, we'll populate the form with sample data
+            document.getElementById('announcementTitle').value = 'YKS Deneme Sınavı Tarihi Değişikliği';
+            document.getElementById('announcementContent').value = 'Değerli öğrencilerimiz,\n\n17 Nisan 2025 tarihinde yapılması planlanan YKS Deneme Sınavımız, teknik nedenlerden dolayı 24 Nisan 2025 tarihine ertelenmiştir.\n\nBilgilerinize sunarız.\n\nÜstün Başarı Akademisi';
+            document.getElementById('announcementPriority').value = 'high';
+            document.getElementById('announcementStatus').value = 'active';
+            document.getElementById('announcementStartDate').value = '2025-04-15';
+            document.getElementById('announcementEndDate').value = '2025-04-20';
+            document.getElementById('announcementTarget').value = 'all';
+            document.getElementById('announcementIcon').value = 'exclamation-circle';
+            document.getElementById('announcementLink').value = '';
+            document.getElementById('announcementSticky').checked = true;
+            document.getElementById('announcementPopup').checked = true;
+            
+            // Show the modal
+            const announcementModal = new bootstrap.Modal(document.getElementById('announcementModal'));
+            announcementModal.show();
+        }
+        
+        // Delete announcement
+        function deleteAnnouncement(announcementId) {
+            if (confirm('Bu duyuruyu silmek istediğinizden emin misiniz?')) {
+                // In a real implementation, this would send a delete request to the server
+                // For demonstration, we'll just show a success message
+                alert('Duyuru başarıyla silindi.');
+                
+                // Reload the page
+                location.reload();
+            }
+        }
+        
+        // Save announcement
+        function saveAnnouncement() {
+            // Get the form data
+            const title = document.getElementById('announcementTitle').value;
+            const content = document.getElementById('announcementContent').value;
+            const priority = document.getElementById('announcementPriority').value;
+            const startDate = document.getElementById('announcementStartDate').value;
+            const endDate = document.getElementById('announcementEndDate').value;
+            
+            // Validate the form
+            if (!title) {
+                alert('Lütfen bir başlık girin.');
+                return;
+            }
+            
+            if (!content) {
+                alert('Lütfen bir içerik girin.');
+                return;
+            }
+            
+            if (!startDate) {
+                alert('Lütfen bir yayın tarihi seçin.');
+                return;
+            }
+            
+            if (!endDate) {
+                alert('Lütfen bir bitiş tarihi seçin.');
+                return;
+            }
+            
+            // In a real implementation, this would send the data to the server
+            // For demonstration, we'll just show a success message
+            alert('Duyuru başarıyla kaydedildi.');
+            
+            // Close the modal
+            const announcementModal = bootstrap.Modal.getInstance(document.getElementById('announcementModal'));
+            announcementModal.hide();
+            
+            // Reload the page
+            location.reload();
+        }
+    </script>
+</body>
+</html>
