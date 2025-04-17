@@ -1,13 +1,36 @@
-/* 
- * README.md - Üstün Başarı Akademisi Modern Website
- * 
- * Bu dosya, Üstün Başarı Akademisi için hazırlanan modern web sitesi hakkında
- * genel bilgiler ve kurulum talimatları içerir.
- */
+# Üstün Başarı Akademisi Web Sitesi ve Yönetim Paneli
 
-# Üstün Başarı Akademisi Modern Website
+Bu proje, Üstün Başarı Akademisi için modern, animasyonlu ve responsive bir web sitesi ve kapsamlı bir yönetim paneli içerir.
 
-Bu proje, Üstün Başarı Akademisi için modern, animasyonlu ve responsive bir web sitesi tasarımı içerir. Tüm sayfalar için tutarlı bir tasarım şablonu, animasyonlar ve modern UI elementleri kullanılmıştır.
+## Proje İçeriği
+
+Bu paket aşağıdaki bileşenleri içerir:
+
+1. **Modern Web Sitesi**
+   - Animasyonlu ve responsive tasarım
+   - Tüm programlar için bilgi kartları
+   - Şube bilgileri ve iletişim sayfaları
+   - Mobil uyumlu navigasyon
+
+2. **Yönetim Paneli**
+   - Kullanıcı girişi ve yetkilendirme
+   - Gösterge paneli ve istatistikler
+   - Program, şube ve öğrenci yönetimi
+   - İçerik yönetimi sistemi
+   - Medya kütüphanesi
+
+3. **İçerik Yönetimi**
+   - Sayfa düzenleme
+   - Blog yazıları yönetimi
+   - Duyuru sistemi
+   - Slider yönetimi
+   - Medya yükleme ve düzenleme
+
+4. **Wix Entegrasyonu**
+   - iframe entegrasyonu
+   - Velo tam entegrasyonu
+   - Adım adım kurulum talimatları
+   - Sorun giderme rehberi
 
 ## Dosya Yapısı
 
@@ -18,60 +41,54 @@ Bu proje, Üstün Başarı Akademisi için modern, animasyonlu ve responsive bir
 - `animation-effects.js` - JavaScript animasyon efektleri
 - `mobile-nav.js` - Mobil navigasyon ve UI etkileşimleri
 - `images/` - Görseller için klasör
-
-## Özellikler
-
-- Modern ve responsive tasarım
-- Animasyonlu UI elementleri
-- Sabit (fixed) header ve footer
-- Tüm programlar için bilgi kartları (YKS, LGS, Okul Takviye, İngilizce, After School)
-- Şube bilgileri
-- Mobil uyumlu navigasyon
-- Animasyonlu arka plan elementleri
-- Scroll animasyonları
-- Modern renk şeması
+- `admin/` - Yönetim paneli dosyaları
+  - `index.html` - Yönetim paneli ana sayfası
+  - `content-editor.html` - İçerik düzenleme sayfası
+  - `admin-styles.css` - Yönetim paneli stilleri
+  - `content-editor.css` - İçerik düzenleme stilleri
+  - `admin-scripts.js` - Yönetim paneli scriptleri
+  - `content-editor.js` - İçerik düzenleme scriptleri
+- `WIX_ENTEGRASYON_REHBERI.md` - Wix entegrasyon talimatları
 
 ## Kurulum
 
-1. Zip dosyasını bilgisayarınıza indirin ve açın
-2. Tüm dosyaları web sunucunuza yükleyin
-3. Görseller için `images` klasörüne kendi görsellerinizi ekleyin
-4. İçerikleri kendi bilgilerinizle güncelleyin
+### Yerel Kurulum
 
-## GitHub'a Yükleme
+1. Tüm dosyaları web sunucunuza yükleyin
+2. `index.html` dosyasını tarayıcınızda açın
+3. Yönetim paneline erişmek için `/admin/index.html` adresini ziyaret edin
+4. Yönetim paneli giriş bilgileri:
+   - Kullanıcı adı: `admin`
+   - Şifre: `admin123`
 
-GitHub'a yüklemek için:
+### GitHub'a Yükleme
 
-1. GitHub hesabınızda yeni bir repository oluşturun (https://github.com/Nebula5255/Site)
-2. Dosyaları bu repository'ye yükleyin
+1. GitHub hesabınızda yeni bir repository oluşturun
+2. Tüm dosyaları bu repository'ye yükleyin
 3. GitHub Pages'i etkinleştirin (Settings > Pages)
-4. Site https://nebula5255.github.io/Site/ adresinde yayınlanacaktır
+4. Site `https://[kullanici-adiniz].github.io/[repo-adiniz]/` adresinde yayınlanacaktır
 
-## Wix'te Kullanma
+### Wix Entegrasyonu
 
-Wix'te iframe olarak kullanmak için:
-
-1. Wix editöründe "Add" > "Embed" > "HTML iframe" seçin
-2. Aşağıdaki kodu yapıştırın:
-
-```html
-<iframe 
-  src="https://nebula5255.github.io/Site/" 
-  width="100%" 
-  height="800" 
-  frameborder="0" 
-  scrolling="yes">
-</iframe>
-```
-
-3. Boyutları ve diğer ayarları ihtiyacınıza göre düzenleyin
+Wix entegrasyonu için `WIX_ENTEGRASYON_REHBERI.md` dosyasındaki adımları izleyin.
 
 ## Özelleştirme
 
 - Renkleri değiştirmek için `unified-styles.css` dosyasındaki `:root` değişkenlerini düzenleyin
-- Animasyonları değiştirmek için `animations.css` dosyasını düzenleyin
-- İçerikleri değiştirmek için HTML dosyalarını düzenleyin
+- Logoları ve görselleri `images/` klasöründeki dosyalarla değiştirin
+- İçerikleri yönetim paneli üzerinden veya doğrudan HTML dosyalarını düzenleyerek değiştirebilirsiniz
+
+## Teknik Detaylar
+
+- HTML5, CSS3 ve JavaScript kullanılarak geliştirilmiştir
+- Harici kütüphane bağımlılığı yoktur (sadece Font Awesome ikonları)
+- Tüm modern tarayıcılarla uyumludur
+- Mobil cihazlar için tam responsive tasarım
 
 ## İletişim
 
 Herhangi bir sorunuz veya öneriniz varsa, lütfen iletişime geçin.
+
+---
+
+© 2025 Üstün Başarı Akademisi. Tüm hakları saklıdır.
