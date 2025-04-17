@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İçerik Ekleme/Düzenleme - Üstün Başarı Akademisi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../unified-styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="stylesheet" href="content-editor.css">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="admin-dashboard">
+        <div class="admin-sidebar">
+            <div class="admin-sidebar-header">
+                <img src="../images/logo-white.png" alt="Üstün Başarı Akademisi Logo">
+                <h3>Yönetim Paneli</h3>
+            </div>
+            <ul class="admin-menu">
+                <li class="admin-menu-item" data-target="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Gösterge Paneli</span>
+                </li>
+                <li class="admin-menu-item active" data-target="content">
+                    <i class="fas fa-edit"></i>
+                    <span>İçerik Yönetimi</span>
+                </li>
+                <li class="admin-menu-item" data-target="programs">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Programlar</span>
+                </li>
+                <li class="admin-menu-item" data-target="branches">
+                    <i class="fas fa-building"></i>
+                    <span>Şubeler</span>
+                </li>
+                <li class="admin-menu-item" data-target="teachers">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Öğretmenler</span>
+                </li>
+                <li class="admin-menu-item" data-target="students">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Öğrenciler</span>
+                </li>
+                <li class="admin-menu-item" data-target="media">
+                    <i class="fas fa-images"></i>
+                    <span>Medya</span>
+                </li>
+                <li class="admin-menu-item" data-target="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Ayarlar</span>
+                </li>
+                <li class="admin-menu-item" id="backToAdmin">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Geri Dön</span>
+                </li>
+            </ul>
+        </div>
+        <div class="admin-content">
+            <div class="admin-topbar">
+                <button class="admin-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="admin-user-info">
+                    <span>Hoş geldiniz, Admin</span>
+                    <img src="../images/avatar-placeholder.jpg" alt="Admin Avatar">
+                </div>
+            </div>
+            <div class="admin-content-area">
+                <!-- İçerik Yönetimi -->
+                <div class="admin-section active" id="content-section">
+                    <h2 class="admin-section-title">İçerik Yönetimi</h2>
+                    
+                    <div class="content-tabs">
+                        <button class="content-tab active" data-tab="pages">Sayfalar</button>
+                        <button class="content-tab" data-tab="blog">Blog</button>
+                        <button class="content-tab" data-tab="announcements">Duyurular</button>
+                        <button class="content-tab" data-tab="sliders">Slider</button>
+                    </div>
+                    
+                    <div class="content-tab-content active" id="pages-content">
+                        <div class="admin-action-bar">
+                            <button class="admin-action-button" id="addNewPage"><i class="fas fa-plus"></i> Yeni Sayfa</button>
+                            <div class="admin-search-box">
+                                <input type="text" placeholder="Sayfa Ara...">
+                                <button><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Sayfa Başlığı</th>
+                                    <th>URL</th>
+                                    <th>Son Güncelleme</th>
+                                    <th>Durum</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Ana Sayfa</td>
+                                    <td>/index.html</td>
+                                    <td>15.04.2025</td>
+                                    <td><span class="status-active">Yayında</span></td>
+                                    <td>
+                                        <button class="admin-icon-button edit-content" data-id="1" data-type="page"><i class="fas fa-edit"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>YKS Hazırlık</td>
+                                    <td>/yks-hazirlik.html</td>
+                                    <td>14.04.2025</td>
+                                    <td><span class="status-active">Yayında</span></td>
+                                    <td>
+                                        <button class="admin-icon-button edit-content" data-id="2" data-type="page"><i class="fas fa-edit"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>LGS Hazırlık</td>
+                                    <td>/lgs-hazirlik.html</td>
+                                    <td>13.04.2025</td>
+                                    <td><span class="status-active">Yayında</span></td>
+                                    <td>
+                                        <button class="admin-icon-button edit-content" data-id="3" data-type="page"><i class="fas fa-edit"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>İngilizce</td>
+                                    <td>/ingilizce.html</td>
+                                    <td>12.04.2025</td>
+                                    <td><span class="status-active">Yayında</span></td>
+                                    <td>
+                                        <button class="admin-icon-button edit-content" data-id="4" data-type="page"><i class="fas fa-edit"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Hakkımızda</td>
+                                    <td>/hakkimizda.html</td>
+                                    <td>10.04.2025</td>
+                                    <td><span class="status-draft">Taslak</span></td>
+                                    <td>
+                                        <button class="admin-icon-button edit-content" data-id="5" data-type="page"><i class="fas fa-edit"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="content-tab-content" id="blog-content">
+                        <div class="admin-action-bar">
+                            <button class="admin-action-button" id="addNewBlog"><i class="fas fa-plus"></i> Yeni Blog Yazısı</button>
+                            <div class="admin-search-box">
+                                <input type="text" placeholder="Blog Ara...">
+                                <button><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Başlık</th>
+                                    <th>Kategori</th>
+                                    <th>Yazar</th>
+                                    <th>Tarih</th>
+                                    <th>Durum</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>YKS 2025 Değişiklikleri</td>
+                                    <td>Sınav Haberleri</td>
+                                    <td>Ahmet Yılmaz</td>
+                                    <td>15.04.2025</td>
+                                    <td><span class="status-active">Yayında</span></td>
+                                    <td>
+                                        <button class="admin-icon-button edit-content" data-id="1" data-type="blog"><i class="fas fa-edit"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Verimli Ders Çalışma Teknikleri</td>
+                                    <td>Eğitim İpuçları</td>
+                                    <td>Zeynep Kaya</td>
+                                    <td>12.04.2025</td>
+                                    <td><span class="status-active">Yayında</span></td>
+                                    <td>
+                                        <button class="admin-icon-button edit-content" data-id="2" data-type="blog"><i class="fas fa-edit"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Yaz Tatilinde Eğitim Planlaması</td>
+                                    <td>Eğitim İpuçları</td>
+                                    <td>Mehmet Demir</td>
+                                    <td>10.04.2025</td>
+                                    <td><span class="status-draft">Taslak</span></td>
+                                    <td>
+                                        <button class="admin-icon-button edit-content" data-id="3" data-type="blog"><i class="fas fa-edit"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="content-tab-content" id="announcements-content">
+                        <div class="admin-action-bar">
+                            <button class="admin-action-button" id="addNewAnnouncement"><i class="fas fa-plus"></i> Yeni Duyuru</button>
+                            <div class="admin-search-box">
+                                <input type="text" placeholder="Duyuru Ara...">
+                                <button><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Başlık</th>
+                                    <th>Tarih</th>
+                                    <th>Öncelik</th>
+                                    <th>Durum</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Yaz Kampı Kayıtları Başladı</td>
+                                    <td>15.04.2025</td>
+                                    <td><span class="priority-high">Yüksek</span></td>
+                                    <td><span class="status-active">Yayında</span></td>
+                                    <td>
+                                        <button class="admin-icon-button edit-content" data-id="1" data-type="announcement"><i class="fas fa-edit"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Deneme Sınavı Sonuçları Açıklandı</td>
+                                    <td>12.04.2025</td>
+                                    <td><span class="priority-medium">Orta</span></td>
+                                    <td><span class="status-active">Yayında</span></td>
+                                    <td>
+                                        <button class="admin-icon-button edit-content" data-id="2" data-type="announcement"><i class="fas fa-edit"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="content-tab-content" id="sliders-content">
+                        <div class="admin-action-bar">
+                            <button class="admin-action-button" id="addNewSlider"><i class="fas fa-plus"></i> Yeni Slider</button>
+                        </div>
+                        
+                        <div class="slider-items-container">
+                            <div class="slider-item">
+                                <div class="slider-item-image">
+                                    <img src="../images/slider-placeholder-1.jpg" alt="Slider 1">
+                                    <div class="slider-item-overlay">
+                                        <button class="admin-icon-button edit-content" data-id="1" data-type="slider"><i class="fas fa-edit"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <div class="slider-item-info">
+                                    <h3>YKS Hazırlık Kampı</h3>
+                                    <p>Sıra: 1 | Durum: <span class="status-active">Aktif</span></p>
+                                </div>
+                            </div>
+                            
+                            <div class="slider-item">
+                                <div class="slider-item-image">
+                                    <img src="../images/slider-placeholder-2.jpg" alt="Slider 2">
+                                    <div class="slider-item-overlay">
+                                        <button class="admin-icon-button edit-content" data-id="2" data-type="slider"><i class="fas fa-edit"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <div class="slider-item-info">
+                                    <h3>Yaz Okulu Kayıtları</h3>
+                                    <p>Sıra: 2 | Durum: <span class="status-active">Aktif</span></p>
+                                </div>
+                            </div>
+                            
+                            <div class="slider-item">
+                                <div class="slider-item-image">
+                                    <img src="../images/slider-placeholder-3.jpg" alt="Slider 3">
+                                    <div class="slider-item-overlay">
+                                        <button class="admin-icon-button edit-content" data-id="3" data-type="slider"><i class="fas fa-edit"></i></button>
+                                        <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <div class="slider-item-info">
+                                    <h3>İngilizce Konuşma Kulübü</h3>
+                                    <p>Sıra: 3 | Durum: <span class="status-inactive">Pasif</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Medya Yönetimi -->
+                <div class="admin-section" id="media-section">
+                    <h2 class="admin-section-title">Medya Yönetimi</h2>
+                    
+                    <div class="admin-action-bar">
+                        <button class="admin-action-button" id="uploadMedia"><i class="fas fa-upload"></i> Medya Yükle</button>
+                        <div class="admin-search-box">
+                            <input type="text" placeholder="Medya Ara...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="media-filter-bar">
+                        <button class="media-filter active" data-filter="all">Tümü</button>
+                        <button class="media-filter" data-filter="image">Görseller</button>
+                        <button class="media-filter" data-filter="document">Dokümanlar</button>
+                        <button class="media-filter" data-filter="video">Videolar</button>
+                    </div>
+                    
+                    <div class="media-grid">
+                        <div class="media-item" data-type="image">
+                            <div class="media-item-preview">
+                                <img src="../images/esenyali-branch.jpeg" alt="Esenyalı Şubesi">
+                            </div>
+                            <div class="media-item-info">
+                                <p>esenyali-branch.jpeg</p>
+                                <span>15.04.2025</span>
+                            </div>
+                            <div class="media-item-actions">
+                                <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                <button class="admin-icon-button"><i class="fas fa-download"></i></button>
+                                <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="media-item" data-type="image">
+                            <div class="media-item-preview">
+                                <img src="../images/gebze-branch.jpeg" alt="Gebze Şubesi">
+                            </div>
+                            <div class="media-item-info">
+                                <p>gebze-branch.jpeg</p>
+                                <span>15.04.2025</span>
+                            </div>
+                            <div class="media-item-actions">
+                                <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                <button class="admin-icon-button"><i class="fas fa-download"></i></button>
+                                <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="media-item" data-type="image">
+                            <div class="media-item-preview">
+                                <img src="../images/logo-blue.png" alt="Logo Mavi">
+                            </div>
+                            <div class="media-item-info">
+                                <p>logo-blue.png</p>
+                                <span>15.04.2025</span>
+                            </div>
+                            <div class="media-item-actions">
+                                <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                <button class="admin-icon-button"><i class="fas fa-download"></i></button>
+                                <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="media-item" data-type="document">
+                            <div class="media-item-preview document-preview">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="media-item-info">
+                                <p>yks-program.pdf</p>
+                                <span>14.04.2025</span>
+                            </div>
+                            <div class="media-item-actions">
+                                <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                <button class="admin-icon-button"><i class="fas fa-download"></i></button>
+                                <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="media-item" data-type="video">
+                            <div class="media-item-preview video-preview">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <div class="media-item-info">
+                                <p>tanitim-videosu.mp4</p>
+                                <span>13.04.2025</span>
+                            </div>
+                            <div class="media-item-actions">
+                                <button class="admin-icon-button"><i class="fas fa-eye"></i></button>
+                                <button class="admin-icon-button"><i class="fas fa-download"></i></button>
+                                <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- İçerik Düzenleme Modalı -->
+    <div class="content-editor-modal" id="contentEditorModal">
+        <div class="content-editor-container">
+            <div class="content-editor-header">
+                <h2 id="editorTitle">İçerik Düzenle</h2>
+                <button class="close-editor" id="closeEditor"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="content-editor-body">
+                <form id="contentForm">
+                    <input type="hidden" id="contentId" value="">
+                    <input type="hidden" id="contentType" value="">
+                    
+                    <div class="form-group">
+                        <label for="contentTitle">Başlık</label>
+                        <input type="text" id="contentTitle" placeholder="Başlık giriniz" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contentStatus">Durum</label>
+                            <select id="contentStatus">
+                                <option value="published">Yayında</option>
+                                <option value="draft">Taslak</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" id="categoryGroup">
+                            <label for="contentCategory">Kategori</label>
+                            <select id="contentCategory">
+                                <option value="education">Eğitim</option>
+                                <option value="exam">Sınav</option>
+                                <option value="announcement">Duyuru</option>
+                                <option value="news">Haber</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" id="featuredImageGroup">
+                        <label>Öne Çıkan Görsel</label>
+                        <div class="image-upload-container">
+                            <div class="image-preview" id="imagePreview">
+                                <img src="../images/image-placeholder.jpg" alt="Görsel Önizleme" id="previewImage">
+                            </div>
+                            <div class="image-upload-controls">
+                                <button type="button" class="admin-action-button" id="selectImage">
+                                    <i class="fas fa-image"></i> Görsel Seç
+                                </button>
+                                <button type="button" class="admin-action-button secondary" id="removeImage">
+                                    <i class="fas fa-trash"></i> Görseli Kaldır
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contentEditor">İçerik</label>
+                        <div class="editor-toolbar">
+                            <button type="button" data-command="bold"><i class="fas fa-bold"></i></button>
+                            <button type="button" data-command="italic"><i class="fas fa-italic"></i></button>
+                            <button type="button" data-command="underline"><i class="fas fa-underline"></i></button>
+                            <button type="button" data-command="insertUnorderedList"><i class="fas fa-list-ul"></i></button>
+                            <button type="button" data-command="insertOrderedList"><i class="fas fa-list-ol"></i></button>
+                            <button type="button" data-command="createLink"><i class="fas fa-link"></i></button>
+                            <button type="button" data-command="insertImage"><i class="fas fa-image"></i></button>
+                            <select data-command="formatBlock">
+                                <option value="p">Normal</option>
+                                <option value="h1">Başlık 1</option>
+                                <option value="h2">Başlık 2</option>
+                                <option value="h3">Başlık 3</option>
+                                <option value="h4">Başlık 4</option>
+                            </select>
+                        </div>
+                        <div class="content-editable" id="contentEditor" contenteditable="true">
+                            <p>İçeriğinizi buraya girin...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" id="sliderLinkGroup">
+                        <label for="sliderLink">Bağlantı URL</label>
+                        <input type="text" id="sliderLink" placeholder="https://...">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="admin-action-button secondary" id="previewContent">
+                            <i class="fas fa-eye"></i> Önizle
+                        </button>
+                        <button type="submit" class="admin-action-button">
+                            <i class="fas fa-save"></i> Kaydet
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Medya Yükleme Modalı -->
+    <div class="media-upload-modal" id="mediaUploadModal">
+        <div class="media-upload-container">
+            <div class="media-upload-header">
+                <h2>Medya Yükle</h2>
+                <button class="close-modal" id="closeMediaUpload"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="media-upload-body">
+                <form id="mediaUploadForm">
+                    <div class="upload-area" id="uploadArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Dosyaları buraya sürükleyin veya seçmek için tıklayın</p>
+                        <input type="file" id="fileInput" multiple style="display: none;">
+                        <button type="button" class="admin-action-button" id="selectFiles">
+                            Dosya Seç
+                        </button>
+                    </div>
+                    
+                    <div class="upload-preview" id="uploadPreview">
+                        <!-- Yüklenen dosyalar burada listelenecek -->
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="admin-action-button secondary" id="cancelUpload">
+                            İptal
+                        </button>
+                        <button type="submit" class="admin-action-button" id="startUpload">
+                            <i class="fas fa-upload"></i> Yükle
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../animation-effects.js"></script>
+    <script src="admin-scripts.js"></script>
+    <script src="content-editor.js"></script>
+</body>
+</html>

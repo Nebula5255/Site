@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üstün Başarı Akademisi - Yönetim Paneli</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../unified-styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="admin-login-container" id="loginContainer">
+        <div class="admin-login-box">
+            <div class="admin-login-logo">
+                <img src="../images/logo-blue.png" alt="Üstün Başarı Akademisi Logo">
+            </div>
+            <h2>Yönetim Paneli</h2>
+            <form id="loginForm" class="admin-login-form">
+                <div class="form-group">
+                    <label for="username"><i class="fas fa-user"></i></label>
+                    <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+                </div>
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i></label>
+                    <input type="password" id="password" placeholder="Şifre" required>
+                </div>
+                <button type="submit" class="admin-login-button">Giriş Yap</button>
+            </form>
+            <div class="admin-login-footer">
+                <p>© 2025 Üstün Başarı Akademisi</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="admin-dashboard" id="dashboardContainer" style="display: none;">
+        <div class="admin-sidebar">
+            <div class="admin-sidebar-header">
+                <img src="../images/logo-white.png" alt="Üstün Başarı Akademisi Logo">
+                <h3>Yönetim Paneli</h3>
+            </div>
+            <ul class="admin-menu">
+                <li class="admin-menu-item active" data-target="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Gösterge Paneli</span>
+                </li>
+                <li class="admin-menu-item" data-target="programs">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Programlar</span>
+                </li>
+                <li class="admin-menu-item" data-target="branches">
+                    <i class="fas fa-building"></i>
+                    <span>Şubeler</span>
+                </li>
+                <li class="admin-menu-item" data-target="teachers">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Öğretmenler</span>
+                </li>
+                <li class="admin-menu-item" data-target="students">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Öğrenciler</span>
+                </li>
+                <li class="admin-menu-item" data-target="reports">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Raporlar</span>
+                </li>
+                <li class="admin-menu-item" data-target="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Ayarlar</span>
+                </li>
+                <li class="admin-menu-item" id="logoutButton">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Çıkış</span>
+                </li>
+            </ul>
+        </div>
+        <div class="admin-content">
+            <div class="admin-topbar">
+                <button class="admin-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="admin-user-info">
+                    <span>Hoş geldiniz, Admin</span>
+                    <img src="../images/avatar-placeholder.jpg" alt="Admin Avatar">
+                </div>
+            </div>
+            <div class="admin-content-area">
+                <!-- Gösterge Paneli -->
+                <div class="admin-section active" id="dashboard-section">
+                    <h2 class="admin-section-title">Gösterge Paneli</h2>
+                    <div class="admin-stats-container">
+                        <div class="admin-stat-card">
+                            <div class="admin-stat-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="admin-stat-info">
+                                <h3>1,250</h3>
+                                <p>Toplam Öğrenci</p>
+                            </div>
+                        </div>
+                        <div class="admin-stat-card">
+                            <div class="admin-stat-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div class="admin-stat-info">
+                                <h3>45</h3>
+                                <p>Öğretmen</p>
+                            </div>
+                        </div>
+                        <div class="admin-stat-card">
+                            <div class="admin-stat-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="admin-stat-info">
+                                <h3>4</h3>
+                                <p>Şube</p>
+                            </div>
+                        </div>
+                        <div class="admin-stat-card">
+                            <div class="admin-stat-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="admin-stat-info">
+                                <h3>8</h3>
+                                <p>Program</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admin-charts-container">
+                        <div class="admin-chart-card">
+                            <h3>Aylık Kayıtlar</h3>
+                            <div class="admin-chart-placeholder">
+                                <img src="../images/chart-placeholder-1.png" alt="Aylık Kayıtlar Grafiği">
+                            </div>
+                        </div>
+                        <div class="admin-chart-card">
+                            <h3>Program Dağılımı</h3>
+                            <div class="admin-chart-placeholder">
+                                <img src="../images/chart-placeholder-2.png" alt="Program Dağılımı Grafiği">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admin-recent-container">
+                        <div class="admin-recent-card">
+                            <h3>Son Kayıtlar</h3>
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Öğrenci</th>
+                                        <th>Program</th>
+                                        <th>Şube</th>
+                                        <th>Tarih</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ahmet Yılmaz</td>
+                                        <td>YKS Hazırlık</td>
+                                        <td>Esenyalı</td>
+                                        <td>15.04.2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ayşe Demir</td>
+                                        <td>LGS Hazırlık</td>
+                                        <td>Gebze</td>
+                                        <td>14.04.2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mehmet Kaya</td>
+                                        <td>İngilizce</td>
+                                        <td>Esenyalı</td>
+                                        <td>13.04.2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Zeynep Çelik</td>
+                                        <td>Okul Takviye</td>
+                                        <td>Gebze</td>
+                                        <td>12.04.2025</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programlar -->
+                <div class="admin-section" id="programs-section">
+                    <h2 class="admin-section-title">Programlar</h2>
+                    <div class="admin-action-bar">
+                        <button class="admin-action-button"><i class="fas fa-plus"></i> Yeni Program</button>
+                        <div class="admin-search-box">
+                            <input type="text" placeholder="Program Ara...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Program Adı</th>
+                                <th>Kategori</th>
+                                <th>Fiyat</th>
+                                <th>Durum</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>YKS Hazırlık</td>
+                                <td>Sınav Hazırlık</td>
+                                <td>₺12,000</td>
+                                <td><span class="status-active">Aktif</span></td>
+                                <td>
+                                    <button class="admin-icon-button"><i class="fas fa-edit"></i></button>
+                                    <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>LGS Hazırlık</td>
+                                <td>Sınav Hazırlık</td>
+                                <td>₺9,500</td>
+                                <td><span class="status-active">Aktif</span></td>
+                                <td>
+                                    <button class="admin-icon-button"><i class="fas fa-edit"></i></button>
+                                    <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>İngilizce</td>
+                                <td>Dil Eğitimi</td>
+                                <td>₺7,800</td>
+                                <td><span class="status-active">Aktif</span></td>
+                                <td>
+                                    <button class="admin-icon-button"><i class="fas fa-edit"></i></button>
+                                    <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Okul Takviye</td>
+                                <td>Akademik Destek</td>
+                                <td>₺6,500</td>
+                                <td><span class="status-active">Aktif</span></td>
+                                <td>
+                                    <button class="admin-icon-button"><i class="fas fa-edit"></i></button>
+                                    <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Yaz Kampı</td>
+                                <td>Yaz Programı</td>
+                                <td>₺5,200</td>
+                                <td><span class="status-inactive">Pasif</span></td>
+                                <td>
+                                    <button class="admin-icon-button"><i class="fas fa-edit"></i></button>
+                                    <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="admin-pagination">
+                        <button class="admin-pagination-button"><i class="fas fa-chevron-left"></i></button>
+                        <button class="admin-pagination-button active">1</button>
+                        <button class="admin-pagination-button">2</button>
+                        <button class="admin-pagination-button">3</button>
+                        <button class="admin-pagination-button"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Şubeler -->
+                <div class="admin-section" id="branches-section">
+                    <h2 class="admin-section-title">Şubeler</h2>
+                    <div class="admin-action-bar">
+                        <button class="admin-action-button"><i class="fas fa-plus"></i> Yeni Şube</button>
+                        <div class="admin-search-box">
+                            <input type="text" placeholder="Şube Ara...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="admin-branches-grid">
+                        <div class="admin-branch-card">
+                            <div class="admin-branch-image">
+                                <img src="../images/esenyali-branch.jpeg" alt="Esenyalı Şubesi">
+                            </div>
+                            <div class="admin-branch-info">
+                                <h3>Esenyalı Şubesi</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Esenyalı Mah., Pendik, İstanbul</p>
+                                <p><i class="fas fa-phone"></i> (0216) 555 1234</p>
+                                <p><i class="fas fa-user-graduate"></i> 450 Öğrenci</p>
+                            </div>
+                            <div class="admin-branch-actions">
+                                <button class="admin-icon-button"><i class="fas fa-edit"></i></button>
+                                <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="admin-branch-card">
+                            <div class="admin-branch-image">
+                                <img src="../images/gebze-branch.jpeg" alt="Gebze Şubesi">
+                            </div>
+                            <div class="admin-branch-info">
+                                <h3>Gebze Şubesi</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Gebze Merkez, Kocaeli</p>
+                                <p><i class="fas fa-phone"></i> (0262) 555 6789</p>
+                                <p><i class="fas fa-user-graduate"></i> 380 Öğrenci</p>
+                            </div>
+                            <div class="admin-branch-actions">
+                                <button class="admin-icon-button"><i class="fas fa-edit"></i></button>
+                                <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="admin-branch-card">
+                            <div class="admin-branch-image">
+                                <img src="../images/branch-placeholder.jpg" alt="Çayırova Şubesi">
+                            </div>
+                            <div class="admin-branch-info">
+                                <h3>Çayırova Şubesi</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Çayırova, Kocaeli</p>
+                                <p><i class="fas fa-phone"></i> (0262) 555 9012</p>
+                                <p><i class="fas fa-user-graduate"></i> 220 Öğrenci</p>
+                            </div>
+                            <div class="admin-branch-actions">
+                                <button class="admin-icon-button"><i class="fas fa-edit"></i></button>
+                                <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="admin-branch-card">
+                            <div class="admin-branch-image">
+                                <img src="../images/branch-placeholder.jpg" alt="Sultanbeyli Şubesi">
+                            </div>
+                            <div class="admin-branch-info">
+                                <h3>Sultanbeyli Şubesi</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Sultanbeyli, İstanbul</p>
+                                <p><i class="fas fa-phone"></i> (0216) 555 3456</p>
+                                <p><i class="fas fa-user-graduate"></i> 200 Öğrenci</p>
+                            </div>
+                            <div class="admin-branch-actions">
+                                <button class="admin-icon-button"><i class="fas fa-edit"></i></button>
+                                <button class="admin-icon-button"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diğer bölümler için yer tutucular -->
+                <div class="admin-section" id="teachers-section">
+                    <h2 class="admin-section-title">Öğretmenler</h2>
+                    <p class="admin-placeholder-text">Öğretmen yönetimi bölümü burada olacak.</p>
+                </div>
+
+                <div class="admin-section" id="students-section">
+                    <h2 class="admin-section-title">Öğrenciler</h2>
+                    <p class="admin-placeholder-text">Öğrenci yönetimi bölümü burada olacak.</p>
+                </div>
+
+                <div class="admin-section" id="reports-section">
+                    <h2 class="admin-section-title">Raporlar</h2>
+                    <p class="admin-placeholder-text">Raporlar bölümü burada olacak.</p>
+                </div>
+
+                <div class="admin-section" id="settings-section">
+                    <h2 class="admin-section-title">Ayarlar</h2>
+                    <p class="admin-placeholder-text">Ayarlar bölümü burada olacak.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../animation-effects.js"></script>
+    <script src="admin-scripts.js"></script>
+</body>
+</html>
