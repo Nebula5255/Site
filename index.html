@@ -1,61 +1,64 @@
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Üstün Başarı Akademisi - Eğitimde Mükemmellik</title>
+    <link rel="stylesheet" href="unified-styles.css">
+    <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="all-styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
-    <!-- Overlay -->
-    <div class="overlay" id="overlay"></div>
-    
     <!-- Header -->
-    <header class="header" id="header">
-        <div class="header-container">
+    <header class="main-header">
+        <div class="container header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo-white.png" alt="Üstün Başarı Akademisi Logo">
+                    <img src="images/logo.png" alt="Üstün Başarı Akademisi Logo">
                 </a>
             </div>
             
             <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                <i class="fas fa-bars"></i>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </button>
             
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link active">Ana Sayfa</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Programlarımız</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item">YKS Hazırlık</a></li>
-                        <li><a href="#" class="dropdown-item">LGS Hazırlık</a></li>
-                        <li><a href="#" class="dropdown-item">Okula Takviye</a></li>
-                        <li><a href="#" class="dropdown-item">İngilizce</a></li>
-                        <li><a href="#" class="dropdown-item">Deneme Kulübü</a></li>
-                        <li><a href="#" class="dropdown-item">Yaz Kampı</a></li>
-                        <li><a href="#" class="dropdown-item">After School</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Şubelerimiz</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Başarılarımız</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Hakkımızda</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">İletişim</a>
-                </li>
-            </ul>
-            
-            <a href="#" class="register-button">Kayıt Ol</a>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Programlarımız</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="yks-hazirlik.html" class="dropdown-link">YKS Hazırlık</a></li>
+                            <li><a href="lgs-hazirlik.html" class="dropdown-link">LGS Hazırlık</a></li>
+                            <li><a href="ingilizce.html" class="dropdown-link">İngilizce</a></li>
+                            <li><a href="okul-takviye.html" class="dropdown-link">Okula Takviye</a></li>
+                            <li><a href="deneme-klubu.html" class="dropdown-link">Deneme Kulübü</a></li>
+                            <li><a href="yaz-kampi.html" class="dropdown-link">Yaz Kampı</a></li>
+                            <li><a href="after-school.html" class="dropdown-link">After School</a></li>
+                            <li><a href="ozel-ders.html" class="dropdown-link">Özel Ders</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="subelerimiz.html" class="nav-link">Şubelerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="basarilarimiz.html" class="nav-link">Başarılarımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="iletisim.html" class="nav-link">İletişim</a>
+                    </li>
+                </ul>
+                
+                <a href="kayit.html" class="register-button">Kayıt Ol</a>
+            </nav>
         </div>
     </header>
     
@@ -67,7 +70,7 @@
         
         <ul class="mobile-nav-menu">
             <li class="mobile-nav-item">
-                <a href="index.html" class="mobile-nav-link">Ana Sayfa</a>
+                <a href="index.html" class="mobile-nav-link active">Ana Sayfa</a>
             </li>
             <li class="mobile-nav-item">
                 <a href="#" class="mobile-nav-link">Programlarımız</a>
@@ -76,329 +79,890 @@
                 </button>
                 <ul class="mobile-dropdown-menu" id="programsDropdown">
                     <li class="mobile-dropdown-item">
-                        <a href="#" class="mobile-dropdown-link">YKS Hazırlık</a>
+                        <a href="yks-hazirlik.html" class="mobile-dropdown-link">YKS Hazırlık</a>
                     </li>
                     <li class="mobile-dropdown-item">
-                        <a href="#" class="mobile-dropdown-link">LGS Hazırlık</a>
+                        <a href="lgs-hazirlik.html" class="mobile-dropdown-link">LGS Hazırlık</a>
                     </li>
                     <li class="mobile-dropdown-item">
-                        <a href="#" class="mobile-dropdown-link">Okula Takviye</a>
+                        <a href="okul-takviye.html" class="mobile-dropdown-link">Okula Takviye</a>
                     </li>
                     <li class="mobile-dropdown-item">
-                        <a href="#" class="mobile-dropdown-link">İngilizce</a>
+                        <a href="ingilizce.html" class="mobile-dropdown-link">İngilizce</a>
                     </li>
                     <li class="mobile-dropdown-item">
-                        <a href="#" class="mobile-dropdown-link">Deneme Kulübü</a>
+                        <a href="deneme-klubu.html" class="mobile-dropdown-link">Deneme Kulübü</a>
                     </li>
                     <li class="mobile-dropdown-item">
-                        <a href="#" class="mobile-dropdown-link">Yaz Kampı</a>
+                        <a href="yaz-kampi.html" class="mobile-dropdown-link">Yaz Kampı</a>
                     </li>
                     <li class="mobile-dropdown-item">
-                        <a href="#" class="mobile-dropdown-link">After School</a>
+                        <a href="after-school.html" class="mobile-dropdown-link">After School</a>
+                    </li>
+                    <li class="mobile-dropdown-item">
+                        <a href="ozel-ders.html" class="mobile-dropdown-link">Özel Ders</a>
                     </li>
                 </ul>
             </li>
             <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">Şubelerimiz</a>
+                <a href="subelerimiz.html" class="mobile-nav-link">Şubelerimiz</a>
             </li>
             <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">Başarılarımız</a>
+                <a href="hakkimizda.html" class="mobile-nav-link">Hakkımızda</a>
             </li>
             <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">Hakkımızda</a>
+                <a href="basarilarimiz.html" class="mobile-nav-link">Başarılarımız</a>
             </li>
             <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">İletişim</a>
+                <a href="iletisim.html" class="mobile-nav-link">İletişim</a>
             </li>
         </ul>
         
-        <a href="#" class="mobile-register-button">Kayıt Ol</a>
+        <a href="kayit.html" class="mobile-register-button">Kayıt Ol</a>
     </div>
     
-    <!-- Hero Bölümü -->
-    <section class="hero-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
         <div class="hero-content">
-            <!-- Sol Bölüm - Metin -->
-            <div class="hero-text">
-                <div class="hero-subtitle">Eğitimde Mükemmellik</div>
-                <h1 class="hero-title">Geleceğinizi Birlikte İnşa Edelim</h1>
-                <p class="hero-description">Üstün Başarı Akademisi olarak, öğrencilerimizin potansiyellerini en üst düzeye çıkarmalarına yardımcı olmak için kaliteli eğitim ve bireysel koçluk hizmetleri sunuyoruz.</p>
-                
-                <!-- Program Kartları -->
-                <div class="program-cards">
-                    <div class="program-card">
-                        <div class="program-icon">
-                            <i class="fas fa-graduation-cap"></i>
+            <h1 class="hero-title animate-on-scroll" data-animation="animate-fade-in-up">Eğitimde Mükemmelliğin Adresi</h1>
+            <p class="hero-subtitle animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">Üstün Başarı Akademisi ile geleceğinizi şekillendirin</p>
+            <div class="hero-buttons animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                <a href="#programs" class="hero-button primary">Programlarımız</a>
+                <a href="kayit.html" class="hero-button secondary">Hemen Kayıt Ol</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero-image.png" alt="Üstün Başarı Akademisi">
+        </div>
+    </section>
+    
+    <!-- Announcement Section -->
+    <section class="announcement-section">
+        <div class="container">
+            <div class="announcement-slider">
+                <div class="announcement-slide active">
+                    <div class="announcement-content">
+                        <div class="announcement-badge">Nisan Kampanyası</div>
+                        <h2 class="announcement-title">YKS Hazırlık Programında %20 İndirim!</h2>
+                        <p class="announcement-description">Nisan ayına özel, YKS hazırlık programlarında %20 indirim fırsatını kaçırmayın. Son başvuru tarihi: 30 Nisan 2025</p>
+                        <div class="countdown-timer" data-end-date="2025-04-30T23:59:59">
+                            <div class="countdown-item">
+                                <span class="countdown-value days">00</span>
+                                <span class="countdown-label">Gün</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-value hours">00</span>
+                                <span class="countdown-label">Saat</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-value minutes">00</span>
+                                <span class="countdown-label">Dakika</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-value seconds">00</span>
+                                <span class="countdown-label">Saniye</span>
+                            </div>
                         </div>
-                        <div class="program-info">
-                            <h3>YKS Hazırlık</h3>
-                            <p>Üniversiteye hazırlık</p>
-                        </div>
+                        <a href="kayit.html" class="announcement-button">Hemen Başvur</a>
                     </div>
-                    
-                    <div class="program-card">
-                        <div class="program-icon">
-                            <i class="fas fa-school"></i>
-                        </div>
-                        <div class="program-info">
-                            <h3>LGS Hazırlık</h3>
-                            <p>Liseye geçiş sınavına hazırlık</p>
-                        </div>
-                    </div>
-                    
-                    <div class="program-card">
-                        <div class="program-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <div class="program-info">
-                            <h3>Okul Derslerine Destek</h3>
-                            <p>Tüm sınıflar için takviye</p>
-                        </div>
-                    </div>
-                    
-                    <div class="program-card">
-                        <div class="program-icon">
-                            <i class="fas fa-language"></i>
-                        </div>
-                        <div class="program-info">
-                            <h3>İngilizce</h3>
-                            <p>Her yaş için dil eğitimi</p>
-                        </div>
-                    </div>
-                    
-                    <div class="program-card">
-                        <div class="program-icon">
-                            <i class="fas fa-chess"></i>
-                        </div>
-                        <div class="program-info">
-                            <h3>After School</h3>
-                            <p>Okul sonrası aktiviteler</p>
-                        </div>
+                    <div class="announcement-image">
+                        <img src="images/yks-campaign.png" alt="YKS Hazırlık Kampanyası">
                     </div>
                 </div>
                 
-                <!-- Butonlar -->
-                <div class="hero-buttons">
-                    <a href="#" class="hero-button hero-button-primary">
-                        <i class="fas fa-list-ul"></i> Tüm Programlarımız
-                    </a>
-                    <a href="#" class="hero-button hero-button-secondary">
-                        <i class="fas fa-chalkboard-teacher"></i> Ücretsiz Deneme Dersi
-                    </a>
+                <div class="announcement-slide">
+                    <div class="announcement-content">
+                        <div class="announcement-badge">Yaz Kampı</div>
+                        <h2 class="announcement-title">8 Haftalık Yaz Kampı Kayıtları Başladı!</h2>
+                        <p class="announcement-description">Çocuğunuzun yaz tatilini hem eğlenceli hem de verimli geçirmesini sağlayacak 8 haftalık yaz kampı programımıza erken kayıt avantajlarıyla başvurun.</p>
+                        <div class="countdown-timer" data-end-date="2025-05-31T23:59:59">
+                            <div class="countdown-item">
+                                <span class="countdown-value days">00</span>
+                                <span class="countdown-label">Gün</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-value hours">00</span>
+                                <span class="countdown-label">Saat</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-value minutes">00</span>
+                                <span class="countdown-label">Dakika</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-value seconds">00</span>
+                                <span class="countdown-label">Saniye</span>
+                            </div>
+                        </div>
+                        <a href="yaz-kampi.html" class="announcement-button">Detaylı Bilgi</a>
+                    </div>
+                    <div class="announcement-image">
+                        <img src="images/summer-camp.png" alt="Yaz Kampı">
+                    </div>
+                </div>
+                
+                <div class="announcement-slide">
+                    <div class="announcement-content">
+                        <div class="announcement-badge">Yeni Şube</div>
+                        <h2 class="announcement-title">Gebze Şubemiz Açıldı!</h2>
+                        <p class="announcement-description">Üstün Başarı Akademisi ailesi büyümeye devam ediyor. Gebze'deki yeni şubemizde tüm programlarımız ile hizmetinizdeyiz.</p>
+                        <a href="subelerimiz.html" class="announcement-button">Şubelerimiz</a>
+                    </div>
+                    <div class="announcement-image">
+                        <img src="images/gebze-branch.png" alt="Gebze Şubesi">
+                    </div>
                 </div>
             </div>
             
-            <!-- Sağ Bölüm - Görsel -->
-            <div class="hero-image">
-                <img src="images/20241005_144051_0001.png" alt="Mezuniyet Töreni" class="hero-image-main">
-                <div class="hero-image-badge">%25 Erken Kayıt İndirimi</div>
-                <img src="images/20241005_144051_0001 (1).png" alt="Öğrenci Çalışıyor" class="hero-image-floating hero-image-floating-1">
-                <img src="images/20241005_144051_0001.png" alt="Grup Çalışması" class="hero-image-floating hero-image-floating-2">
+            <div class="slider-controls">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
     
-    <!-- Şubeler Bölümü -->
-    <section class="branches-section">
-        <div class="section-title">
-            <h2>Şubelerimiz</h2>
-            <p>İstanbul'un farklı bölgelerinde hizmet veren şubelerimizle size en yakın noktadayız.</p>
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Neden Üstün Başarı Akademisi?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="feature-title">Uzman Eğitim Kadrosu</h3>
+                    <p class="feature-description">Alanında uzman, deneyimli ve öğrenci odaklı eğitim kadromuz ile öğrencilerimizin başarısı için çalışıyoruz.</p>
+                </div>
+                
+                <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="feature-title">Kapsamlı Eğitim Programları</h3>
+                    <p class="feature-description">Her öğrencinin ihtiyacına uygun, kapsamlı ve güncel eğitim programları ile akademik başarıyı garanti ediyoruz.</p>
+                </div>
+                
+                <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Ölçme ve Değerlendirme</h3>
+                    <p class="feature-description">Düzenli deneme sınavları ve detaylı analizler ile öğrencilerimizin gelişimini sürekli takip ediyoruz.</p>
+                </div>
+                
+                <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">Bireysel Danışmanlık</h3>
+                    <p class="feature-description">Her öğrencimize özel akademik koçluk ve rehberlik hizmeti ile kişisel gelişimlerini destekliyoruz.</p>
+                </div>
+                
+                <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                    <div class="feature-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="feature-title">Modern Eğitim Ortamı</h3>
+                    <p class="feature-description">Teknolojik donanımlı, ferah ve konforlu sınıflarımız ile öğrencilerimize ideal bir eğitim ortamı sunuyoruz.</p>
+                </div>
+                
+                <div class="feature-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.6">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="feature-title">Kanıtlanmış Başarı</h3>
+                    <p class="feature-description">Her yıl yüzlerce öğrencimiz hedefledikleri üniversite ve liselere yerleşerek başarımızı kanıtlıyor.</p>
+                </div>
+            </div>
         </div>
-        
-        <div class="branches-container">
-            <!-- Esenyalı Şubesi -->
-            <div class="branch-card">
-                <img src="images/esenyali-branch.jpeg" alt="Esenyalı Şubesi" class="branch-image">
-                <div class="branch-content">
-                    <h3 class="branch-name">Esenyalı Şubesi</h3>
-                    <p class="branch-address">Esenyalı, Uygar Sk. No:29, 34890 Pendik/İstanbul</p>
-                    <div class="branch-contact">
-                        <i class="fas fa-phone"></i>
-                        <span>0216 123 45 67</span>
+    </section>
+    
+    <!-- Programs Section -->
+    <section id="programs" class="programs-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Eğitim Programlarımız</h2>
+            
+            <div class="programs-grid">
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                    <div class="program-card-image">
+                        <img src="images/yks-hazirlik.png" alt="YKS Hazırlık">
+                        <div class="program-card-badge">YKS Hazırlık</div>
                     </div>
-                    <div class="branch-contact">
-                        <i class="fas fa-envelope"></i>
-                        <span>esenyali@ustunbasari.com</span>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">YKS Hazırlık</h3>
+                        <p class="program-card-description">Üniversite sınavına hazırlık programımız ile hedef üniversitenizi kazanın. 60 Türkiye geneli deneme sınavı, konu anlatımları, soru çözümleri ve birebir danışmanlık ile tam destek.</p>
+                        <ul class="program-card-features">
+                            <li><i class="fas fa-check-circle"></i> TYT ve AYT'ye yönelik kapsamlı hazırlık</li>
+                            <li><i class="fas fa-check-circle"></i> 60 Türkiye geneli deneme sınavı</li>
+                            <li><i class="fas fa-check-circle"></i> Branş bazlı konu anlatımları</li>
+                            <li><i class="fas fa-check-circle"></i> Soru çözüm seansları</li>
+                        </ul>
+                        <a href="yks-hazirlik.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <a href="#" class="branch-button">Detaylı Bilgi</a>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                    <div class="program-card-image">
+                        <img src="images/lgs-hazirlik.png" alt="LGS Hazırlık">
+                        <div class="program-card-badge">LGS Hazırlık</div>
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">LGS Hazırlık</h3>
+                        <p class="program-card-description">Liselere Geçiş Sınavına hazırlık programımız ile hedef lisenizi kazanın. 40 Türkiye geneli deneme sınavı, konu anlatımları, soru çözümleri ve birebir danışmanlık ile tam destek.</p>
+                        <ul class="program-card-features">
+                            <li><i class="fas fa-check-circle"></i> Tüm dersler için kapsamlı hazırlık</li>
+                            <li><i class="fas fa-check-circle"></i> 40 Türkiye geneli deneme sınavı</li>
+                            <li><i class="fas fa-check-circle"></i> Branş bazlı konu anlatımları</li>
+                            <li><i class="fas fa-check-circle"></i> Soru çözüm seansları</li>
+                        </ul>
+                        <a href="lgs-hazirlik.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                    <div class="program-card-image">
+                        <img src="images/ingilizce.png" alt="İngilizce">
+                        <div class="program-card-badge">İngilizce</div>
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">İngilizce</h3>
+                        <p class="program-card-description">Konuşma odaklı İngilizce eğitimi ile dil becerilerinizi geliştirin. Genel İngilizce, YDT hazırlık ve sertifika programları ile her seviyeye uygun eğitim.</p>
+                        <ul class="program-card-features">
+                            <li><i class="fas fa-check-circle"></i> Konuşma odaklı eğitim</li>
+                            <li><i class="fas fa-check-circle"></i> YDT sınav hazırlık</li>
+                            <li><i class="fas fa-check-circle"></i> Seviye belirleme sınavı</li>
+                            <li><i class="fas fa-check-circle"></i> Sertifika programları</li>
+                        </ul>
+                        <a href="ingilizce.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                    <div class="program-card-image">
+                        <img src="images/okul-takviye.png" alt="Okul Takviye">
+                        <div class="program-card-badge">Okul Takviye</div>
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Okul Takviye</h3>
+                        <p class="program-card-description">Okul derslerine takviye ve yazılı sınavlara hazırlık programı ile akademik başarınızı artırın. Tüm dersler için birebir veya grup dersleri ile eksiklerinizi tamamlayın.</p>
+                        <ul class="program-card-features">
+                            <li><i class="fas fa-check-circle"></i> Tüm dersler için destek</li>
+                            <li><i class="fas fa-check-circle"></i> Yazılı sınavlara hazırlık</li>
+                            <li><i class="fas fa-check-circle"></i> Ödev takibi</li>
+                            <li><i class="fas fa-check-circle"></i> Birebir veya grup dersleri</li>
+                        </ul>
+                        <a href="okul-takviye.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.5">
+                    <div class="program-card-image">
+                        <img src="images/deneme-klubu.png" alt="Deneme Kulübü">
+                        <div class="program-card-badge">Deneme Kulübü</div>
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Deneme Kulübü</h3>
+                        <p class="program-card-description">Düzenli deneme sınavları ile sınav performansınızı artırın. YKS için 60, LGS için 40 Türkiye geneli deneme sınavı ve detaylı analizler ile eksiklerinizi belirleyin.</p>
+                        <ul class="program-card-features">
+                            <li><i class="fas fa-check-circle"></i> YKS için 60 Türkiye geneli deneme</li>
+                            <li><i class="fas fa-check-circle"></i> LGS için 40 Türkiye geneli deneme</li>
+                            <li><i class="fas fa-check-circle"></i> Detaylı karne ve analizler</li>
+                            <li><i class="fas fa-check-circle"></i> Türkiye geneli sıralama</li>
+                        </ul>
+                        <a href="deneme-klubu.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.6">
+                    <div class="program-card-image">
+                        <img src="images/yaz-kampi.png" alt="Yaz Kampı">
+                        <div class="program-card-badge">Yaz Kampı</div>
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Yaz Kampı</h3>
+                        <p class="program-card-description">Yaz tatilinde eğlenerek öğrenme fırsatı sunan 8 haftalık program ile çocuğunuzun tatilini verimli geçirmesini sağlayın.</p>
+                        <ul class="program-card-features">
+                            <li><i class="fas fa-check-circle"></i> 8 haftalık eğlenceli program</li>
+                            <li><i class="fas fa-check-circle"></i> STEM deneyleri</li>
+                            <li><i class="fas fa-check-circle"></i> İngilizce pratik</li>
+                            <li><i class="fas fa-check-circle"></i> Matematik oyunları</li>
+                        </ul>
+                        <a href="yaz-kampi.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.7">
+                    <div class="program-card-image">
+                        <img src="images/after-school.png" alt="After School">
+                        <div class="program-card-badge">After School</div>
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">After School</h3>
+                        <p class="program-card-description">Okul sonrası eğitim programı ile öğrencilerin akademik başarısını destekleyin. Ödev takibi, ders tekrarı ve eğlenceli aktiviteler ile tam destek.</p>
+                        <ul class="program-card-features">
+                            <li><i class="fas fa-check-circle"></i> Ödev takibi</li>
+                            <li><i class="fas fa-check-circle"></i> Ders tekrarı</li>
+                            <li><i class="fas fa-check-circle"></i> Eğlenceli aktiviteler</li>
+                            <li><i class="fas fa-check-circle"></i> Güvenli ortam</li>
+                        </ul>
+                        <a href="after-school.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.8">
+                    <div class="program-card-image">
+                        <img src="images/ozel-ders.png" alt="Özel Ders">
+                        <div class="program-card-badge">Özel Ders</div>
+                    </div>
+                    <div class="program-card-content">
+                        <h3 class="program-card-title">Özel Ders</h3>
+                        <p class="program-card-description">Birebir öğretmen desteği ile öğrencilerin ihtiyaç duydukları konularda ekstra destek almasını sağlayın. Tüm dersler için özel ders imkanı.</p>
+                        <ul class="program-card-features">
+                            <li><i class="fas fa-check-circle"></i> Birebir eğitim</li>
+                            <li><i class="fas fa-check-circle"></i> Tüm dersler için destek</li>
+                            <li><i class="fas fa-check-circle"></i> Esnek zamanlama</li>
+                            <li><i class="fas fa-check-circle"></i> Hızlı ilerleme</li>
+                        </ul>
+                        <a href="ozel-ders.html" class="program-card-link">Detaylı Bilgi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Branches Section -->
+    <section class="branches-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Şubelerimiz</h2>
+            
+            <div class="branches-grid">
+                <div class="branch-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                    <div class="branch-image">
+                        <img src="images/esenyali-branch.png" alt="Esenyalı Şubesi">
+                    </div>
+                    <div class="branch-content">
+                        <h3 class="branch-title">Esenyalı Şubesi</h3>
+                        <p class="branch-address"><i class="fas fa-map-marker-alt"></i> Esenyalı, Uygar Sk. No:29, 34890 Pendik/İstanbul</p>
+                        <p class="branch-phone"><i class="fas fa-phone"></i> <a href="tel:+902165000000">0216 500 00 00</a></p>
+                        <a href="https://maps.google.com/?q=Esenyalı, Uygar Sk. No:29, 34890 Pendik/İstanbul" target="_blank" class="branch-link">Yol Tarifi <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="branch-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                    <div class="branch-image">
+                        <img src="images/gebze-branch.png" alt="Gebze Şubesi">
+                    </div>
+                    <div class="branch-content">
+                        <h3 class="branch-title">Gebze Şubesi</h3>
+                        <p class="branch-address"><i class="fas fa-map-marker-alt"></i> Hacı Halil, İnönü Cd. No:74, 41400 Gebze/Kocaeli</p>
+                        <p class="branch-phone"><i class="fas fa-phone"></i> <a href="tel:+902626000000">0262 600 00 00</a></p>
+                        <a href="https://maps.google.com/?q=Hacı Halil, İnönü Cd. No:74, 41400 Gebze/Kocaeli" target="_blank" class="branch-link">Yol Tarifi <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
             
-            <!-- Gebze Şubesi -->
-            <div class="branch-card">
-                <img src="images/gebze-branch.jpeg" alt="Gebze Şubesi" class="branch-image">
-                <div class="branch-content">
-                    <h3 class="branch-name">Gebze Şubesi</h3>
-                    <p class="branch-address">Gebze, Kocaeli</p>
-                    <div class="branch-contact">
-                        <i class="fas fa-phone"></i>
-                        <span>0262 123 45 67</span>
+            <div class="branches-cta animate-on-scroll" data-animation="animate-fade-in-up">
+                <a href="subelerimiz.html" class="branches-button">Tüm Şubelerimiz <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Success Stories Section -->
+    <section class="success-stories-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Başarı Hikayeleri</h2>
+            
+            <div class="success-stories-slider">
+                <div class="success-story-card active animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                    <div class="success-story-image">
+                        <img src="images/success-story1.png" alt="Başarı Hikayesi 1">
                     </div>
-                    <div class="branch-contact">
-                        <i class="fas fa-envelope"></i>
-                        <span>gebze@ustunbasari.com</span>
+                    <div class="success-story-content">
+                        <div class="success-story-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="success-story-text">Üstün Başarı Akademisi'nde aldığım eğitim sayesinde hayalim olan Boğaziçi Üniversitesi Bilgisayar Mühendisliği bölümünü kazandım. Öğretmenlerimin desteği ve sistemli çalışma programı ile başarıya ulaştım.</p>
+                        <div class="success-story-author">
+                            <h3 class="author-name">Ahmet Yılmaz</h3>
+                            <p class="author-school">Boğaziçi Üniversitesi - Bilgisayar Mühendisliği</p>
+                        </div>
                     </div>
-                    <a href="#" class="branch-button">Detaylı Bilgi</a>
+                </div>
+                
+                <div class="success-story-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                    <div class="success-story-image">
+                        <img src="images/success-story2.png" alt="Başarı Hikayesi 2">
+                    </div>
+                    <div class="success-story-content">
+                        <div class="success-story-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="success-story-text">LGS hazırlık sürecimde Üstün Başarı Akademisi'nin desteği ile İstanbul Erkek Lisesi'ni kazandım. Düzenli deneme sınavları ve birebir danışmanlık sayesinde eksiklerimi hızla tamamladım.</p>
+                        <div class="success-story-author">
+                            <h3 class="author-name">Zeynep Kaya</h3>
+                            <p class="author-school">İstanbul Erkek Lisesi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="success-story-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                    <div class="success-story-image">
+                        <img src="images/success-story3.png" alt="Başarı Hikayesi 3">
+                    </div>
+                    <div class="success-story-content">
+                        <div class="success-story-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="success-story-text">Matematik dersinde çok zorlanıyordum. Üstün Başarı Akademisi'nde aldığım özel dersler sayesinde matematiği sevmeye başladım ve sınavlarda başarılı olmaya başladım. Şimdi okul birincisiyim!</p>
+                        <div class="success-story-author">
+                            <h3 class="author-name">Mehmet Demir</h3>
+                            <p class="author-school">Pendik Anadolu Lisesi</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <!-- Çayırova Şubesi -->
-            <div class="branch-card">
-                <img src="images/gebze-branch.jpeg" alt="Çayırova Şubesi" class="branch-image">
-                <div class="branch-content">
-                    <h3 class="branch-name">Çayırova Şubesi</h3>
-                    <p class="branch-address">Çayırova, Kocaeli</p>
-                    <div class="branch-contact">
-                        <i class="fas fa-phone"></i>
-                        <span>0262 123 45 68</span>
-                    </div>
-                    <div class="branch-contact">
-                        <i class="fas fa-envelope"></i>
-                        <span>cayirova@ustunbasari.com</span>
-                    </div>
-                    <a href="#" class="branch-button">Detaylı Bilgi</a>
+            <div class="slider-controls">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
                 </div>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
             </div>
             
-            <!-- Sultanbeyli Şubesi -->
-            <div class="branch-card">
-                <img src="images/esenyali-branch.jpeg" alt="Sultanbeyli Şubesi" class="branch-image">
-                <div class="branch-content">
-                    <h3 class="branch-name">Sultanbeyli Şubesi</h3>
-                    <p class="branch-address">Sultanbeyli, İstanbul</p>
-                    <div class="branch-contact">
-                        <i class="fas fa-phone"></i>
-                        <span>0216 123 45 69</span>
+            <div class="success-stories-cta animate-on-scroll" data-animation="animate-fade-in-up">
+                <a href="basarilarimiz.html" class="success-stories-button">Tüm Başarı Hikayeleri <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Statistics Section -->
+    <section class="statistics-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-animation="animate-fade-in-up">Rakamlarla Üstün Başarı</h2>
+            
+            <div class="statistics-grid">
+                <div class="statistic-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.1">
+                    <div class="statistic-icon">
+                        <i class="fas fa-user-graduate"></i>
                     </div>
-                    <div class="branch-contact">
-                        <i class="fas fa-envelope"></i>
-                        <span>sultanbeyli@ustunbasari.com</span>
+                    <div class="statistic-number" data-count="5000">0</div>
+                    <h3 class="statistic-title">Mezun Öğrenci</h3>
+                </div>
+                
+                <div class="statistic-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.2">
+                    <div class="statistic-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
                     </div>
-                    <a href="#" class="branch-button">Detaylı Bilgi</a>
+                    <div class="statistic-number" data-count="120">0</div>
+                    <h3 class="statistic-title">Uzman Öğretmen</h3>
+                </div>
+                
+                <div class="statistic-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.3">
+                    <div class="statistic-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="statistic-number" data-count="5">0</div>
+                    <h3 class="statistic-title">Şube</h3>
+                </div>
+                
+                <div class="statistic-card animate-on-scroll" data-animation="animate-fade-in-up" data-delay="0.4">
+                    <div class="statistic-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="statistic-number" data-count="15">0</div>
+                    <h3 class="statistic-title">Yıllık Deneyim</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll" data-animation="animate-fade-in-left">
+                    <h2 class="contact-title">Bize Ulaşın</h2>
+                    <p class="contact-description">Sorularınız için bize ulaşın, size en kısa sürede dönüş yapacağız.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Adres</h3>
+                                <p>Esenyalı, Uygar Sk. No:29, 34890 Pendik/İstanbul</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Telefon</h3>
+                                <p><a href="tel:+902165000000">0216 500 00 00</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>E-posta</h3>
+                                <p><a href="mailto:info@ustunbasariakademisi.com">info@ustunbasariakademisi.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Çalışma Saatleri</h3>
+                                <p>Hafta içi: 09:00 - 19:00</p>
+                                <p>Hafta sonu: 09:00 - 17:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form animate-on-scroll" data-animation="animate-fade-in-right">
+                    <h2 class="form-title">İletişim Formu</h2>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Adınız Soyadınız</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-posta Adresiniz</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefon Numaranız</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Konu</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Seçiniz</option>
+                                <option value="Genel Bilgi">Genel Bilgi</option>
+                                <option value="Kayıt">Kayıt</option>
+                                <option value="Fiyat Bilgisi">Fiyat Bilgisi</option>
+                                <option value="Diğer">Diğer</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mesajınız</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="form-button">Gönder</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-top">
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <img src="images/logo-white.png" alt="Üstün Başarı Akademisi Logo">
-                    </div>
-                    <p class="footer-description">Üstün Başarı Akademisi olarak, öğrencilerimizin potansiyellerini en üst düzeye çıkarmalarına yardımcı olmak için kaliteli eğitim ve bireysel koçluk hizmetleri sunuyoruz.</p>
-                    <div class="footer-social">
-                        <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-youtube"></i></a>
-                    </div>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-white.png" alt="Üstün Başarı Akademisi Logo">
+                    <p>Geleceğinizi Şekillendirin</p>
                 </div>
                 
                 <div class="footer-links">
-                    <h3 class="footer-title">Hızlı Bağlantılar</h3>
-                    <ul class="footer-link-list">
-                        <li class="footer-link-item">
-                            <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Ana Sayfa</a>
-                        </li>
-                        <li class="footer-link-item">
-                            <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Hakkımızda</a>
-                        </li>
-                        <li class="footer-link-item">
-                            <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Programlarımız</a>
-                        </li>
-                        <li class="footer-link-item">
-                            <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Şubelerimiz</a>
-                        </li>
-                        <li class="footer-link-item">
-                            <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Başarılarımız</a>
-                        </li>
-                        <li class="footer-link-item">
-                            <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> İletişim</a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h3 class="footer-title">Programlarımız</h3>
-                    <ul class="footer-link-list">
-                        <li class="footer-link-item">
-                            <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> YKS Hazırlık</a>
-                        </li>
-                        <li class="footer-link-item">
-                            <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> LGS Hazırlık</a>
-                        </li>
-                        <li class="footer-link-item">
-                            <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Okula Takviye</a>
-                        </li>
-                        <li class="footer-link-item">
-                            <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> İngilizce</a>
-                        </li>
-                        <li class="footer-link-item">
-                            <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Deneme Kulübü</a>
-                        </li>
-                        <li class="footer-link-item">
-                            <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Yaz Kampı</a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="footer-contact">
-                    <h3 class="footer-title">İletişim</h3>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="footer-contact-text">
-                            Esenyalı, Uygar Sk. No:29, 34890 Pendik/İstanbul
+                    <div class="footer-links-column">
+                        <h3>Programlarımız</h3>
+                        <ul>
+                            <li><a href="yks-hazirlik.html">YKS Hazırlık</a></li>
+                            <li><a href="lgs-hazirlik.html">LGS Hazırlık</a></li>
+                            <li><a href="ingilizce.html">İngilizce</a></li>
+                            <li><a href="okul-takviye.html">Okula Takviye</a></li>
+                            <li><a href="deneme-klubu.html">Deneme Kulübü</a></li>
+                            <li><a href="yaz-kampi.html">Yaz Kampı</a></li>
+                            <li><a href="after-school.html">After School</a></li>
+                            <li><a href="ozel-ders.html">Özel Ders</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h3>Kurumsal</h3>
+                        <ul>
+                            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                            <li><a href="subelerimiz.html">Şubelerimiz</a></li>
+                            <li><a href="basarilarimiz.html">Başarılarımız</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="kariyer.html">Kariyer</a></li>
+                            <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h3>İletişim</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Esenyalı, Uygar Sk. No:29, 34890 Pendik/İstanbul</li>
+                            <li><i class="fas fa-phone"></i> <a href="tel:+902165000000">0216 500 00 00</a></li>
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:info@ustunbasariakademisi.com">info@ustunbasariakademisi.com</a></li>
+                        </ul>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="footer-contact-text">
-                            0216 123 45 67
-                        </div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="footer-contact-text">
-                            info@ustunbasari.com
-                        </div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <div class="footer-contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="footer-contact-text">
-                            Pazartesi - Cumartesi: 09:00 - 19:00
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="footer-newsletter">
-                    <h3 class="footer-title">Bültenimize Abone Olun</h3>
-                    <p class="footer-description">Kampanyalar, etkinlikler ve eğitim haberleri hakkında bilgi almak için bültenimize abone olun.</p>
-                    <form class="footer-newsletter-form">
-                        <input type="email" class="footer-newsletter-input" placeholder="E-posta adresiniz">
-                        <button type="submit" class="footer-newsletter-button">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Üstün Başarı Akademisi. Tüm hakları saklıdır.</p>
+                <p>&copy; 2025 Üstün Başarı Akademisi. Tüm Hakları Saklıdır.</p>
+                <div class="footer-bottom-links">
+                    <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+                    <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+                    <a href="kvkk.html">KVKK</a>
+                </div>
             </div>
         </div>
     </footer>
     
-    <script src="all-scripts.js"></script>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="mobile-nav.js"></script>
+    <script src="animation-effects.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+            const programsToggle = document.getElementById('programsToggle');
+            const programsDropdown = document.getElementById('programsDropdown');
+            
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+            });
+            
+            mobileMenuClose.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+            
+            programsToggle.addEventListener('click', () => {
+                programsDropdown.classList.toggle('active');
+                programsToggle.querySelector('i').classList.toggle('fa-chevron-down');
+                programsToggle.querySelector('i').classList.toggle('fa-chevron-up');
+            });
+            
+            // Announcement Slider
+            const announcementSlides = document.querySelectorAll('.announcement-slide');
+            const announcementDots = document.querySelectorAll('.slider-dots .dot');
+            const announcementPrev = document.querySelector('.announcement-section .slider-prev');
+            const announcementNext = document.querySelector('.announcement-section .slider-next');
+            let currentAnnouncementSlide = 0;
+            
+            function showAnnouncementSlide(index) {
+                announcementSlides.forEach(slide => slide.classList.remove('active'));
+                announcementDots.forEach(dot => dot.classList.remove('active'));
+                
+                announcementSlides[index].classList.add('active');
+                announcementDots[index].classList.add('active');
+                currentAnnouncementSlide = index;
+            }
+            
+            announcementNext.addEventListener('click', () => {
+                currentAnnouncementSlide = (currentAnnouncementSlide + 1) % announcementSlides.length;
+                showAnnouncementSlide(currentAnnouncementSlide);
+            });
+            
+            announcementPrev.addEventListener('click', () => {
+                currentAnnouncementSlide = (currentAnnouncementSlide - 1 + announcementSlides.length) % announcementSlides.length;
+                showAnnouncementSlide(currentAnnouncementSlide);
+            });
+            
+            announcementDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showAnnouncementSlide(index);
+                });
+            });
+            
+            // Auto slide for announcements
+            setInterval(() => {
+                currentAnnouncementSlide = (currentAnnouncementSlide + 1) % announcementSlides.length;
+                showAnnouncementSlide(currentAnnouncementSlide);
+            }, 5000);
+            
+            // Success Stories Slider
+            const successStoryCards = document.querySelectorAll('.success-story-card');
+            const successStoryDots = document.querySelectorAll('.success-stories-section .slider-dots .dot');
+            const successStoryPrev = document.querySelector('.success-stories-section .slider-prev');
+            const successStoryNext = document.querySelector('.success-stories-section .slider-next');
+            let currentSuccessStory = 0;
+            
+            function showSuccessStory(index) {
+                successStoryCards.forEach(card => card.classList.remove('active'));
+                successStoryDots.forEach(dot => dot.classList.remove('active'));
+                
+                successStoryCards[index].classList.add('active');
+                successStoryDots[index].classList.add('active');
+                currentSuccessStory = index;
+            }
+            
+            successStoryNext.addEventListener('click', () => {
+                currentSuccessStory = (currentSuccessStory + 1) % successStoryCards.length;
+                showSuccessStory(currentSuccessStory);
+            });
+            
+            successStoryPrev.addEventListener('click', () => {
+                currentSuccessStory = (currentSuccessStory - 1 + successStoryCards.length) % successStoryCards.length;
+                showSuccessStory(currentSuccessStory);
+            });
+            
+            successStoryDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSuccessStory(index);
+                });
+            });
+            
+            // Auto slide for success stories
+            setInterval(() => {
+                currentSuccessStory = (currentSuccessStory + 1) % successStoryCards.length;
+                showSuccessStory(currentSuccessStory);
+            }, 6000);
+            
+            // Countdown Timer
+            const countdownTimers = document.querySelectorAll('.countdown-timer');
+            
+            countdownTimers.forEach(timer => {
+                const endDate = new Date(timer.getAttribute('data-end-date')).getTime();
+                
+                const countdownInterval = setInterval(() => {
+                    const now = new Date().getTime();
+                    const distance = endDate - now;
+                    
+                    if (distance < 0) {
+                        clearInterval(countdownInterval);
+                        timer.innerHTML = '<div class="countdown-expired">Kampanya Sona Erdi</div>';
+                        return;
+                    }
+                    
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                    timer.querySelector('.days').textContent = days.toString().padStart(2, '0');
+                    timer.querySelector('.hours').textContent = hours.toString().padStart(2, '0');
+                    timer.querySelector('.minutes').textContent = minutes.toString().padStart(2, '0');
+                    timer.querySelector('.seconds').textContent = seconds.toString().padStart(2, '0');
+                }, 1000);
+            });
+            
+            // Statistics Counter
+            const statisticNumbers = document.querySelectorAll('.statistic-number');
+            let counted = false;
+            
+            function startCounting() {
+                if (counted) return;
+                
+                statisticNumbers.forEach(number => {
+                    const target = parseInt(number.getAttribute('data-count'));
+                    const duration = 2000; // 2 seconds
+                    const step = target / (duration / 16); // 16ms per frame (60fps)
+                    let current = 0;
+                    
+                    const counter = setInterval(() => {
+                        current += step;
+                        if (current >= target) {
+                            number.textContent = target;
+                            clearInterval(counter);
+                        } else {
+                            number.textContent = Math.floor(current);
+                        }
+                    }, 16);
+                });
+                
+                counted = true;
+            }
+            
+            // Start counting when statistics section is in view
+            const statisticsSection = document.querySelector('.statistics-section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        startCounting();
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(statisticsSection);
+            
+            // Contact Form Submission
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simulate form submission
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                submitButton.textContent = 'Gönderiliyor...';
+                submitButton.disabled = true;
+                
+                setTimeout(() => {
+                    alert('Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.');
+                    contactForm.reset();
+                    submitButton.textContent = 'Gönder';
+                    submitButton.disabled = false;
+                }, 1500);
+            });
+            
+            // Back to Top Button
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
